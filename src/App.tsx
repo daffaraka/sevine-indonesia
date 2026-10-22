@@ -46,11 +46,12 @@ export const App: React.FC = () => {
   return (
     <>
       {currentRoute === "editorial" ? (
-        <EditorialProfilePage />
+        <EditorialProfilePage id="editorial-view" />
       ) : (
-        <ClassicProfilePage />
+        <ClassicProfilePage id="classic-view" />
       )}
       <RouteViewSwitcher
+        id="global-route-switcher"
         currentRoute={currentRoute}
         onSwitchRoute={handleSwitchRoute}
       />

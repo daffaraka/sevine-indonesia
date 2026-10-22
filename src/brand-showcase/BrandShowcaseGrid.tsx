@@ -1,24 +1,32 @@
-import React, { useState } from 'react';
-import { BrandCardItem } from './BrandCardItem';
-import { BrandDetailModal } from './BrandDetailModal';
-import { CompanyProfileService } from '../services/CompanyProfileService';
-import { BrandItem } from '../types/CompanyProfileTypes';
+import React, { useState } from "react";
+import { BrandCardItem } from "./BrandCardItem";
+import { BrandDetailModal } from "./BrandDetailModal";
+import { CompanyProfileService } from "../services/CompanyProfileService";
+import { BrandItem } from "../types/CompanyProfileTypes";
 
-export const BrandShowcaseGrid: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [activeModalBrand, setActiveModalBrand] = useState<BrandItem | null>(null);
+interface BrandShowcaseGridProps {
+  id?: string;
+}
+
+export const BrandShowcaseGrid: React.FC<BrandShowcaseGridProps> = ({
+  id = "brands",
+}) => {
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [activeModalBrand, setActiveModalBrand] = useState<BrandItem | null>(
+    null,
+  );
 
   const categories = [
-    { id: 'all', label: 'Semua 5 Brand' },
-    { id: 'bag', label: 'Koleksi Tas' },
-    { id: 'apparel', label: 'Pakaian Basic' },
-    { id: 'muslim-wear', label: 'Busana Muslim' }
+    { id: "all", label: "Semua 4 Brand" },
+    { id: "bag", label: "Koleksi Tas" },
+    { id: "apparel", label: "Pakaian Basic" },
+    { id: "muslim-wear", label: "Busana Muslim" },
   ];
 
   const filteredBrands = CompanyProfileService.getBrands(selectedCategory);
 
   return (
-    <section id="brands" className="py-16 md:py-24 bg-[#F8F9FA]">
+    <section id={id} className="py-16 md:py-24 bg-[#F8F9FA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -30,7 +38,8 @@ export const BrandShowcaseGrid: React.FC = () => {
               5 Brand Unggulan Sevine
             </h2>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Setiap brand dirancang memiliki kepribadian dan segmentasi pasar yang jelas, didukung standar manufaktur in-house yang konsisten.
+              Setiap brand dirancang memiliki kepribadian dan segmentasi pasar
+              yang jelas, didukung standar manufaktur in-house yang konsisten.
             </p>
           </div>
 
@@ -42,8 +51,8 @@ export const BrandShowcaseGrid: React.FC = () => {
                 onClick={() => setSelectedCategory(cat.id)}
                 className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                   selectedCategory === cat.id
-                    ? 'bg-doff-navy text-white shadow-xs'
-                    : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
+                    ? "bg-doff-navy text-white shadow-xs"
+                    : "bg-white text-slate-600 hover:bg-slate-100 border border-slate-200"
                 }`}
               >
                 {cat.label}
@@ -57,6 +66,7 @@ export const BrandShowcaseGrid: React.FC = () => {
           {filteredBrands.map((brand) => (
             <BrandCardItem
               key={brand.id}
+              id={`brand-card-${brand.id}`}
               brand={brand}
               onSelect={(b) => setActiveModalBrand(b)}
             />

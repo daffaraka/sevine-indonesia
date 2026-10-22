@@ -1,13 +1,17 @@
 import React from 'react';
 
 interface EditorialHeroCoverProps {
+  id?: string;
   onNavigate: (sectionId: string) => void;
 }
 
-export const EditorialHeroCover: React.FC<EditorialHeroCoverProps> = ({ onNavigate }) => {
+export const EditorialHeroCover: React.FC<EditorialHeroCoverProps> = ({
+  id = 'ed-hero',
+  onNavigate
+}) => {
   return (
     <section
-      id="ed-hero"
+      id={id}
       className="relative overflow-hidden bg-[#132238] border-b border-[#F6F4F0]/10 pt-8 pb-14 sm:pt-12 sm:pb-20 text-[#F6F4F0]"
     >
       {/* Layer 0: Organic Flowing Ribbon Wave (Ref Image 2 "JENA ARA" Background Curve) */}

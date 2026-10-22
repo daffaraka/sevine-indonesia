@@ -4,14 +4,15 @@ import { HeroStatCounter } from './HeroStatCounter';
 import { CompanyProfileService } from '../services/CompanyProfileService';
 
 interface HeroBannerProps {
+  id?: string;
   onNavigate: (sectionId: string) => void;
 }
 
-export const HeroBannerView: React.FC<HeroBannerProps> = ({ onNavigate }) => {
+export const HeroBannerView: React.FC<HeroBannerProps> = ({ id = 'hero', onNavigate }) => {
   const stats = CompanyProfileService.getMetricStats();
 
   return (
-    <section id="hero" className="relative pt-14 pb-16 md:pt-20 md:pb-24 bg-[#F8F9FA] border-b border-slate-200">
+    <section id={id} className="relative pt-14 pb-16 md:pt-20 md:pb-24 bg-[#F8F9FA] border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center space-y-6">
           {/* Authentic Corporate Identifier */}

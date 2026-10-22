@@ -60,11 +60,11 @@ export const BrandDetailModal: React.FC<BrandDetailModalProps> = ({ brand, onClo
 
         {/* Gambar dan Deskripsi */}
         <div className="py-4 space-y-4">
-          <div className="h-44 w-full rounded-xl overflow-hidden bg-slate-100">
+          <div className="h-44 w-full rounded-xl overflow-hidden bg-slate-50 border border-slate-100 p-6 flex items-center justify-center">
             <img
               src={brand.imageUrl}
               alt={brand.name}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain mix-blend-multiply"
             />
           </div>
 

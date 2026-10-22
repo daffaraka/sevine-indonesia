@@ -12,13 +12,17 @@ export interface KineticCardItem {
 }
 
 interface KineticPortraitCardProps {
+  id?: string;
   item: KineticCardItem;
   index: number;
 }
 
-export const KineticPortraitCard: React.FC<KineticPortraitCardProps> = ({ item, index }) => {
+export const KineticPortraitCard: React.FC<KineticPortraitCardProps> = ({ id, item, index }) => {
+  const cardId = id || `kinetic-card-${item.id}`;
+
   return (
     <article
+      id={cardId}
       className={`group relative rounded-[26px] overflow-hidden aspect-[3/4] ${item.bgToneClass} flex flex-col justify-between p-6 select-none shadow-md hover:shadow-xl transition-all duration-300`}
     >
       {/* Base Sharp/Semi-Soft Portrait Layer */}

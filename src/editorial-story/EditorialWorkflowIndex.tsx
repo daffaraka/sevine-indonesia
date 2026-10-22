@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import { CompanyProfileService } from '../services/CompanyProfileService';
 
-export const EditorialWorkflowIndex: React.FC = () => {
+interface EditorialWorkflowIndexProps {
+  id?: string;
+}
+
+export const EditorialWorkflowIndex: React.FC<EditorialWorkflowIndexProps> = ({
+  id = 'editorial-workflow'
+}) => {
   const workflowSteps = CompanyProfileService.getWorkflowSteps();
   const advantages = CompanyProfileService.getAdvantages();
   const [activeStepIndex, setActiveStepIndex] = useState<number>(0);
 
   return (
-    <div className="pt-8 border-t border-white/10 space-y-16">
+    <div id={id} className="pt-8 border-t border-white/10 space-y-16">
       {/* 7-Step In-House Production Ledger */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         <div className="lg:col-span-4 space-y-4">
@@ -44,6 +50,7 @@ export const EditorialWorkflowIndex: React.FC = () => {
             return (
               <div
                 key={item.step}
+                id={`workflow-step-${item.step}`}
                 onMouseEnter={() => setActiveStepIndex(idx)}
                 onClick={() => setActiveStepIndex(idx)}
                 className={`py-4 sm:py-5 px-4 sm:px-6 transition-colors cursor-pointer grid grid-cols-12 items-baseline gap-4 ${
@@ -79,6 +86,7 @@ export const EditorialWorkflowIndex: React.FC = () => {
           {advantages.map((adv) => (
             <div
               key={adv.id}
+              id={`factory-adv-${adv.id}`}
               className="p-5 rounded-2xl bg-[#1B2E4B] border border-white/10 shadow-md hover:shadow-lg transition-shadow flex flex-col justify-between space-y-4"
             >
               <span className="font-mono text-[11px] tracking-[0.2em] text-[#C27B66] font-semibold">

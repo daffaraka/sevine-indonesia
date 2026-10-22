@@ -2,11 +2,15 @@ import React from 'react';
 import { DepartmentCardItem } from './DepartmentCardItem';
 import { CompanyProfileService } from '../services/CompanyProfileService';
 
-export const DepartmentTeamGrid: React.FC = () => {
+interface DepartmentTeamGridProps {
+  id?: string;
+}
+
+export const DepartmentTeamGrid: React.FC<DepartmentTeamGridProps> = ({ id = 'team' }) => {
   const departments = CompanyProfileService.getDepartments();
 
   return (
-    <section id="team" className="py-16 md:py-24 bg-white border-y border-slate-200/80">
+    <section id={id} className="py-16 md:py-24 bg-white border-y border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Header Seksi */}
         <div className="max-w-2xl space-y-3">

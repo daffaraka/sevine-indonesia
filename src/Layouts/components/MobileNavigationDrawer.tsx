@@ -3,6 +3,7 @@ import { X, ArrowRight, Instagram, Mail, ShoppingBag } from 'lucide-react';
 import { CONTACT_INFO } from '../../data/SevineProfileData';
 
 interface MobileDrawerProps {
+  id?: string;
   isOpen: boolean;
   onClose: () => void;
   activeSection: string;
@@ -10,6 +11,7 @@ interface MobileDrawerProps {
 }
 
 export const MobileNavigationDrawer: React.FC<MobileDrawerProps> = ({
+  id = 'classic-mobile-drawer',
   isOpen,
   onClose,
   activeSection,
@@ -39,7 +41,7 @@ export const MobileNavigationDrawer: React.FC<MobileDrawerProps> = ({
       />
 
       {/* Drawer Container */}
-      <div className="relative ml-auto w-4/5 max-w-sm h-full bg-white shadow-2xl flex flex-col justify-between p-6 overflow-y-auto">
+      <div id={id} className="relative ml-auto w-4/5 max-w-sm h-full bg-white shadow-2xl flex flex-col justify-between p-6 overflow-y-auto">
         <div>
           <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
             <div className="flex items-center gap-2">

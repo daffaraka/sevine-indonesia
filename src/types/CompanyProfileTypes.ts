@@ -65,10 +65,27 @@ export interface OfflineEvent {
   description: string;
 }
 
+export interface ClientPartnerItem {
+  id: string;
+  name: string;
+  logo: string;
+  role?: string;
+}
+
 export interface ClientPartnerGroup {
   category: string;
   subtitle: string;
   clients: string[];
+  partnerItems?: ClientPartnerItem[];
+}
+
+export interface PartnerBrandItem {
+  id: string;
+  name: string;
+  category: string;
+  categoryLabel: string;
+  logo: string;
+  role: string;
 }
 
 export interface TestimonialItem {
@@ -78,6 +95,9 @@ export interface TestimonialItem {
   rating: number;
   content: string;
   highlightAspect: string;
+  screenshotImage: string;
+  buyerPhotos?: string[];
+  platform?: string;
 }
 
 export interface OfficeLocation {

@@ -3,13 +3,19 @@ import { CompanyProfileService } from '../services/CompanyProfileService';
 import { PortfolioImageLightbox } from '../portfolio-gallery/PortfolioImageLightbox';
 import { EditorialPartnersPress } from './EditorialPartnersPress';
 
-export const EditorialCapsulePortfolio: React.FC = () => {
+interface EditorialCapsulePortfolioProps {
+  id?: string;
+}
+
+export const EditorialCapsulePortfolio: React.FC<EditorialCapsulePortfolioProps> = ({
+  id = 'ed-capsule'
+}) => {
   const samples = CompanyProfileService.getPortfolioSamples('all');
   const events = CompanyProfileService.getOfflineEvents();
   const [lightboxImage, setLightboxImage] = useState<{ src: string; title: string } | null>(null);
 
   return (
-    <section id="ed-capsule" className="py-16 sm:py-24 bg-white border-b border-slate-200">
+    <section id={id} className="py-16 sm:py-24 bg-white border-b border-slate-200">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-8 space-y-20">
         {/* Part 1: Capsule Collection Strip with shadow-md */}
         <div className="space-y-10">
@@ -26,6 +32,7 @@ export const EditorialCapsulePortfolio: React.FC = () => {
             {samples.map((sample) => (
               <article
                 key={sample.id}
+                id={`capsule-sample-${sample.id}`}
                 onClick={() => setLightboxImage({ src: sample.image, title: sample.title })}
                 className="group relative aspect-[4/5] rounded-2xl bg-slate-100 overflow-hidden cursor-pointer flex flex-col justify-end shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200/80"
               >
@@ -77,6 +84,7 @@ export const EditorialCapsulePortfolio: React.FC = () => {
             {events.map((ev, idx) => (
               <article
                 key={ev.id}
+                id={`offline-event-${ev.id}`}
                 onClick={() => setLightboxImage({ src: ev.image, title: ev.title })}
                 className="group rounded-2xl bg-white border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer flex flex-col justify-between"
               >

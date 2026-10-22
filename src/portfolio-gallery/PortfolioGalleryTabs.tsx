@@ -4,7 +4,11 @@ import { PortfolioEventsGrid } from './PortfolioEventsGrid';
 import { PortfolioImageLightbox } from './PortfolioImageLightbox';
 import { CompanyProfileService } from '../services/CompanyProfileService';
 
-export const PortfolioGalleryTabs: React.FC = () => {
+interface PortfolioGalleryTabsProps {
+  id?: string;
+}
+
+export const PortfolioGalleryTabs: React.FC<PortfolioGalleryTabsProps> = ({ id = 'portfolio' }) => {
   const [activeTab, setActiveTab] = useState<'products' | 'events'>('products');
   const [lightboxData, setLightboxData] = useState<{ src: string | null; title: string | null }>({
     src: null,
@@ -15,7 +19,7 @@ export const PortfolioGalleryTabs: React.FC = () => {
   const events = CompanyProfileService.getOfflineEvents();
 
   return (
-    <section id="portfolio" className="py-16 md:py-24 bg-[#F8F9FA]">
+    <section id={id} className="py-16 md:py-24 bg-[#F8F9FA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         {/* Header Seksi */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">

@@ -3,19 +3,22 @@ import { ArrowUpRight } from 'lucide-react';
 import { BrandItem } from '../types/CompanyProfileTypes';
 
 interface BrandCardItemProps {
+  id?: string;
   brand: BrandItem;
   onSelect: (brand: BrandItem) => void;
 }
 
-export const BrandCardItem: React.FC<BrandCardItemProps> = ({ brand, onSelect }) => {
+export const BrandCardItem: React.FC<BrandCardItemProps> = ({ id, brand, onSelect }) => {
+  const cardId = id || `brand-card-${brand.id}`;
+
   return (
-    <div className="bg-white rounded-xl border border-slate-200/90 shadow-md hover:shadow-lg overflow-hidden flex flex-col justify-between group hover:border-slate-300 transition-all">
+    <div id={cardId} className="bg-white rounded-xl border border-slate-200/90 shadow-md hover:shadow-lg overflow-hidden flex flex-col justify-between group hover:border-slate-300 transition-all">
       {/* Brand Image Preview */}
-      <div className="relative h-48 w-full overflow-hidden bg-slate-100">
+      <div className="relative h-48 w-full overflow-hidden bg-slate-50 p-6 flex items-center justify-center">
         <img
           src={brand.imageUrl}
           alt={brand.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
         />
         <div className="absolute top-3 left-3">

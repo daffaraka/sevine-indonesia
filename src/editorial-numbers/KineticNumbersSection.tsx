@@ -2,7 +2,13 @@ import React from 'react';
 import { KineticPortraitCard, KineticCardItem } from './KineticPortraitCard';
 import { CompanyProfileService } from '../services/CompanyProfileService';
 
-export const KineticNumbersSection: React.FC = () => {
+interface KineticNumbersSectionProps {
+  id?: string;
+}
+
+export const KineticNumbersSection: React.FC<KineticNumbersSectionProps> = ({
+  id = 'ed-numbers'
+}) => {
   const departments = CompanyProfileService.getDepartments();
 
   const kineticItems: KineticCardItem[] = [
@@ -50,14 +56,19 @@ export const KineticNumbersSection: React.FC = () => {
 
   return (
     <section
-      id="ed-numbers"
+      id={id}
       className="relative bg-[#EEF1F5] border-b border-slate-300/80 sm:border-r-[20px] sm:border-r-[#132238]"
     >
       <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-16 sm:py-24 space-y-10">
         {/* 4 Tall Rounded Portrait Strip (Ref Image 3 Kinetic Cards) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {kineticItems.map((item, idx) => (
-            <KineticPortraitCard key={item.id} item={item} index={idx} />
+            <KineticPortraitCard
+              key={item.id}
+              id={`kinetic-card-${item.id}`}
+              item={item}
+              index={idx}
+            />
           ))}
         </div>
 
@@ -83,6 +94,7 @@ export const KineticNumbersSection: React.FC = () => {
           {departments.map((dept, index) => (
             <div
               key={dept.id}
+              id={`dept-card-${dept.id}`}
               className="space-y-2 bg-white/95 p-6 rounded-2xl border border-slate-200/90 shadow-md hover:shadow-lg transition-shadow"
             >
               <div className="flex items-baseline justify-between">

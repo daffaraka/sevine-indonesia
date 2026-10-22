@@ -1,6 +1,7 @@
 import React from 'react';
 
 interface EditorialMobileDrawerProps {
+  id?: string;
   isOpen: boolean;
   onClose: () => void;
   activeSection: string;
@@ -8,6 +9,7 @@ interface EditorialMobileDrawerProps {
 }
 
 export const EditorialMobileDrawer: React.FC<EditorialMobileDrawerProps> = ({
+  id = 'editorial-mobile-drawer',
   isOpen,
   onClose,
   activeSection,
@@ -40,7 +42,7 @@ export const EditorialMobileDrawer: React.FC<EditorialMobileDrawerProps> = ({
       />
 
       {/* Drawer Sheet with shadow-2xl */}
-      <aside className="relative w-full max-w-sm bg-[#132238] text-white h-full flex flex-col justify-between p-6 sm:p-8 border-r border-white/10 shadow-2xl z-10">
+      <aside id={id} className="relative w-full max-w-sm bg-[#132238] text-white h-full flex flex-col justify-between p-6 sm:p-8 border-r border-white/10 shadow-2xl z-10">
         <div>
           {/* Top Bar */}
           <div className="flex items-center justify-between pb-6 border-b border-white/10">

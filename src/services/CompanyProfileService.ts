@@ -10,6 +10,7 @@ import {
   PORTFOLIO_SAMPLES,
   OFFLINE_EVENTS,
   CLIENT_PARTNER_GROUPS,
+  ALL_PARTNER_BRANDS,
   TESTIMONIALS_LIST,
   OFFICE_LOCATIONS,
   CONTACT_INFO
@@ -18,7 +19,8 @@ import {
 import {
   BrandItem,
   InquiryFormData,
-  PortfolioSample
+  PortfolioSample,
+  PartnerBrandItem
 } from '../types/CompanyProfileTypes';
 
 export const CompanyProfileService = {
@@ -46,6 +48,7 @@ export const CompanyProfileService = {
 
   getOfflineEvents: () => OFFLINE_EVENTS,
   getClientPartnerGroups: () => CLIENT_PARTNER_GROUPS,
+  getAllPartnerBrands: (): PartnerBrandItem[] => ALL_PARTNER_BRANDS,
   getTestimonials: () => TESTIMONIALS_LIST,
   getOfficeLocations: () => OFFICE_LOCATIONS,
   getContactInfo: () => CONTACT_INFO,

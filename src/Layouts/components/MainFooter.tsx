@@ -4,12 +4,13 @@ import { CONTACT_INFO } from '../../data/SevineProfileData';
 import { FooterOfficeContacts } from './FooterOfficeContacts';
 
 interface MainFooterProps {
+  id?: string;
   onNavigate: (sectionId: string) => void;
 }
 
-export const MainFooter: React.FC<MainFooterProps> = ({ onNavigate }) => {
+export const MainFooter: React.FC<MainFooterProps> = ({ id = 'classic-main-footer', onNavigate }) => {
   return (
-    <footer className="bg-doff-navy text-slate-300 pt-16 pb-12 border-t border-slate-800">
+    <footer id={id} className="bg-doff-navy text-slate-300 pt-16 pb-12 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800/80">
           {/* Kolom 1: Profil Brand */}

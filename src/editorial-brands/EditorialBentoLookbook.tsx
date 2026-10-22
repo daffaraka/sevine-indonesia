@@ -1,12 +1,16 @@
 import React from 'react';
 
 interface EditorialBentoLookbookProps {
+  id?: string;
   onNavigate: (sectionId: string) => void;
 }
 
-export const EditorialBentoLookbook: React.FC<EditorialBentoLookbookProps> = ({ onNavigate }) => {
+export const EditorialBentoLookbook: React.FC<EditorialBentoLookbookProps> = ({
+  id = 'ed-lookbook',
+  onNavigate
+}) => {
   return (
-    <section id="ed-lookbook" className="py-16 sm:py-24 bg-[#132238] border-b border-white/10 text-white">
+    <section id={id} className="py-16 sm:py-24 bg-[#132238] border-b border-white/10 text-white">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-8 space-y-8">
         {/* Minimal Section Eyebrow */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">

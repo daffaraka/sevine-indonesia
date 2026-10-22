@@ -16,7 +16,11 @@ import { ClientPartnershipSection } from '../client-partners/ClientPartnershipSe
 import { CustomerTestimonialSlider } from '../client-testimonials/CustomerTestimonialSlider';
 import { ContactOfficeLocations } from '../contact-location/ContactOfficeLocations';
 
-export const ClassicProfilePage: React.FC = () => {
+interface ClassicProfilePageProps {
+  id?: string;
+}
+
+export const ClassicProfilePage: React.FC<ClassicProfilePageProps> = ({ id = 'classic-profile-page' }) => {
   const [activeSection, setActiveSection] = useState<string>('hero');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
@@ -62,34 +66,36 @@ export const ClassicProfilePage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F8F9FA] text-[#1B2E4B] selection:bg-[#1B2E4B] selection:text-white">
+    <div id={id} className="min-h-screen flex flex-col bg-[#F8F9FA] text-[#1B2E4B] selection:bg-[#1B2E4B] selection:text-white">
       <MainNavbar
+        id="classic-navbar"
         activeSection={activeSection}
         onNavigate={handleNavigate}
         onOpenMobileMenu={() => setIsMobileMenuOpen(true)}
       />
 
       <MobileNavigationDrawer
+        id="classic-mobile-drawer"
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
         activeSection={activeSection}
         onNavigate={handleNavigate}
       />
 
-      <main className="flex-1">
-        <HeroBannerView onNavigate={handleNavigate} />
-        <CompanyAboutStory />
-        <BrandShowcaseGrid />
-        <CompanyAdvantageGrid />
-        <WorkflowProcessTimeline />
-        <DepartmentTeamGrid />
-        <PortfolioGalleryTabs />
-        <ClientPartnershipSection />
-        <CustomerTestimonialSlider />
-        <ContactOfficeLocations />
+      <main id={`${id}-main`} className="flex-1">
+        <HeroBannerView id="hero" onNavigate={handleNavigate} />
+        <CompanyAboutStory id="about" />
+        <BrandShowcaseGrid id="brands" />
+        <CompanyAdvantageGrid id="advantages" />
+        <WorkflowProcessTimeline id="workflow" />
+        <DepartmentTeamGrid id="team" />
+        <PortfolioGalleryTabs id="portfolio" />
+        <ClientPartnershipSection id="partners" />
+        <CustomerTestimonialSlider id="testimonials" />
+        <ContactOfficeLocations id="contact" />
       </main>
 
-      <MainFooter onNavigate={handleNavigate} />
+      <MainFooter id="classic-footer" onNavigate={handleNavigate} />
 
       <BackToTopButton />
       <QuickWhatsAppFloatingButton />

@@ -2,18 +2,23 @@ import React from 'react';
 import { BrandItem } from '../types/CompanyProfileTypes';
 
 interface EditorialSquircleCardProps {
+  id?: string;
   brand: BrandItem;
   index: number;
   onSelect: (brand: BrandItem) => void;
 }
 
 export const EditorialSquircleCard: React.FC<EditorialSquircleCardProps> = ({
+  id,
   brand,
   index,
   onSelect
 }) => {
+  const cardId = id || `brand-card-${brand.id}`;
+
   return (
     <article
+      id={cardId}
       onClick={() => onSelect(brand)}
       className="group relative rounded-[24px] bg-[#F8F9FA] border border-slate-200/90 shadow-md hover:shadow-lg overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-1 hover:border-slate-300 flex flex-col justify-between"
     >
@@ -28,15 +33,15 @@ export const EditorialSquircleCard: React.FC<EditorialSquircleCardProps> = ({
       </div>
 
       {/* Studio Image Container with Soft Fade (Ref Image 2 Squircle Card) */}
-      <div className="relative h-72 sm:h-80 w-full overflow-hidden my-2">
+      <div className="relative h-72 sm:h-80 w-full overflow-hidden my-2 px-8 py-6 flex items-center justify-center">
         <img
           src={brand.imageUrl}
           alt={brand.name}
           loading="lazy"
-          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+          className="w-full h-full object-contain object-center mix-blend-multiply group-hover:scale-105 transition-transform duration-700"
         />
         {/* Soft Bottom Gradient into Card Base */}
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#F8F9FA] via-[#F8F9FA]/70 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-[#F8F9FA] to-transparent" />
       </div>
 
       {/* Bottom Footer Inside Squircle with shadow-md details */}

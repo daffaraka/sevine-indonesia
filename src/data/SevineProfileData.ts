@@ -8,6 +8,7 @@ import {
   PortfolioSample,
   OfflineEvent,
   ClientPartnerGroup,
+  PartnerBrandItem,
   TestimonialItem,
   OfficeLocation,
   ContactInfo
@@ -73,17 +74,17 @@ export const MISSION_LIST: string[] = [
 ];
 
 export const BRAND_ITEMS: BrandItem[] = [
-  {
-    id: 'sevine',
-    name: 'SEVINE',
-    category: 'bag',
-    tagline: 'Tas Stylish & Fungsional',
-    description: 'Tas stylish dan fungsional yang dirancang khusus untuk menemani mobilitas harian dengan tampilan youthful dan material pilihan.',
-    highlightPoints: ['Waterproof Fabric', 'Multi-compartment Kompartemen', 'Jahitan Bar-tack Kuat'],
-    badgeColor: 'bg-doff-navy text-white',
-    targetMarket: 'Aktivitas kampus, kerja harian, dan gaya kasual modern',
-    imageUrl: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&auto=format&fit=crop&q=80'
-  },
+  // {
+  //   id: 'sevine',
+  //   name: 'SEVINE',
+  //   category: 'bag',
+  //   tagline: 'Tas Stylish & Fungsional',
+  //   description: 'Tas stylish dan fungsional yang dirancang khusus untuk menemani mobilitas harian dengan tampilan youthful dan material pilihan.',
+  //   highlightPoints: ['Waterproof Fabric', 'Multi-compartment Kompartemen', 'Jahitan Bar-tack Kuat'],
+  //   badgeColor: 'bg-doff-navy text-white',
+  //   targetMarket: 'Aktivitas kampus, kerja harian, dan gaya kasual modern',
+  //   imageUrl: '/assets/brands/logo-sevine-1.png'
+  // },
   {
     id: 'klou',
     name: 'klou',
@@ -93,7 +94,7 @@ export const BRAND_ITEMS: BrandItem[] = [
     highlightPoints: ['Katun Premium Breathable', 'Jahitan Rantai Standar Ekspor', 'Warna Muted Earth Tone'],
     badgeColor: 'bg-[#5B6B58] text-white',
     targetMarket: 'Pencinta busana kasual minimalis & santai',
-    imageUrl: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80'
+    imageUrl: '/assets/brands/logo-brand-klou.png'
   },
   {
     id: 'laluna',
@@ -104,7 +105,7 @@ export const BRAND_ITEMS: BrandItem[] = [
     highlightPoints: ['Tekstur Kulit Sintetis Lembut', 'Aksen Hardware Gold Redup', 'Desain Ergonomis Ringan'],
     badgeColor: 'bg-[#8F3B4A] text-white',
     targetMarket: 'Wanita karier, acara semi-formal, dan gaya feminin berkelas',
-    imageUrl: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800&auto=format&fit=crop&q=80'
+    imageUrl: '/assets/brands/logo-brand-laluna.png'
   },
   {
     id: 'assaif',
@@ -115,7 +116,7 @@ export const BRAND_ITEMS: BrandItem[] = [
     highlightPoints: ['Material Ringan Tidak Gerah', 'Potongan Modern Regular-Fit', 'Detail Kerah Shanghai Presisi'],
     badgeColor: 'bg-[#8A5B38] text-white',
     targetMarket: 'Pria modern untuk ibadah, kerja santun, dan busana hari raya',
-    imageUrl: 'https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=800&auto=format&fit=crop&q=80'
+    imageUrl: '/assets/brands/logo-brand-assaif.png'
   },
   {
     id: 'nabira',
@@ -126,7 +127,7 @@ export const BRAND_ITEMS: BrandItem[] = [
     highlightPoints: ['Kain Lembut Jatuh Sempurna', 'Wudhu-friendly Sleeve', 'Motif Eksklusif Sevine Lab'],
     badgeColor: 'bg-[#8B6E8C] text-white',
     targetMarket: 'Muslimah aktif yang mengutamakan kenyamanan dan keanggunan',
-    imageUrl: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800&auto=format&fit=crop&q=80'
+    imageUrl: '/assets/brands/logo-brand-nabira.png'
   }
 ];
 
@@ -332,26 +333,285 @@ export const OFFLINE_EVENTS: OfflineEvent[] = [
   }
 ];
 
+export const ALL_PARTNER_BRANDS: PartnerBrandItem[] = [
+  // Beauty & Skincare
+  {
+    id: 'wardah',
+    name: 'Wardah Cosmetics',
+    category: 'beauty',
+    categoryLabel: 'Beauty & Skincare',
+    logo: '/assets/brands/logo-wardah.png',
+    role: 'Leading Cosmetics GWP & Bags'
+  },
+  {
+    id: 'emina',
+    name: 'Emina Beauty',
+    category: 'beauty',
+    categoryLabel: 'Beauty & Skincare',
+    logo: '/assets/brands/logo-emina.png',
+    role: 'Youth Skincare Promotional Bags'
+  },
+  {
+    id: 'light-plus',
+    name: 'Light+ by Wardah',
+    category: 'beauty',
+    categoryLabel: 'Beauty & Skincare',
+    logo: '/assets/brands/logo-light-plus-wardah.png',
+    role: 'Skincare Activation & Exclusive Pouch'
+  },
+  {
+    id: 'paragon',
+    name: 'PT Paragon Technology & Innovation',
+    category: 'beauty',
+    categoryLabel: 'Beauty & Skincare',
+    logo: '/assets/brands/logo-paragon.png',
+    role: 'National Beauty FMCG Corporate Partner'
+  },
+  // Hospitality & F&B
+  {
+    id: 'tomoro-coffee',
+    name: 'Tomoro Coffee',
+    category: 'hospitality',
+    categoryLabel: 'Hospitality & F&B',
+    logo: '/assets/brands/logo-tomoro-coffee.png',
+    role: 'National Coffee Chain Merchandise'
+  },
+  {
+    id: 'mooncha',
+    name: 'Moon Cha',
+    category: 'hospitality',
+    categoryLabel: 'Hospitality & F&B',
+    logo: '/assets/brands/logo-mooncha.png',
+    role: 'Artisanal Tea Lifestyle Collaboration'
+  },
+  {
+    id: 'hella-coffee',
+    name: 'Hella Coffee',
+    category: 'hospitality',
+    categoryLabel: 'Hospitality & F&B',
+    logo: '/assets/brands/logo-hella-coffee.png',
+    role: 'Specialty Coffee & Roastery Merchandise'
+  },
+  {
+    id: 'pleasure-please',
+    name: 'Pleasure Please',
+    category: 'hospitality',
+    categoryLabel: 'Hospitality & F&B',
+    logo: '/assets/brands/logo-pleasure-please.png',
+    role: 'Dining Space & Creative Merchandise'
+  },
+  // Retail & Company
+  {
+    id: 'yogya-heritage',
+    name: 'Yogya Heritage',
+    category: 'retail',
+    categoryLabel: 'Retail & Korporasi',
+    logo: '/assets/brands/logo-yogya-heritage.png',
+    role: 'Retail & Lifestyle Cultural Concept'
+  },
+  {
+    id: 'monic',
+    name: 'MoNic Fashion',
+    category: 'retail',
+    categoryLabel: 'Retail & Korporasi',
+    logo: '/assets/brands/logo-monic.png',
+    role: 'Fashion Apparel & Boutique Network'
+  },
+  {
+    id: 'callysta',
+    name: 'Callysta',
+    category: 'retail',
+    categoryLabel: 'Retail & Korporasi',
+    logo: '/assets/brands/logo-callysta.png',
+    role: 'Exclusive Apparel & Lifestyle Partner'
+  },
+  // Creative Community & Events
+  {
+    id: 'hello-market',
+    name: 'Hello Market Solo',
+    category: 'community',
+    categoryLabel: 'Komunitas & Event',
+    logo: '/assets/brands/logo-hello-market-solo.png',
+    role: 'Official Creative Market Partner'
+  },
+  {
+    id: 'the-buddies',
+    name: 'The Buddies in class',
+    category: 'community',
+    categoryLabel: 'Komunitas & Event',
+    logo: '/assets/brands/logo-the-buddies-in-class.png',
+    role: 'Youth Community Collaborative Apparel'
+  },
+  {
+    id: 'mula-mula',
+    name: 'Mula Mula Florist',
+    category: 'community',
+    categoryLabel: 'Komunitas & Event',
+    logo: '/assets/brands/logo-mula-mula-florist.png',
+    role: 'Floral Studio & Lifestyle Hampers'
+  },
+  {
+    id: 'aranya-flow',
+    name: 'Aranya Flow',
+    category: 'community',
+    categoryLabel: 'Komunitas & Event',
+    logo: '/assets/brands/logo-aranya-flow.png',
+    role: 'Wellness & Creative Movement Bags'
+  },
+  {
+    id: 'bynana-gift',
+    name: 'Bynana Gift',
+    category: 'community',
+    categoryLabel: 'Komunitas & Event',
+    logo: '/assets/brands/logo-bynana-gift.png',
+    role: 'Curated Gift & Souvenir Bags'
+  },
+  {
+    id: 'waktu-luang',
+    name: 'Waktu Luang',
+    category: 'community',
+    categoryLabel: 'Komunitas & Event',
+    logo: '/assets/brands/logo-waktu-luang.png',
+    role: 'Creative Platform & Community Space'
+  }
+];
+
 export const CLIENT_PARTNER_GROUPS: ClientPartnerGroup[] = [
   {
     category: 'Retail & Company',
     subtitle: 'Mitra Ritel & Korporasi',
-    clients: ['Yogya Heritage', 'MoNic Fashion', 'Metro Living Partner', 'Nusa Creative Lab']
+    clients: ['Yogya Heritage', 'MoNic Fashion', 'Callysta', 'Paragon Technology'],
+    partnerItems: [
+      {
+        id: 'yogya-heritage',
+        name: 'Yogya Heritage',
+        logo: '/assets/brands/logo-yogya-heritage.png',
+        role: 'Retail & Cultural Merchandise'
+      },
+      {
+        id: 'monic',
+        name: 'MoNic Fashion',
+        logo: '/assets/brands/logo-monic.png',
+        role: 'Fashion Boutique Partner'
+      },
+      {
+        id: 'callysta',
+        name: 'Callysta',
+        logo: '/assets/brands/logo-callysta.png',
+        role: 'Apparel & Lifestyle Collection'
+      },
+      {
+        id: 'paragon-corp',
+        name: 'PT Paragon Technology',
+        logo: '/assets/brands/logo-paragon.png',
+        role: 'Corporate Event & B2B GWP'
+      }
+    ]
   },
   {
     category: 'Restaurant & Cafe',
     subtitle: 'Hospitality & F&B Merchandise',
-    clients: ['Tomoro Coffee', 'Moon Cha', 'Pleasure Please', 'Kopi Titik Temu']
+    clients: ['Tomoro Coffee', 'Moon Cha', 'Hella Coffee', 'Pleasure Please'],
+    partnerItems: [
+      {
+        id: 'tomoro-coffee',
+        name: 'Tomoro Coffee',
+        logo: '/assets/brands/logo-tomoro-coffee.png',
+        role: 'Coffee Chain Merchandise'
+      },
+      {
+        id: 'mooncha',
+        name: 'Moon Cha',
+        logo: '/assets/brands/logo-mooncha.png',
+        role: 'Artisanal Tea Collab'
+      },
+      {
+        id: 'hella-coffee',
+        name: 'Hella Coffee',
+        logo: '/assets/brands/logo-hella-coffee.png',
+        role: 'Specialty Coffee Roastery'
+      },
+      {
+        id: 'pleasure-please',
+        name: 'Pleasure Please',
+        logo: '/assets/brands/logo-pleasure-please.png',
+        role: 'Lifestyle Dining Concept'
+      }
+    ]
   },
   {
     category: 'Creative Community',
     subtitle: 'Komunitas Kreatif & Event',
-    clients: ['Hello Market Solo', 'The Buddies in class', 'Mula Mula Florist', 'Aranya Flow', 'Bynana Gift', 'Waktu Luang Project']
+    clients: ['Hello Market Solo', 'The Buddies in class', 'Mula Mula Florist', 'Aranya Flow', 'Bynana Gift', 'Waktu Luang'],
+    partnerItems: [
+      {
+        id: 'hello-market',
+        name: 'Hello Market Solo',
+        logo: '/assets/brands/logo-hello-market-solo.png',
+        role: 'Prime Creative Market'
+      },
+      {
+        id: 'the-buddies',
+        name: 'The Buddies in class',
+        logo: '/assets/brands/logo-the-buddies-in-class.png',
+        role: 'Youth Community Apparel'
+      },
+      {
+        id: 'mula-mula',
+        name: 'Mula Mula Florist',
+        logo: '/assets/brands/logo-mula-mula-florist.png',
+        role: 'Floral Studio & Hampers'
+      },
+      {
+        id: 'aranya-flow',
+        name: 'Aranya Flow',
+        logo: '/assets/brands/logo-aranya-flow.png',
+        role: 'Wellness Movement Bag'
+      },
+      {
+        id: 'bynana-gift',
+        name: 'Bynana Gift',
+        logo: '/assets/brands/logo-bynana-gift.png',
+        role: 'Curated Souvenirs'
+      },
+      {
+        id: 'waktu-luang',
+        name: 'Waktu Luang',
+        logo: '/assets/brands/logo-waktu-luang.png',
+        role: 'Creative Space Project'
+      }
+    ]
   },
   {
     category: 'Beauty & Skincare',
     subtitle: 'Kolaborasi Brand Kecantikan',
-    clients: ['Wardah Cosmetics', 'Emina Beauty', 'Light+ Skincare', 'Glow & Grace']
+    clients: ['Wardah Cosmetics', 'Emina Beauty', 'Light+ by Wardah', 'Paragon Group'],
+    partnerItems: [
+      {
+        id: 'wardah',
+        name: 'Wardah Cosmetics',
+        logo: '/assets/brands/logo-wardah.png',
+        role: 'Cosmetics GWP & Pouches'
+      },
+      {
+        id: 'emina',
+        name: 'Emina Beauty',
+        logo: '/assets/brands/logo-emina.png',
+        role: 'Youth Skincare Bags'
+      },
+      {
+        id: 'light-plus',
+        name: 'Light+ by Wardah',
+        logo: '/assets/brands/logo-light-plus-wardah.png',
+        role: 'Campaign Activation Pouch'
+      },
+      {
+        id: 'paragon',
+        name: 'Paragon Group',
+        logo: '/assets/brands/logo-paragon.png',
+        role: 'Beauty Holding Partner'
+      }
+    ]
   }
 ];
 
@@ -362,7 +622,14 @@ export const TESTIMONIALS_LIST: TestimonialItem[] = [
     date: '14/09/2026',
     rating: 5,
     highlightAspect: 'Kapasitas Lega & Fleksibel',
-    content: 'Kapasitas tas minimalis, tapi setelah diisi muat hp, make up pouch, dan dompet tebal. Nyaman dipakai, bahannya tebal fleksibel, jahitan rapi banget tanpa benang sisa.'
+    content: 'Kapasitas tas minimalis, tapi setelah diisi muat hp, make up pouch, dan dompet tebal. Nyaman dipakai, bahannya tebal fleksibel, jahitan rapi banget tanpa benang sisa.',
+    screenshotImage: '/assets/testimonials/customer-testimonial-1.png',
+    buyerPhotos: [
+      '/assets/testimonials/testi-1-buyer-photo-1.png',
+      '/assets/testimonials/testi-1-buyer-photo-2.png',
+      '/assets/testimonials/testi-1-buyer-photo-3.png'
+    ],
+    platform: 'Shopee Official Shop'
   },
   {
     id: 'testi-2',
@@ -370,7 +637,16 @@ export const TESTIMONIALS_LIST: TestimonialItem[] = [
     date: '14/09/2026',
     rating: 5,
     highlightAspect: 'Desain Imut & Material Tebal',
-    content: 'Muat banyak loo walaupun ukurannya tampak mini dari luar. Desainnya lucu banget cantiikkk! Bahannya kokoh dan tidak mudah kusut.'
+    content: 'Muat banyak loo walaupun ukurannya tampak mini dari luar. Desainnya lucu banget cantiikkk! Bahannya kokoh dan tidak mudah kusut.',
+    screenshotImage: '/assets/testimonials/customer-testimonial-2.png',
+    buyerPhotos: [
+      '/assets/testimonials/testi-2-buyer-photo-1.png',
+      '/assets/testimonials/testi-2-buyer-photo-2.png',
+      '/assets/testimonials/testi-2-buyer-photo-3.png',
+      '/assets/testimonials/testi-2-buyer-photo-4.png',
+      '/assets/testimonials/testi-2-buyer-photo-5.png'
+    ],
+    platform: 'Shopee Official Shop'
   },
   {
     id: 'testi-3',
@@ -378,7 +654,9 @@ export const TESTIMONIALS_LIST: TestimonialItem[] = [
     date: '13/09/2026',
     rating: 5,
     highlightAspect: 'Sudah Repeat Order 2 Model',
-    content: 'Bagusss pol, suka banget sama tasnya! Ini udah koleksi ke-2 dari toko ini dan tidak pernah mengecewakan. Dipakai kuliah dan nongkrong selalu ada yang nanya beli di mana.'
+    content: 'Bagusss pol, suka banget sama tasnya! Ini udah koleksi ke-2 dari toko ini dan tidak pernah mengecewakan. Dipakai kuliah dan nongkrong selalu ada yang nanya beli di mana.',
+    screenshotImage: '/assets/testimonials/customer-testimonial-3.png',
+    platform: 'Shopee Official Shop'
   },
   {
     id: 'testi-4',
@@ -386,7 +664,9 @@ export const TESTIMONIALS_LIST: TestimonialItem[] = [
     date: '13/09/2026',
     rating: 5,
     highlightAspect: 'Material Tahan Air (Waterproof)',
-    content: 'Kapasitas muat banyak dan kuat. Bahannya oke banget, ringan dan sejauh ini sangat awet dipakai harian. Beneran kedap air waktu kehujanan gerimis dan mudah dilap bersih!'
+    content: 'Kapasitas muat banyak dan kuat. Bahannya oke banget, ringan dan sejauh ini sangat awet dipakai harian. Beneran kedap air waktu kehujanan gerimis dan mudah dilap bersih!',
+    screenshotImage: '/assets/testimonials/customer-testimonial-4.png',
+    platform: 'Shopee Official Shop'
   }
 ];
 

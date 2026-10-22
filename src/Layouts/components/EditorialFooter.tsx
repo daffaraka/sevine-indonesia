@@ -2,15 +2,19 @@ import React from 'react';
 import { CompanyProfileService } from '../../services/CompanyProfileService';
 
 interface EditorialFooterProps {
+  id?: string;
   onNavigate: (sectionId: string) => void;
 }
 
-export const EditorialFooter: React.FC<EditorialFooterProps> = ({ onNavigate }) => {
+export const EditorialFooter: React.FC<EditorialFooterProps> = ({
+  id = 'editorial-footer',
+  onNavigate
+}) => {
   const contact = CompanyProfileService.getContactInfo();
   const offices = CompanyProfileService.getOfficeLocations();
 
   return (
-    <footer className="bg-[#0D1826] text-[#F6F4F0] border-t border-white/10 overflow-hidden">
+    <footer id={id} className="bg-[#0D1826] text-[#F6F4F0] border-t border-white/10 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-8 pt-16 pb-12">
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-16 border-b border-white/10">

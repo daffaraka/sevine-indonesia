@@ -10,7 +10,13 @@ import { EditorialStoryManifesto } from '../editorial-story/EditorialStoryManife
 import { EditorialCapsulePortfolio } from '../editorial-portfolio/EditorialCapsulePortfolio';
 import { EditorialContactAtelier } from '../editorial-contact/EditorialContactAtelier';
 
-export const EditorialProfilePage: React.FC = () => {
+interface EditorialProfilePageProps {
+  id?: string;
+}
+
+export const EditorialProfilePage: React.FC<EditorialProfilePageProps> = ({
+  id = 'editorial-profile-page'
+}) => {
   const [activeSection, setActiveSection] = useState<string>('ed-hero');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
@@ -53,31 +59,33 @@ export const EditorialProfilePage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F6F4F0] text-[#171715] selection:bg-[#9E4738] selection:text-[#F6F4F0]">
+    <div id={id} className="min-h-screen flex flex-col bg-[#F6F4F0] text-[#171715] selection:bg-[#9E4738] selection:text-[#F6F4F0]">
       <EditorialHeader
+        id="editorial-header"
         activeSection={activeSection}
         onNavigate={handleNavigate}
         onOpenMobileMenu={() => setIsMobileMenuOpen(true)}
       />
 
       <EditorialMobileDrawer
+        id="editorial-mobile-drawer"
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
         activeSection={activeSection}
         onNavigate={handleNavigate}
       />
 
-      <main className="flex-1">
-        <EditorialHeroCover onNavigate={handleNavigate} />
-        <EditorialBrandShowcase />
-        <EditorialBentoLookbook onNavigate={handleNavigate} />
-        <KineticNumbersSection />
-        <EditorialStoryManifesto />
-        <EditorialCapsulePortfolio />
-        <EditorialContactAtelier />
+      <main id={`${id}-main`} className="flex-1">
+        <EditorialHeroCover id="ed-hero" onNavigate={handleNavigate} />
+        <EditorialBrandShowcase id="ed-brands" />
+        <EditorialBentoLookbook id="ed-lookbook" onNavigate={handleNavigate} />
+        <KineticNumbersSection id="ed-numbers" />
+        <EditorialStoryManifesto id="ed-story" />
+        <EditorialCapsulePortfolio id="ed-capsule" />
+        <EditorialContactAtelier id="ed-contact" />
       </main>
 
-      <EditorialFooter onNavigate={handleNavigate} />
+      <EditorialFooter id="editorial-footer" onNavigate={handleNavigate} />
     </div>
   );
 };

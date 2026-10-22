@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 interface EditorialHeaderProps {
+  id?: string;
   activeSection: string;
   onNavigate: (sectionId: string) => void;
   onOpenMobileMenu: () => void;
@@ -81,6 +82,7 @@ const MenuLinkButton: React.FC<{
 );
 
 export const EditorialHeader: React.FC<EditorialHeaderProps> = ({
+  id = "editorial-header",
   activeSection,
   onNavigate,
   onOpenMobileMenu,
@@ -89,15 +91,18 @@ export const EditorialHeader: React.FC<EditorialHeaderProps> = ({
 
   return (
     <>
-      <BrandMastheadRow onNavigate={onNavigate} />
+      <div id={`${id}-masthead`}>
+        <BrandMastheadRow onNavigate={onNavigate} />
+      </div>
 
       <nav
+        id={id}
         aria-label="Navigasi Editorial"
         className={`sticky top-0 z-40 bg-[#132238]/95 backdrop-blur-md text-[#F6F4F0] border-b border-[#F6F4F0]/10 transition-shadow ${
           showCompactWordmark ? "shadow-[0_4px_12px_rgba(19,34,56,0.25)]" : ""
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-8 h-8 sm:h-9 flex items-center justify-between gap-3">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-8 h-8 py-8 sm:h-9 flex items-center justify-between gap-3">
           {/* Kiri: trigger mobile + wordmark ringkas saat sticky */}
           <div className="flex items-center gap-2.5 min-w-0">
             <button

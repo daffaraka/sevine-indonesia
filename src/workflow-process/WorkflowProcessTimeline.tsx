@@ -2,11 +2,15 @@ import React from 'react';
 import { WorkflowStepCard } from './WorkflowStepCard';
 import { CompanyProfileService } from '../services/CompanyProfileService';
 
-export const WorkflowProcessTimeline: React.FC = () => {
+interface WorkflowProcessTimelineProps {
+  id?: string;
+}
+
+export const WorkflowProcessTimeline: React.FC<WorkflowProcessTimelineProps> = ({ id = 'workflow' }) => {
   const steps = CompanyProfileService.getWorkflowSteps();
 
   return (
-    <section id="workflow" className="py-16 md:py-24 bg-[#F8F9FA]">
+    <section id={id} className="py-16 md:py-24 bg-[#F8F9FA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Header Seksi */}
         <div className="max-w-2xl space-y-3">

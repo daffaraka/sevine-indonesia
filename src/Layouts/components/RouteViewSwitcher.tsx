@@ -3,16 +3,19 @@ import React from 'react';
 export type AppRouteMode = 'classic' | 'editorial';
 
 interface RouteViewSwitcherProps {
+  id?: string;
   currentRoute: AppRouteMode;
   onSwitchRoute: (route: AppRouteMode) => void;
 }
 
 export const RouteViewSwitcher: React.FC<RouteViewSwitcherProps> = ({
+  id = 'route-view-switcher',
   currentRoute,
   onSwitchRoute
 }) => {
   return (
     <div
+      id={id}
       className="fixed bottom-5 left-5 z-50 flex items-center p-1 rounded-full bg-[#171715]/95 text-[#F6F4F0] border border-[#D8D3C8]/25 shadow-lg backdrop-blur-md"
       role="navigation"
       aria-label="Pilih Tampilan Route"

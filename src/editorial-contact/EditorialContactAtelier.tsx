@@ -2,12 +2,18 @@ import React from 'react';
 import { CompanyProfileService } from '../services/CompanyProfileService';
 import { EditorialInquiryForm } from './EditorialInquiryForm';
 
-export const EditorialContactAtelier: React.FC = () => {
+interface EditorialContactAtelierProps {
+  id?: string;
+}
+
+export const EditorialContactAtelier: React.FC<EditorialContactAtelierProps> = ({
+  id = 'ed-contact'
+}) => {
   const offices = CompanyProfileService.getOfficeLocations();
   const contact = CompanyProfileService.getContactInfo();
 
   return (
-    <section id="ed-contact" className="py-16 sm:py-24 bg-[#132238] border-b border-white/10 text-white">
+    <section id={id} className="py-16 sm:py-24 bg-[#132238] border-b border-white/10 text-white">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-8 space-y-14">
         {/* Section Masthead */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-6">
@@ -32,6 +38,7 @@ export const EditorialContactAtelier: React.FC = () => {
             {offices.map((office, idx) => (
               <article
                 key={office.id}
+                id={`office-card-${office.id}`}
                 className="p-7 rounded-2xl bg-[#1B2E4B] border border-white/10 space-y-4 shadow-md hover:shadow-xl transition-shadow"
               >
                 <div className="flex items-center justify-between font-mono text-[10px] tracking-[0.22em] uppercase text-[#C27B66]">
@@ -86,7 +93,7 @@ export const EditorialContactAtelier: React.FC = () => {
 
           {/* Right: Minimalist Atelier Inquiry Form */}
           <div className="lg:col-span-7">
-            <EditorialInquiryForm />
+            <EditorialInquiryForm id={`${id}-form`} />
           </div>
         </div>
       </div>

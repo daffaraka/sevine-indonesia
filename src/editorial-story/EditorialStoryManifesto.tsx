@@ -2,12 +2,18 @@ import React from 'react';
 import { CompanyProfileService } from '../services/CompanyProfileService';
 import { EditorialWorkflowIndex } from './EditorialWorkflowIndex';
 
-export const EditorialStoryManifesto: React.FC = () => {
+interface EditorialStoryManifestoProps {
+  id?: string;
+}
+
+export const EditorialStoryManifesto: React.FC<EditorialStoryManifestoProps> = ({
+  id = 'ed-story'
+}) => {
   const coreValues = CompanyProfileService.getCoreValues();
   const { vision, missions } = CompanyProfileService.getVisionMission();
 
   return (
-    <section id="ed-story" className="py-16 sm:py-24 bg-[#132238] border-b border-white/10 text-white">
+    <section id={id} className="py-16 sm:py-24 bg-[#132238] border-b border-white/10 text-white">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-8 space-y-20">
         {/* Part 1: Two-Column Asymmetric Magazine Spread (Vision & Mission) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
@@ -68,6 +74,7 @@ export const EditorialStoryManifesto: React.FC = () => {
             {coreValues.map((val) => (
               <article
                 key={val.letter}
+                id={`core-value-${val.letter.toLowerCase()}`}
                 className="bg-[#1B2E4B] border border-white/10 rounded-2xl p-7 sm:p-8 flex flex-col justify-between space-y-8 shadow-md hover:shadow-xl transition-shadow"
               >
                 <div className="flex items-start justify-between">
