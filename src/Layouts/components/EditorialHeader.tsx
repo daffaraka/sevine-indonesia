@@ -50,10 +50,10 @@ const BrandMastheadRow: React.FC<{
         className="text-center focus:outline-none group"
         aria-label="SEVINE Indonesia — kembali ke atas"
       >
-        <span className="block font-serif text-lg sm:text-2xl lg:text-3xl font-semibold tracking-[0.3em] pl-[0.3em] leading-none group-hover:text-[#C27B66] transition-colors">
+        <span className="block font-serif xl:text-5xl sm:text-2xl lg:text-3xl font-bold tracking-[0.3em] pl-[0.3em] leading-none group-hover:text-[#C27B66] transition-colors">
           SEVINE
         </span>
-        <span className="block font-mono text-[7px] sm:text-[8px] tracking-[0.3em] pl-[0.3em] uppercase text-[#F6F4F0]/55 mt-0.5">
+        <span className="block font-mono xl:text-[24px] sm:text-[8px] tracking-[0.3em] pl-[0.3em] uppercase text-[#F6F4F0]/55 mt-0.5">
           Indonesia
         </span>
       </button>

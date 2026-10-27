@@ -12,8 +12,15 @@ export const CompanyAboutStory: React.FC<CompanyAboutStoryProps> = ({ id = 'abou
   const { vision, missions } = CompanyProfileService.getVisionMission();
 
   return (
-    <section id={id} className="py-16 md:py-24 bg-white border-y border-slate-200/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section
+      id={id}
+      className="relative py-16 md:py-24 bg-textile-texture overflow-hidden"
+    >
+      {/* Top and Bottom Subtle Transition Blurs */}
+      <div className="section-seam-blur-top" />
+      <div className="section-seam-blur-bottom" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Header Seksi */}
         <div className="max-w-3xl space-y-3">
           <div className="text-xs font-bold text-doff-terracotta uppercase tracking-wider">

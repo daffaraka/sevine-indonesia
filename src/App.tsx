@@ -12,14 +12,14 @@ const resolveRouteFromLocation = (): AppRouteMode => {
   const params = new URLSearchParams(window.location.search);
 
   if (
-    path.includes("/classic") ||
-    hash.includes("classic") ||
-    params.get("view") === "classic"
+    path.includes("/editorial") ||
+    hash.includes("editorial") ||
+    params.get("view") === "editorial"
   ) {
-    return "classic";
+    return "editorial";
   }
 
-  return "editorial";
+  return "classic";
 };
 
 export const App: React.FC = () => {

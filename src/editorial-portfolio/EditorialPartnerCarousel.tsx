@@ -4,11 +4,15 @@ import { EditorialPartnerCarouselRow } from './EditorialPartnerCarouselRow';
 
 interface EditorialPartnerCarouselProps {
   brands: PartnerBrandItem[];
+  maskVariant?: 'dark' | 'light';
 }
 
 const PRIORITY_IDS = ['paragon', 'wardah', 'emina', 'light-plus'];
 
-export const EditorialPartnerCarousel: React.FC<EditorialPartnerCarouselProps> = ({ brands }) => {
+export const EditorialPartnerCarousel: React.FC<EditorialPartnerCarouselProps> = ({
+  brands,
+  maskVariant = 'light'
+}) => {
   // Extract priority featured brands
   const brandMap = useMemo(() => {
     const map = new Map<string, PartnerBrandItem>();
@@ -59,10 +63,22 @@ export const EditorialPartnerCarousel: React.FC<EditorialPartnerCarouselProps> =
   return (
     <div className="relative space-y-1 sm:space-y-2 py-2 hover-pause">
       {/* Left Gradient Edge Mask for Smooth Fade-In */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-[#F8F9FA] via-[#F8F9FA]/80 to-transparent z-10" />
+      <div
+        className={`pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-32 z-10 ${
+          maskVariant === 'dark'
+            ? 'bg-gradient-to-r from-[#0F1B2C] via-[#0F1B2C]/80 to-transparent'
+            : 'bg-gradient-to-r from-white via-white/80 to-transparent'
+        }`}
+      />
 
       {/* Right Gradient Edge Mask for Smooth Fade-Out */}
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-[#F8F9FA] via-[#F8F9FA]/80 to-transparent z-10" />
+      <div
+        className={`pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-32 z-10 ${
+          maskVariant === 'dark'
+            ? 'bg-gradient-to-l from-[#0F1B2C] via-[#0F1B2C]/80 to-transparent'
+            : 'bg-gradient-to-l from-white via-white/80 to-transparent'
+        }`}
+      />
 
       {/* Row 1: Leftward (Paragon, Wardah, Emina, Light+ first) - Smooth & Relaxed Speed (55s) */}
       <EditorialPartnerCarouselRow

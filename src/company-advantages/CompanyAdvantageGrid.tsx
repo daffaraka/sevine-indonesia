@@ -10,8 +10,11 @@ export const CompanyAdvantageGrid: React.FC<CompanyAdvantageGridProps> = ({ id =
   const advantages = CompanyProfileService.getAdvantages();
 
   return (
-    <section id={id} className="py-16 md:py-24 bg-white border-y border-slate-200/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id={id} className="relative py-16 md:py-24 bg-blue-diagonal-stripes overflow-hidden">
+      {/* Top and Bottom Subtle Transition Blurs */}
+      <div className="section-seam-blur-top" />
+      <div className="section-seam-blur-bottom" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Header Seksi */}
         <div className="max-w-2xl space-y-3">
           <div className="text-xs font-bold text-doff-terracotta uppercase tracking-wider">

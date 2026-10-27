@@ -66,7 +66,7 @@ export const ClassicProfilePage: React.FC<ClassicProfilePageProps> = ({ id = 'cl
   };
 
   return (
-    <div id={id} className="min-h-screen flex flex-col bg-[#F8F9FA] text-[#1B2E4B] selection:bg-[#1B2E4B] selection:text-white">
+    <div id={id} className="min-h-screen flex flex-col bg-[#F8FAFC] text-[#1B2E4B] selection:bg-[#1B2E4B] selection:text-white">
       <MainNavbar
         id="classic-navbar"
         activeSection={activeSection}

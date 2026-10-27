@@ -6,7 +6,7 @@
   html {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     color: #1B2E4B;
-    background-color: #F8F9FA;
+    background-color: #F8FAFC;
   }
 
   /* Smooth scroll and mobile touch settings */
@@ -35,7 +35,96 @@
 
   /* Muted linen background tone */
   .bg-warm-linen {
-    background-color: #F8F9FA;
+    background-color: #F8FAFC;
+  }
+
+  /* 1. Sevine Navy Multi-Point Mesh Gradient Background */
+  .bg-blue-mesh-gradient {
+    background-color: #F8FAFD;
+    background-image:
+      radial-gradient(at 0% 0%, rgba(27, 46, 75, 0.16) 0px, transparent 55%),
+      radial-gradient(at 100% 15%, rgba(27, 46, 75, 0.14) 0px, transparent 50%),
+      radial-gradient(at 15% 100%, rgba(19, 34, 56, 0.13) 0px, transparent 55%),
+      radial-gradient(at 85% 85%, rgba(27, 46, 75, 0.10) 0px, transparent 50%),
+      linear-gradient(180deg, #F3F6FA 0%, #FFFFFF 50%, #EFF4F9 100%);
+  }
+
+  /* 2. Textile Linen Fabric Image Background (Generated Custom Background) */
+  .bg-textile-texture,
+  .bg-blue-dots-pattern {
+    background-color: #F8FAFD;
+    background-image:
+      linear-gradient(180deg, rgba(248, 250, 253, 0.85) 0%, rgba(255, 255, 255, 0.74) 50%, rgba(240, 246, 253, 0.88) 100%),
+      url('/assets/backgrounds/sevine-textile-texture-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* 3. Architectural Blue Grid / Crosshatch Background (Sevine Navy Tones) */
+  .bg-blue-grid-pattern {
+    background-color: #FFFFFF;
+    background-image:
+      radial-gradient(ellipse at 50% 0%, rgba(27, 46, 75, 0.12) 0%, transparent 68%),
+      radial-gradient(ellipse at 90% 90%, rgba(27, 46, 75, 0.08) 0%, transparent 50%),
+      linear-gradient(to right, rgba(27, 46, 75, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(27, 46, 75, 0.08) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+  }
+
+  /* 4. Diagonal Blue Gradient & Pinstripe Texture Background */
+  .bg-blue-diagonal-stripes {
+    background-color: #F4F7FC;
+    background-image:
+      repeating-linear-gradient(
+        -45deg,
+        rgba(27, 46, 75, 0.05),
+        rgba(27, 46, 75, 0.05) 1.5px,
+        transparent 1.5px,
+        transparent 18px
+      ),
+      linear-gradient(135deg, #EAF1FA 0%, #FFFFFF 52%, #E7EFF9 100%);
+  }
+
+  /* 5. Staggered Dual-Tone Blue Cross-Dots Background (Larger Sevine Dots) */
+  .bg-blue-cross-dots {
+    background-color: #FFFFFF;
+    background-image:
+      radial-gradient(circle at 10% 20%, rgba(27, 46, 75, 0.14) 0%, transparent 45%),
+      radial-gradient(circle at 90% 80%, rgba(27, 46, 75, 0.12) 0%, transparent 45%),
+      radial-gradient(rgba(27, 46, 75, 0.26) 3px, transparent 3px),
+      radial-gradient(rgba(27, 46, 75, 0.16) 3px, transparent 3px);
+    background-size: 100% 100%, 100% 100%, 34px 34px, 34px 34px;
+    background-position: 0 0, 0 0, 0 0, 17px 17px;
+  }
+
+  /* Section Transition Blur & Soft Fade Masks (Refined & Subtle) */
+  .section-seam-blur-top {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 2.5rem;
+    pointer-events: none;
+    z-index: 5;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  .section-seam-blur-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2.5rem;
+    pointer-events: none;
+    z-index: 5;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
   }
 
   /* Kinetic Shutter Drag / Motion Blur Effect (Ref Image 3) */
@@ -100,6 +189,25 @@
   .hover-pause:hover .animate-marquee-left,
   .hover-pause:hover .animate-marquee-right {
     animation-play-state: paused;
+  }
+
+  /* Clean Minimal Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #CBD5E1;
+    border-radius: 9999px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #94A3B8;
+  }
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #CBD5E1 transparent;
   }
 }
 

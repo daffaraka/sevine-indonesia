@@ -46,11 +46,11 @@ export const EditorialPartnersPress: React.FC<EditorialPartnersPressProps> = ({
               RINGKASAN SEKTOR KEMITRAAN
             </span>
             <span className="font-mono text-[10px] text-slate-500">
-              RETAIL • HOSPITALITY • BEAUTY • CREATIVE
+              BEAUTY • RETAIL • HOSPITALITY • CREATIVE
             </span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {partnerGroups.map((group, idx) => (
               <EditorialPartnerCategoryCard key={group.category} group={group} index={idx} />
             ))}

@@ -1,6 +1,6 @@
-import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
-import { BrandItem } from '../types/CompanyProfileTypes';
+import React from "react";
+import { ArrowUpRight } from "lucide-react";
+import { BrandItem } from "../types/CompanyProfileTypes";
 
 interface BrandCardItemProps {
   id?: string;
@@ -8,11 +8,18 @@ interface BrandCardItemProps {
   onSelect: (brand: BrandItem) => void;
 }
 
-export const BrandCardItem: React.FC<BrandCardItemProps> = ({ id, brand, onSelect }) => {
+export const BrandCardItem: React.FC<BrandCardItemProps> = ({
+  id,
+  brand,
+  onSelect,
+}) => {
   const cardId = id || `brand-card-${brand.id}`;
 
   return (
-    <div id={cardId} className="bg-white rounded-xl border border-slate-200/90 shadow-md hover:shadow-lg overflow-hidden flex flex-col justify-between group hover:border-slate-300 transition-all">
+    <div
+      id={cardId}
+      className="bg-white rounded-lg border-2 border-slate-300/90 shadow-md hover:shadow-lg overflow-hidden flex flex-col justify-between group hover:border-slate-300 transition-all"
+    >
       {/* Brand Image Preview */}
       <div className="relative h-48 w-full overflow-hidden bg-slate-50 p-6 flex items-center justify-center">
         <img
@@ -21,11 +28,6 @@ export const BrandCardItem: React.FC<BrandCardItemProps> = ({ id, brand, onSelec
           className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
         />
-        <div className="absolute top-3 left-3">
-          <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-xs ${brand.badgeColor}`}>
-            {brand.name}
-          </span>
-        </div>
       </div>
 
       {/* Brand Content */}
@@ -57,7 +59,7 @@ export const BrandCardItem: React.FC<BrandCardItemProps> = ({ id, brand, onSelec
 
           <button
             onClick={() => onSelect(brand)}
-            className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-slate-50 hover:bg-slate-100 text-doff-navy text-xs font-semibold transition-colors"
+            className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-slate-300/50 border-2 border-dark hover:bg-blue-700/50 text-doff-navy text-xs font-semibold transition-colors"
           >
             <span>Lihat Detail Brand</span>
             <ArrowUpRight className="w-3.5 h-3.5" />

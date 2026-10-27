@@ -478,6 +478,37 @@ export const ALL_PARTNER_BRANDS: PartnerBrandItem[] = [
 
 export const CLIENT_PARTNER_GROUPS: ClientPartnerGroup[] = [
   {
+    category: 'Beauty & Skincare',
+    subtitle: 'Kolaborasi Brand Kecantikan',
+    clients: ['Wardah Cosmetics', 'Emina Beauty', 'Light+ by Wardah', 'Paragon Group'],
+    partnerItems: [
+      {
+        id: 'wardah',
+        name: 'Wardah Cosmetics',
+        logo: '/assets/brands/logo-wardah.png',
+        role: 'Cosmetics GWP & Pouches'
+      },
+      {
+        id: 'emina',
+        name: 'Emina Beauty',
+        logo: '/assets/brands/logo-emina.png',
+        role: 'Youth Skincare Bags'
+      },
+      {
+        id: 'light-plus',
+        name: 'Light+ by Wardah',
+        logo: '/assets/brands/logo-light-plus-wardah.png',
+        role: 'Campaign Activation Pouch'
+      },
+      {
+        id: 'paragon',
+        name: 'Paragon Group',
+        logo: '/assets/brands/logo-paragon.png',
+        role: 'Beauty Holding Partner'
+      }
+    ]
+  },
+  {
     category: 'Retail & Company',
     subtitle: 'Mitra Ritel & Korporasi',
     clients: ['Yogya Heritage', 'MoNic Fashion', 'Callysta', 'Paragon Technology'],
@@ -579,37 +610,6 @@ export const CLIENT_PARTNER_GROUPS: ClientPartnerGroup[] = [
         name: 'Waktu Luang',
         logo: '/assets/brands/logo-waktu-luang.png',
         role: 'Creative Space Project'
-      }
-    ]
-  },
-  {
-    category: 'Beauty & Skincare',
-    subtitle: 'Kolaborasi Brand Kecantikan',
-    clients: ['Wardah Cosmetics', 'Emina Beauty', 'Light+ by Wardah', 'Paragon Group'],
-    partnerItems: [
-      {
-        id: 'wardah',
-        name: 'Wardah Cosmetics',
-        logo: '/assets/brands/logo-wardah.png',
-        role: 'Cosmetics GWP & Pouches'
-      },
-      {
-        id: 'emina',
-        name: 'Emina Beauty',
-        logo: '/assets/brands/logo-emina.png',
-        role: 'Youth Skincare Bags'
-      },
-      {
-        id: 'light-plus',
-        name: 'Light+ by Wardah',
-        logo: '/assets/brands/logo-light-plus-wardah.png',
-        role: 'Campaign Activation Pouch'
-      },
-      {
-        id: 'paragon',
-        name: 'Paragon Group',
-        logo: '/assets/brands/logo-paragon.png',
-        role: 'Beauty Holding Partner'
       }
     ]
   }

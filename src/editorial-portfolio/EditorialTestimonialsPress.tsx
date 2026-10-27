@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Star, Maximize2 } from 'lucide-react';
-import { TestimonialItem } from '../types/CompanyProfileTypes';
-import { TestimonialImageLightbox } from '../client-testimonials/TestimonialImageLightbox';
-import { TestimonialBuyerPhotoStrip } from '../client-testimonials/TestimonialBuyerPhotoStrip';
-import { TestimonialAuthorCard } from '../client-testimonials/TestimonialAuthorCard';
+import React, { useState } from "react";
+import { Star, Maximize2 } from "lucide-react";
+import { TestimonialItem } from "../types/CompanyProfileTypes";
+import { TestimonialImageLightbox } from "../client-testimonials/TestimonialImageLightbox";
+import { TestimonialBuyerPhotoStrip } from "../client-testimonials/TestimonialBuyerPhotoStrip";
+import { TestimonialAuthorCard } from "../client-testimonials/TestimonialAuthorCard";
 
 interface EditorialTestimonialsPressProps {
   testimonials: TestimonialItem[];
@@ -15,12 +15,18 @@ interface ActiveLightboxData {
   subtitle?: string;
 }
 
-export const EditorialTestimonialsPress: React.FC<EditorialTestimonialsPressProps> = ({
-  testimonials
-}) => {
-  const [lightboxData, setLightboxData] = useState<ActiveLightboxData | null>(null);
+export const EditorialTestimonialsPress: React.FC<
+  EditorialTestimonialsPressProps
+> = ({ testimonials }) => {
+  const [lightboxData, setLightboxData] = useState<ActiveLightboxData | null>(
+    null,
+  );
 
-  const handleOpenLightbox = (src: string, title: string, subtitle?: string) => {
+  const handleOpenLightbox = (
+    src: string,
+    title: string,
+    subtitle?: string,
+  ) => {
     setLightboxData({ src, title, subtitle });
   };
 
@@ -30,7 +36,7 @@ export const EditorialTestimonialsPress: React.FC<EditorialTestimonialsPressProp
 
   return (
     <div className="space-y-6 sm:space-y-8">
-      <div className="max-w-4xl mx-auto flex items-baseline justify-between border-b border-slate-200 pb-2.5">
+      <div className="max-w-8xl mx-auto flex items-baseline justify-between border-b border-slate-200 pb-2.5">
         <span className="font-mono text-[10px] tracking-[0.26em] uppercase text-[#C27B66]">
           TESTIMONI KLIEN &amp; RESELLER
         </span>
@@ -40,7 +46,7 @@ export const EditorialTestimonialsPress: React.FC<EditorialTestimonialsPressProp
       </div>
 
       {/* Layout 2 Kolom Ringkas (Ukuran Semula) */}
-      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+      <div className="max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
         {testimonials.map((t) => (
           <article
             key={t.id}
@@ -54,7 +60,10 @@ export const EditorialTestimonialsPress: React.FC<EditorialTestimonialsPressProp
                 </span>
                 <div className="flex items-center gap-0.5 text-amber-500">
                   {Array.from({ length: t.rating }).map((_, i) => (
-                    <Star key={i} className="w-3 h-3 fill-amber-400 text-amber-400" />
+                    <Star
+                      key={i}
+                      className="w-3 h-3 fill-amber-400 text-amber-400"
+                    />
                   ))}
                   <span className="ml-1 text-[10px] font-mono font-semibold text-slate-500">
                     5.0
@@ -75,7 +84,7 @@ export const EditorialTestimonialsPress: React.FC<EditorialTestimonialsPressProp
                       handleOpenLightbox(
                         t.screenshotImage,
                         `Bukti Ulasan - ${t.author}`,
-                        `${t.platform || 'Shopee Official Shop'} • ${t.highlightAspect}`
+                        `${t.platform || "Shopee Official Shop"} • ${t.highlightAspect}`,
                       )
                     }
                     className="relative w-full h-18 sm:h-20 rounded-lg overflow-hidden border border-slate-200 bg-white p-1 group/btn text-left flex items-center justify-center shadow-2xs"
@@ -103,7 +112,11 @@ export const EditorialTestimonialsPress: React.FC<EditorialTestimonialsPressProp
                   photos={t.buyerPhotos}
                   author={t.author}
                   onSelectPhoto={(src, title) =>
-                    handleOpenLightbox(src, title, `Dokumentasi produk nyata oleh ${t.author}`)
+                    handleOpenLightbox(
+                      src,
+                      title,
+                      `Dokumentasi produk nyata oleh ${t.author}`,
+                    )
                   }
                 />
               )}

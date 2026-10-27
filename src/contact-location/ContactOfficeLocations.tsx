@@ -13,7 +13,10 @@ export const ContactOfficeLocations: React.FC<ContactOfficeLocationsProps> = ({ 
   const contact = CompanyProfileService.getContactInfo();
 
   return (
-    <section id={id} className="py-16 md:py-24 bg-white border-t border-slate-200/80">
+    <section id={id} className="relative py-16 md:py-24 bg-blue-grid-pattern overflow-hidden">
+      {/* Top Subtle Transition Blur & Bottom Fade into Navy Footer */}
+      <div className="section-seam-blur-top" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-[#1B2E4B]/60 to-transparent z-10" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Header Seksi */}
         <div className="max-w-2xl space-y-3">

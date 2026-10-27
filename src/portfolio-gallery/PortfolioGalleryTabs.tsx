@@ -19,7 +19,12 @@ export const PortfolioGalleryTabs: React.FC<PortfolioGalleryTabsProps> = ({ id =
   const events = CompanyProfileService.getOfflineEvents();
 
   return (
-    <section id={id} className="py-16 md:py-24 bg-[#F8F9FA]">
+    <section id={id} className="relative py-16 md:py-24 bg-textile-texture overflow-hidden">
+      {/* Top Subtle Transition Blur */}
+      <div className="section-seam-blur-top" />
+
+      {/* Bottom Gentle Fade into Deep Navy Partners Section */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-[#132238]/70 to-transparent z-10" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         {/* Header Seksi */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">

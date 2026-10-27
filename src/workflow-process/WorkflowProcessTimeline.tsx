@@ -10,7 +10,10 @@ export const WorkflowProcessTimeline: React.FC<WorkflowProcessTimelineProps> = (
   const steps = CompanyProfileService.getWorkflowSteps();
 
   return (
-    <section id={id} className="py-16 md:py-24 bg-[#F8F9FA]">
+    <section id={id} className="relative py-16 md:py-24 bg-textile-texture overflow-hidden">
+      {/* Top and Bottom Subtle Transition Blurs */}
+      <div className="section-seam-blur-top" />
+      <div className="section-seam-blur-bottom" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Header Seksi */}
         <div className="max-w-2xl space-y-3">

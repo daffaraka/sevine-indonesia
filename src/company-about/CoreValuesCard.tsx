@@ -1,5 +1,5 @@
-import React from 'react';
-import { CoreValue } from '../types/CompanyProfileTypes';
+import React from "react";
+import { CoreValue } from "../types/CompanyProfileTypes";
 
 interface CoreValuesCardProps {
   values: CoreValue[];
@@ -15,7 +15,7 @@ export const CoreValuesCard: React.FC<CoreValuesCardProps> = ({ values }) => {
         </span>
       </div>
       <h3 className="text-xl sm:text-2xl font-bold text-doff-navy tracking-tight">
-        Trilogi Nilai Inti: S &bull; V &bull; N
+        Nilai Inti Sevine
       </h3>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 pt-2">

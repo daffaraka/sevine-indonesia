@@ -10,8 +10,8 @@ export default {
         doff: {
           navy: '#1B2E4B',
           navydark: '#132238',
-          linen: '#F8F9FA',
-          subtle: '#EEF1F5',
+          linen: '#F8FAFC',
+          subtle: '#EEF2F6',
           slate: '#475569',
           muted: '#64748B',
           terracotta: '#C27B66',

@@ -26,7 +26,10 @@ export const BrandShowcaseGrid: React.FC<BrandShowcaseGridProps> = ({
   const filteredBrands = CompanyProfileService.getBrands(selectedCategory);
 
   return (
-    <section id={id} className="py-16 md:py-24 bg-[#F8F9FA]">
+    <section id={id} className="relative py-16 md:py-24 bg-blue-grid-pattern overflow-hidden">
+      {/* Top and Bottom Subtle Transition Blurs */}
+      <div className="section-seam-blur-top" />
+      <div className="section-seam-blur-bottom" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -35,7 +38,7 @@ export const BrandShowcaseGrid: React.FC<BrandShowcaseGridProps> = ({
               Ekosistem Portofolio
             </div>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-doff-navy tracking-tight">
-              5 Brand Unggulan Sevine
+              4 Brand Unggulan Sevine
             </h2>
             <p className="text-sm text-slate-600 leading-relaxed">
               Setiap brand dirancang memiliki kepribadian dan segmentasi pasar
@@ -62,7 +65,7 @@ export const BrandShowcaseGrid: React.FC<BrandShowcaseGridProps> = ({
         </div>
 
         {/* Brands Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
           {filteredBrands.map((brand) => (
             <BrandCardItem
               key={brand.id}
