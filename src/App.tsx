@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { ClassicProfilePage } from "./classic-profile/ClassicProfilePage";
-import { EditorialProfilePage } from "./editorial-profile/EditorialProfilePage";
+import { ClassicProfilePage } from "./classic/classic-profile/ClassicProfilePage";
+import { EditorialProfilePage } from "./editorial/editorial-profile/EditorialProfilePage";
 import {
   RouteViewSwitcher,
   AppRouteMode,
@@ -37,7 +37,8 @@ export const App: React.FC = () => {
   }, []);
 
   const handleSwitchRoute = (targetRoute: AppRouteMode) => {
-    const nextPath = targetRoute === "editorial" ? "/editorial" : "/classic";
+    // Classic adalah tampilan default di "/" (URL canonical); hindari URL duplikat "/classic".
+    const nextPath = targetRoute === "editorial" ? "/editorial" : "/";
     window.history.pushState({}, "", nextPath);
     setCurrentRoute(targetRoute);
     window.scrollTo({ top: 0, behavior: "smooth" });

@@ -13,14 +13,16 @@ import {
   ALL_PARTNER_BRANDS,
   TESTIMONIALS_LIST,
   OFFICE_LOCATIONS,
-  CONTACT_INFO
+  CONTACT_INFO,
+  FAQ_ITEMS
 } from '../data/SevineProfileData';
 
 import {
   BrandItem,
   InquiryFormData,
   PortfolioSample,
-  PartnerBrandItem
+  PartnerBrandItem,
+  FaqItem
 } from '../types/CompanyProfileTypes';
 
 export const CompanyProfileService = {
@@ -52,6 +54,7 @@ export const CompanyProfileService = {
   getTestimonials: () => TESTIMONIALS_LIST,
   getOfficeLocations: () => OFFICE_LOCATIONS,
   getContactInfo: () => CONTACT_INFO,
+  getFaqItems: (): FaqItem[] => FAQ_ITEMS,
 
   generateWhatsAppInquiryUrl: (formData: InquiryFormData): string => {
     const isReseller = formData.partnershipType === 'reseller';

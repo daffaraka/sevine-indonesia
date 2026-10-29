@@ -4,31 +4,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sevine </title>
+  <title>CV. Sevine Indonesia | Produsen Tas & Apparel, Maklon Custom Ngawi–Malang</title>
 
-  <!-- Meta SEO Dasar -->
+  <!-- Meta SEO Dasar (%SITE_URL% diganti otomatis oleh vite-plugins/SeoMetaPlugin.ts) -->
   <meta name="description"
-    content="CV. SEVINE INDONESIA adalah perusahaan manufaktur apparel dan lifestyle terkemuka di Indonesia yang menaungi 5 brand unggulan: SEVINE, klou, LALUNA, ASSAIF, dan NABIRA. Melayani kemitraan ritel, reseller nasional, dan pesanan custom korporasi." />
-  <meta name="keywords"
-    content="CV Sevine Indonesia, sevine tas, klou apparel, laluna indonesia, assaif muslim menswear, nabira busana, konveksi tas ngawi, pabrik apparel malang, maklon tas lokal, distributor apparel indonesia" />
+    content="CV. Sevine Indonesia: produsen tas & apparel in-house di Ngawi dan Malang. Kapasitas 30.000+ produk/bulan, maklon custom korporat, kemitraan reseller, dan 5 brand fashion lokal." />
   <meta name="author" content="CV. SEVINE INDONESIA" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://sevine.id/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#1B2E4B" />
+  <link rel="canonical" href="%SITE_URL%/" />
 
-  <!-- Open Graph / Facebook / WhatsApp -->
-  <meta property="og:type" content="business.business" />
-  <meta property="og:title" content="CV. SEVINE INDONESIA - Trusted Apparel & Lifestyle Brand" />
+  <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CV. Sevine Indonesia | Produsen Tas & Apparel Lokal" />
   <meta property="og:description"
-    content="Manufaktur mandiri dengan 30.000+ produk terjual per bulan dan 500.000+ komunitas digital. Melayani pesanan korporat, reseller, dan ritel." />
-  <meta property="og:url" content="https://sevine.id/" />
+    content="Manufaktur mandiri 30.000+ produk/bulan. Melayani maklon custom korporat, kemitraan reseller, dan 5 brand: SEVINE, klou, LALUNA, ASSAIF, NABIRA." />
+  <meta property="og:url" content="%SITE_URL%/" />
   <meta property="og:site_name" content="CV. SEVINE INDONESIA" />
   <meta property="og:locale" content="id_ID" />
+  <meta property="og:image" content="%SITE_URL%/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Logo CV. Sevine Indonesia — Produsen Tas & Apparel Lokal, Ngawi–Malang" />
 
-  <!-- Twitter Card -->
+  <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CV. SEVINE INDONESIA | Manufaktur Apparel & Lifestyle" />
+  <meta name="twitter:title" content="CV. Sevine Indonesia | Produsen Tas & Apparel Lokal" />
   <meta name="twitter:description"
-    content="Perusahaan induk 5 brand apparel ternama di Indonesia: SEVINE, klou, LALUNA, ASSAIF, NABIRA." />
+    content="Induk 5 brand fashion lokal: SEVINE, klou, LALUNA, ASSAIF, NABIRA. Maklon custom & kemitraan reseller." />
+  <meta name="twitter:image" content="%SITE_URL%/og-cover.jpg" />
 
   <!-- Preconnect & Google Fonts: Plus Jakarta Sans, Cormorant Garamond (Editorial Serif), Space Grotesk (Technical Mono-Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,9 +41,9 @@
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
 
-  <!-- Favicon SVG Simpel Sevine S -->
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%231B2E4B'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='22' fill='%23F8F9FA'%3ES%3C/text%3E%3C/svg%3E" />
+  <!-- Favicon SVG Simpel Sevine S (file asli agar bisa di-crawl Google untuk ikon SERP) -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
   <!-- JSON-LD Structured Data: Organization & LocalBusiness -->
   <script type="application/ld+json">
@@ -47,14 +51,27 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
-          "@id": "https://sevine.id/#organization",
+          "@type": "WebSite",
+          "@id": "%SITE_URL%/#website",
+          "url": "%SITE_URL%/",
           "name": "CV. SEVINE INDONESIA",
-          "url": "https://sevine.id",
+          "inLanguage": "id-ID",
+          "publisher": { "@id": "%SITE_URL%/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "%SITE_URL%/#organization",
+          "name": "CV. SEVINE INDONESIA",
+          "alternateName": "Sevine Indonesia",
+          "url": "%SITE_URL%/",
+          "logo": "%SITE_URL%/assets/brands/logo-cv-sevine-indonesia.png",
+          "image": "%SITE_URL%/og-cover.jpg",
+          "email": "sevine.id@gmail.com",
           "description": "Perusahaan manufaktur apparel dan lifestyle terpercaya di Indonesia dengan kapasitas 30.000+ produk per bulan.",
           "foundingDate": "2019",
           "sameAs": [
-            "https://instagram.com/sevine.id"
+            "https://instagram.com/sevine.id",
+            "https://shopee.co.id/sevine.id"
           ],
           "brand": [
             { "@type": "Brand", "name": "SEVINE", "description": "Tas stylish dan fungsional" },
@@ -66,8 +83,11 @@
         },
         {
           "@type": "LocalBusiness",
-          "@id": "https://sevine.id/#head-office",
+          "@id": "%SITE_URL%/#head-office",
           "name": "CV. SEVINE INDONESIA - Kantor Pusat & Manufaktur",
+          "parentOrganization": { "@id": "%SITE_URL%/#organization" },
+          "url": "%SITE_URL%/",
+          "image": "%SITE_URL%/og-cover.jpg",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Sambiroto, Padas",
@@ -80,8 +100,11 @@
         },
         {
           "@type": "LocalBusiness",
-          "@id": "https://sevine.id/#branch-office",
+          "@id": "%SITE_URL%/#branch-office",
           "name": "CV. SEVINE INDONESIA - Kantor Cabang Malang",
+          "parentOrganization": { "@id": "%SITE_URL%/#organization" },
+          "url": "%SITE_URL%/",
+          "image": "%SITE_URL%/og-cover.jpg",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Ruko Joyo Agung Greenland Kav. 2, Tlogomas, Lowokwaru",
@@ -91,6 +114,52 @@
             "addressCountry": "ID"
           },
           "telephone": "+6285194587737"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "%SITE_URL%/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Berapa jumlah pesanan minimum (MOQ) untuk produksi maklon tas atau pakaian custom B2B?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Untuk produksi maklon custom korporat, merchandise event, maupun GWP brand, MOQ mulai dari 100 pcs per desain/model. Untuk kebutuhan kuantitas besar hingga puluhan ribu pcs per bulan, pabrik in-house kami di Ngawi memiliki kapasitas produksi rata-rata 30.000+ produk per bulan."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Berapa lama proses pembuatan sampel prototipe (sampling) dan produksi massal di CV. Sevine Indonesia?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tahap pembuatan sampel (prototipe pola dan pemilihan material) rata-rata memakan waktu 7–14 hari kerja setelah spesifikasi desain disepakati. Setelah sampel fisik disetujui (approval), produksi massal dan Quality Control (QC) bar-tack memakan waktu sekitar 14–30 hari kerja tergantung kompleksitas dan volume pesanan."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah klien korporat bisa memilih jenis bahan, warna, dan emboss/label brand sendiri?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Bisa. Layanan maklon dan custom order kami mencakup konsultasi pemilihan kain (waterproof fabric, kanvas, kulit sintetis, katun combed, maupun bahan flowy busana muslim), aksesoris hardware, sablon, bordir, woven label, hingga kemasan khusus sesuai identitas perusahaan Anda."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Bagaimana syarat dan cara bergabung menjadi mitra Reseller atau Distributor resmi 5 brand Sevine?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pendaftaran mitra Reseller dan Distributor dapat dilakukan langsung melalui formulir kemitraan di website ini atau menghubungi Hotline Reseller resmi (0813-9820-5665). Mitra mendapatkan akses katalog lengkap 5 brand (SEVINE, klou, LALUNA, ASSAIF, NABIRA), harga grosir tangan pertama langsung pabrik, serta materi foto katalog untuk pemasaran digital."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Di mana lokasi pabrik produksi dan kantor cabang CV. Sevine Indonesia jika ingin berkunjung?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Fasilitas pabrik utama, riset pola, dan gudang pengiriman kami berlokasi di Sambiroto, Kec. Padas, Kabupaten Ngawi, Jawa Timur (63281). Untuk diskusi bisnis, kemitraan B2B, dan tim kreatif, Anda juga dapat mengunjungi Kantor Cabang kami di Ruko Joyo Agung Greenland Kav. 2, Tlogomas, Kec. Lowokwaru, Kota Malang (61544) dengan janji temu terlebih dahulu."
+              }
+            }
+          ]
         }
       ]
     }

@@ -44,10 +44,16 @@ export const MobileNavigationDrawer: React.FC<MobileDrawerProps> = ({
       <div id={id} className="relative ml-auto w-4/5 max-w-sm h-full bg-white shadow-2xl flex flex-col justify-between p-6 overflow-y-auto">
         <div>
           <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
-            <div className="flex items-center gap-2">
-              <span className="w-8 h-8 rounded-lg bg-doff-navy text-white flex items-center justify-center font-bold text-sm">
-                S
-              </span>
+            <div className="flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-lg bg-doff-navy flex items-center justify-center p-1.5 shadow-xs">
+                <img
+                  src="/assets/brands/logo-sevine-white.webp"
+                  alt="Logo CV. Sevine Indonesia"
+                  width={24}
+                  height={24}
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <span className="font-bold text-doff-navy tracking-tight text-sm">
                 SEVINE INDONESIA
               </span>

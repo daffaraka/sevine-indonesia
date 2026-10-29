@@ -46,13 +46,24 @@ export const EditorialMobileDrawer: React.FC<EditorialMobileDrawerProps> = ({
         <div>
           {/* Top Bar */}
           <div className="flex items-center justify-between pb-6 border-b border-white/10">
-            <div>
-              <span className="font-serif text-xl font-semibold tracking-[0.28em] block text-white">
-                SEVINE
-              </span>
-              <span className="font-mono text-[10px] tracking-[0.22em] text-[#94A3B8] uppercase">
-                Direktori Editorial
-              </span>
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 rounded-xl bg-white/10 border border-white/15 p-2 flex items-center justify-center">
+                <img
+                  src="/assets/brands/logo-sevine-white.webp"
+                  alt="Logo CV. Sevine Indonesia"
+                  width={28}
+                  height={28}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div>
+                <span className="font-serif text-xl font-semibold tracking-[0.28em] block text-white">
+                  SEVINE
+                </span>
+                <span className="font-mono text-[10px] tracking-[0.22em] text-[#94A3B8] uppercase">
+                  Direktori Editorial
+                </span>
+              </div>
             </div>
             <button
               type="button"

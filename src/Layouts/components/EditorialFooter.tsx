@@ -20,8 +20,20 @@ export const EditorialFooter: React.FC<EditorialFooterProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-16 border-b border-white/10">
           {/* Col 1: Brand Statement */}
           <div className="md:col-span-5 space-y-4">
-            <div className="font-mono text-[10px] tracking-[0.28em] uppercase text-[#C27B66]">
-              COLOPHON • CV. SEVINE INDONESIA
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/15 p-1.5 flex items-center justify-center">
+                <img
+                  src="/assets/brands/logo-sevine-white.webp"
+                  alt="Logo CV. Sevine Indonesia"
+                  width={24}
+                  height={24}
+                  loading="lazy"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="font-mono text-[10px] tracking-[0.28em] uppercase text-[#C27B66]">
+                COLOPHON • CV. SEVINE INDONESIA
+              </div>
             </div>
             <p className="font-serif text-2xl sm:text-3xl leading-snug text-white max-w-md">
               Manufaktur mandiri tas fungsional, pakaian esensial, dan busana muslim kontemporer sejak 2019.

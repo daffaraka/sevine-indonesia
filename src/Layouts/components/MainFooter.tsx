@@ -16,8 +16,15 @@ export const MainFooter: React.FC<MainFooterProps> = ({ id = 'classic-main-foote
           {/* Kolom 1: Profil Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-white text-doff-navy flex items-center justify-center font-black text-lg">
-                SI
+              <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center p-2 shadow-xs">
+                <img
+                  src="/assets/brands/logo-sevine-2.webp"
+                  alt="Logo CV. Sevine Indonesia"
+                  width={32}
+                  height={32}
+                  loading="lazy"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <div className="font-bold text-white text-base">CV. SEVINE INDONESIA</div>

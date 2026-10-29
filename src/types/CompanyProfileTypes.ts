@@ -23,6 +23,7 @@ export interface BrandItem {
   badgeColor: string;
   targetMarket: string;
   imageUrl: string;
+  imageAlt?: string;
 }
 
 export interface AdvantageItem {
@@ -53,6 +54,7 @@ export interface PortfolioSample {
   brand: string;
   category: 'tas' | 'pakaian' | 'muslim';
   image: string;
+  imageAlt?: string;
   description: string;
 }
 
@@ -62,6 +64,7 @@ export interface OfflineEvent {
   location: string;
   year: string;
   image: string;
+  imageAlt?: string;
   description: string;
 }
 
@@ -69,6 +72,7 @@ export interface ClientPartnerItem {
   id: string;
   name: string;
   logo: string;
+  imageAlt?: string;
   role?: string;
 }
 
@@ -85,6 +89,7 @@ export interface PartnerBrandItem {
   category: string;
   categoryLabel: string;
   logo: string;
+  imageAlt?: string;
   role: string;
 }
 
@@ -96,6 +101,7 @@ export interface TestimonialItem {
   content: string;
   highlightAspect: string;
   screenshotImage: string;
+  imageAlt?: string;
   buyerPhotos?: string[];
   platform?: string;
 }
@@ -125,4 +131,11 @@ export interface InquiryFormData {
   partnershipType: 'reseller' | 'corporate_b2b' | 'custom_order' | 'distributor';
   preferredBrand: string;
   messageNotes: string;
+}
+
+export interface FaqItem {
+  id: string;
+  question: string;
+  answer: string;
+  category: 'maklon' | 'reseller' | 'umum';
 }
