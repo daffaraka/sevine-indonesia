@@ -2,7 +2,8 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./resources/views/**/*.blade.php",
+    "./resources/js/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {

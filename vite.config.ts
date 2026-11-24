@@ -1,19 +1,23 @@
-import { defineConfig, loadEnv } from 'vite';
+import { defineConfig } from 'vite';
+import laravel from 'laravel-vite-plugin';
 import react from '@vitejs/plugin-react';
-import { DEFAULT_SITE_URL, seoMetaPlugin } from './vite-plugins/SeoMetaPlugin';
+import { fileURLToPath, URL } from 'node:url';
 
-// https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, '.', 'VITE_');
-
-  return {
-    plugins: [react(), seoMetaPlugin(env.VITE_SITE_URL || DEFAULT_SITE_URL)],
-    server: {
-      port: 3001,
-      open: false
+export default defineConfig({
+  plugins: [
+    laravel({
+      input: ['resources/css/app.css', 'resources/js/app.tsx'],
+      refresh: true,
+    }),
+    react(),
+  ],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./resources/js', import.meta.url)),
     },
-    build: {
-      emptyOutDir: false
-    }
-  };
+  },
+  server: {
+    port: 5173,
+    strictPort: false,
+  },
 });
