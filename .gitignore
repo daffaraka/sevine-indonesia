@@ -1,5 +1,14 @@
-# Antigravity Skills & Internal Docs (User Rule: wajib di-ignore)
+# Antigravity Skills & Internal Docs
 *antigravity-skills*
+
+# Documents & Legal Archive (auto-ignore)
+*.docx
+*.pdf
+*.md
+!README.md
+!docs/*.md
+/docs/legal/
+invoice-*.html
 
 # Dependencies
 node_modules/
@@ -12,6 +21,15 @@ coverage/
 # Production Build
 dist/
 build/
+/public/build
+/public/hot
+
+# Laravel
+/vendor
+/storage/*.key
+/storage/pail
+/database/database.sqlite
+/.phpunit.result.cache
 
 # Misc
 .DS_Store
