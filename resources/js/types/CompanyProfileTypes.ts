@@ -15,6 +15,7 @@ export interface CoreValue {
 
 export interface BrandItem {
   id: string;
+  key?: string;
   name: string;
   category: 'bag' | 'apparel' | 'muslim-wear';
   tagline: string;
@@ -24,6 +25,7 @@ export interface BrandItem {
   targetMarket: string;
   imageUrl: string;
   imageAlt?: string;
+  shopeeUrl?: string;
 }
 
 export interface AdvantageItem {
@@ -64,6 +66,7 @@ export interface OfflineEvent {
   location: string;
   year: string;
   image: string;
+  gallery?: string[];
   imageAlt?: string;
   description: string;
 }
@@ -138,4 +141,17 @@ export interface FaqItem {
   question: string;
   answer: string;
   category: 'maklon' | 'reseller' | 'umum';
+}
+
+export interface CareerPublicItem {
+  id: string;
+  slug: string;
+  title: string;
+  division: string;
+  location: string;
+  employmentType: string;
+  qualificationsHtml: string;
+  responsibilitiesHtml: string;
+  googleFormUrl: string;
+  updatedAt?: string;
 }

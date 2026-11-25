@@ -325,6 +325,11 @@ export const OFFLINE_EVENTS: OfflineEvent[] = [
     location: 'Solo Paragon Mall, Surakarta',
     year: 'Official Exhibitor',
     image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&auto=format&fit=crop&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1556740758-90de374c12ad?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&auto=format&fit=crop&q=80',
+    ],
     imageAlt: 'Dokumentasi booth pameran CV. Sevine Indonesia di Hello Market Solo #35 Solo Paragon Mall',
     description: 'Partisipasi booth eksklusif Sevine menampilkan rilisan tas terbaru dengan antusiasme ribuan pengunjung lokal.'
   },
@@ -334,6 +339,11 @@ export const OFFLINE_EVENTS: OfflineEvent[] = [
     location: 'Atrium Exhibition Center',
     year: 'Featured Creative Brand',
     image: 'https://images.unsplash.com/photo-1472653431158-6364773b2a56?w=800&auto=format&fit=crop&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1472653431158-6364773b2a56?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800&auto=format&fit=crop&q=80',
+    ],
     imageAlt: 'Aktivasi pop-up store CV. Sevine Indonesia di pameran kreatif Project X Market',
     description: 'Eksplorasi aktivasi pop-up store interaktif dan instalasi visual estetis menjangkau audiens muda kreatif.'
   },
@@ -343,8 +353,55 @@ export const OFFLINE_EVENTS: OfflineEvent[] = [
     location: 'Solo Square Convention',
     year: 'Prime Fashion Booth',
     image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&auto=format&fit=crop&q=80',
+    ],
     imageAlt: 'Peluncuran koleksi multi-brand Sevine Indonesia di pameran Hello Market Solo #36 Solo Square',
     description: 'Kolaborasi peluncuran koleksi spesial multi-brand Sevine bersama rekanan komunitas lokal.'
+  },
+  {
+    id: 'event-surabaya-creative-market',
+    title: 'SURABAYA CREATIVE MARKET',
+    location: 'Tunjungan Plaza Convention, Surabaya',
+    year: 'Pop-Up Showcase 2025',
+    image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&auto=format&fit=crop&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&auto=format&fit=crop&q=80',
+    ],
+    imageAlt: 'Showcase pameran Surabaya Creative Market CV. Sevine Indonesia',
+    description: 'Pameran kolaboratif lintas brand menampilkan tas harian SEVINE, pakaian basic klou, dan koleksi muslimah NABIRA.'
+  },
+  {
+    id: 'event-bandung-popup-exhibition',
+    title: 'BANDUNG FASHION & CRAFT EXPO',
+    location: 'Trans Studio Mall Atrium, Bandung',
+    year: 'B2B & Retail Booth',
+    image: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&auto=format&fit=crop&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&auto=format&fit=crop&q=80',
+    ],
+    imageAlt: 'Showcase material dan jahitan bar-tack CV. Sevine Indonesia di Bandung Fashion Expo',
+    description: 'Showcase langsung material tekstil waterproof, detail jahitan bar-tack, serta konsultasi kemitraan reseller dan korporasi.'
+  },
+  {
+    id: 'event-malang-brand-week',
+    title: 'MALANG LOCAL BRAND WEEK',
+    location: 'Malang Creative Center, Jawa Timur',
+    year: 'Community Showcase',
+    image: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=800&auto=format&fit=crop&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1479064555552-3ef4979f8908?w=800&auto=format&fit=crop&q=80',
+    ],
+    imageAlt: 'Dokumentasi pameran Malang Local Brand Week CV. Sevine Indonesia',
+    description: 'Pameran produk kreatif dan temu komunitas bisnis bersama tim kantor cabang kreatif Malang.'
   }
 ];
 
