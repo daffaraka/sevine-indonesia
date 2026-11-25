@@ -56,7 +56,6 @@ export const SERVICE_FILTER_OPTIONS: Array<{
   chipToneClass: string;
 }> = [
   { key: 'officialStore', label: 'Official Store Sevine', chipToneClass: 'bg-doff-terracotta/10 text-doff-terracotta font-bold' },
-  { key: 'freeShipping', label: 'Gratis Ongkir Xtra', chipToneClass: 'bg-emerald-100 text-emerald-800 font-bold' },
   { key: 'cod', label: 'COD (Bayar di Tempat)', chipToneClass: 'bg-slate-200/80 text-doff-navy font-medium' },
   { key: 'readyStock', label: 'Ready Stock Pabrik', chipToneClass: 'bg-slate-200/80 text-doff-navy font-medium' },
   { key: 'b2bWholesale', label: 'Grosir & B2B Ready', chipToneClass: 'bg-blue-100 text-blue-800 font-bold' },

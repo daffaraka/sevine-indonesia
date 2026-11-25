@@ -1,6 +1,6 @@
 import React from 'react';
 import { Eye, MapPin, Star } from 'lucide-react';
-import { CatalogProductItem, ProductColorSwatch } from '../types/ProductCatalogTypes';
+import { CatalogProductItem } from '../types/ProductCatalogTypes';
 
 interface ThumbnailProps {
   product: CatalogProductItem;
@@ -23,7 +23,7 @@ export const ProductThumbnailBox: React.FC<ThumbnailProps> = ({
       height={imageSize}
       decoding="async"
       loading="lazy"
-      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+      className="w-full h-full object-cover sevine-photo-zoom"
     />
     {product.isOfficial && (
       <span className="absolute top-2 left-2 text-[10px] font-bold px-2 py-0.5 rounded bg-doff-terracotta text-white shadow-xs tracking-tight">
@@ -33,11 +33,6 @@ export const ProductThumbnailBox: React.FC<ThumbnailProps> = ({
     {product.discountPercentage > 0 && (
       <span className="absolute top-2 right-2 text-[10px] font-extrabold px-1.5 py-0.5 rounded bg-amber-500/90 text-white shadow-xs">
         -{product.discountPercentage}%
-      </span>
-    )}
-    {product.isFreeShipping && (
-      <span className="absolute bottom-2 left-2 text-[9px] font-bold px-1.5 py-0.5 rounded bg-emerald-700/90 text-white backdrop-blur-xs">
-        Gratis Ongkir Xtra
       </span>
     )}
     {showHoverOverlay && (
@@ -50,29 +45,6 @@ export const ProductThumbnailBox: React.FC<ThumbnailProps> = ({
     )}
   </div>
 );
-
-export const ProductSwatchDots: React.FC<{
-  swatches: ProductColorSwatch[];
-  maxVisible?: number;
-  dotClass?: string;
-}> = ({ swatches, maxVisible = swatches.length, dotClass = 'w-2.5 h-2.5' }) => {
-  if (!swatches.length) return null;
-  return (
-    <div className="flex items-center gap-1">
-      {swatches.slice(0, maxVisible).map((swatch, idx) => (
-        <span
-          key={idx}
-          title={swatch.name}
-          style={{ backgroundColor: swatch.hex }}
-          className={`${dotClass} rounded-full border border-white shadow-xs`}
-        />
-      ))}
-      {swatches.length > maxVisible && (
-        <span className="text-[9px] text-slate-400">+{swatches.length - maxVisible}</span>
-      )}
-    </div>
-  );
-};
 
 export const ProductRatingMeta: React.FC<{
   product: CatalogProductItem;
