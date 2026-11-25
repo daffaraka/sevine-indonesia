@@ -59,7 +59,7 @@ class AdminInertiaFlowTest extends TestCase
             'sku'         => 'SVN-TEST-999',
             'name'        => 'Backpack Uji Integrasi Inertia',
             'brand'       => 'SEVINE',
-            'category'    => 'Tas Harian (Backpack)',
+            'category'    => 'Tas Ransel & Laptop',
             'capacity'    => '500 pcs/bln',
             'status'      => 'Produksi Aktif',
             'description' => 'Produk uji otomatis PHPUnit',

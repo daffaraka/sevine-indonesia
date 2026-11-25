@@ -57,8 +57,20 @@ export const EditorialPartnerCarousel: React.FC<EditorialPartnerCarouselProps> =
       Boolean
     ) as PartnerBrandItem[];
 
+    // Append any newly added partners from DB that are not part of the curated 17 IDs
+    const curatedIds = new Set([
+      'paragon', 'wardah', 'emina', 'light-plus', 'tomoro-coffee', 'yogya-heritage',
+      'mooncha', 'hella-coffee', 'pleasure-please', 'monic', 'callysta',
+      'hello-market', 'the-buddies', 'mula-mula', 'aranya-flow', 'bynana-gift', 'waktu-luang',
+    ]);
+    const extraBrands = brands.filter((b) => !curatedIds.has(b.id));
+    const rows = [r1, r2, r3];
+    extraBrands.forEach((b, idx) => {
+      rows[idx % 3].push(b);
+    });
+
     return { row1: r1, row2: r2, row3: r3 };
-  }, [brandMap]);
+  }, [brandMap, brands]);
 
   return (
     <div className="relative space-y-1 sm:space-y-2 py-2 hover-pause">
