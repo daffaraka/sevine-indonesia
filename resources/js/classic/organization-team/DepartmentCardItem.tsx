@@ -7,7 +7,7 @@ interface DepartmentCardItemProps {
 
 export const DepartmentCardItem: React.FC<DepartmentCardItemProps> = ({ dept }) => {
   return (
-    <div className="bg-white rounded-xl p-6 border border-slate-200/90 shadow-md hover:shadow-lg flex flex-col justify-between hover:border-slate-300 transition-all">
+    <div className="bg-white rounded-lg p-6 border border-slate-200/90 shadow-md hover:shadow-lg flex flex-col justify-between hover:border-slate-300 transition-all">
       <div className="space-y-3">
         <div className="flex items-center justify-between pb-2.5 border-b border-slate-100">
           <span className="text-[10px] font-semibold text-doff-terracotta uppercase tracking-wider">

@@ -31,7 +31,7 @@ export const ProductCatalogTopToolbar: React.FC<ProductCatalogTopToolbarProps> =
   activeFilterCount,
   filteredCount,
 }) => (
-  <div className="bg-slate-100/90 p-3 sm:p-4 rounded-xl border border-slate-200/90 space-y-3">
+  <div className="bg-slate-100/90 p-3 sm:p-4 rounded-lg border border-slate-200/90 space-y-3">
     <div className="flex items-center gap-3">
       <div className="relative flex-1">
         <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
@@ -40,7 +40,7 @@ export const ProductCatalogTopToolbar: React.FC<ProductCatalogTopToolbarProps> =
           placeholder="Cari model tas, baju basic, kurta, abaya..."
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="w-full pl-9 pr-8 py-2 bg-white text-xs text-doff-navy rounded-lg border border-slate-200 focus:outline-none focus:border-doff-navy transition-colors placeholder:text-slate-400"
+          className="w-full pl-9 pr-8 py-2 bg-white text-xs text-doff-navy rounded-md border border-slate-200 focus:outline-none focus:border-doff-navy transition-colors placeholder:text-slate-400"
         />
         {searchQuery && (
           <button type="button" onClick={() => onSearchChange('')} aria-label="Hapus pencarian" className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-600">
@@ -49,7 +49,7 @@ export const ProductCatalogTopToolbar: React.FC<ProductCatalogTopToolbarProps> =
         )}
       </div>
 
-      <button type="button" onClick={onOpenMobileFilter} className="lg:hidden flex items-center gap-1.5 px-3 py-2 bg-white border border-slate-200 text-doff-navy rounded-lg text-xs font-bold shrink-0 hover:bg-slate-50 transition-colors">
+      <button type="button" onClick={onOpenMobileFilter} className="lg:hidden flex items-center gap-1.5 px-3 py-2 bg-white border border-slate-200 text-doff-navy rounded-md text-xs font-bold shrink-0 hover:bg-slate-50 transition-colors">
         <SlidersHorizontal className="w-3.5 h-3.5 text-doff-terracotta" />
         <span>Filter</span>
         {activeFilterCount > 0 && (
@@ -57,7 +57,7 @@ export const ProductCatalogTopToolbar: React.FC<ProductCatalogTopToolbarProps> =
         )}
       </button>
 
-      <div className="inline-flex bg-white rounded-lg p-0.5 border border-slate-200 shrink-0">
+      <div className="inline-flex bg-white rounded-md p-0.5 border border-slate-200 shrink-0">
         {VIEW_MODES.map(({ mode, title, Icon }) => (
           <button
             key={mode}
@@ -65,7 +65,7 @@ export const ProductCatalogTopToolbar: React.FC<ProductCatalogTopToolbarProps> =
             onClick={() => onViewModeChange(mode)}
             title={title}
             aria-label={title}
-            className={`p-1.5 rounded-md transition-colors ${viewMode === mode ? 'bg-doff-navy text-white shadow-xs' : 'text-slate-500 hover:text-doff-navy'}`}
+            className={`p-1.5 rounded transition-colors ${viewMode === mode ? 'bg-doff-navy text-white shadow-xs' : 'text-slate-500 hover:text-doff-navy'}`}
           >
             <Icon className="w-4 h-4" />
           </button>
@@ -81,7 +81,7 @@ export const ProductCatalogTopToolbar: React.FC<ProductCatalogTopToolbarProps> =
             key={tab.id}
             type="button"
             onClick={() => onSortChange(tab.id)}
-            className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
+            className={`px-3 py-1.5 rounded text-xs font-medium transition-all ${
               sortOption === tab.id ? 'bg-doff-navy text-white shadow-xs font-semibold' : 'bg-white text-slate-600 hover:text-doff-navy border border-slate-200/80 hover:bg-slate-50'
             }`}
           >

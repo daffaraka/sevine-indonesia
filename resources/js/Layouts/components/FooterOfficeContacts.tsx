@@ -28,7 +28,7 @@ export const FooterOfficeContacts: React.FC = () => {
         <div className="text-xs font-bold text-white uppercase tracking-wider mb-4">
           Hotline Kemitraan
         </div>
-        <div className="p-3 rounded-xl bg-slate-800/60 border border-slate-700/60 space-y-2 text-xs">
+        <div className="p-3 rounded-lg bg-slate-800/60 border border-slate-700/60 space-y-2 text-xs">
           <div className="flex items-center gap-2 text-slate-300">
             <Phone className="w-3.5 h-3.5 text-emerald-400" />
             <span className="font-medium">PIC Reseller:</span>

@@ -15,7 +15,7 @@ export const WorkflowActiveStageCard: React.FC<WorkflowActiveStageCardProps> = (
   return (
     <div
       id={id}
-      className="p-5 sm:p-6 rounded-2xl bg-[#1B2E4B] border border-white/10 shadow-xl border-l-4 border-doff-terracotta space-y-3 transition-all duration-300 text-white"
+      className="p-5 sm:p-6 rounded-xl bg-[#1B2E4B] border border-white/10 shadow-xl border-l-4 border-doff-terracotta space-y-3 transition-all duration-300 text-white"
     >
       {/* Top Meta Indicator */}
       <div className="flex items-center justify-between font-mono text-[10px] tracking-[0.22em] uppercase text-doff-terracotta">

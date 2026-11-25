@@ -27,7 +27,7 @@ export const HeroBannerView: React.FC<HeroBannerProps> = ({
       {/* Bottom Subtle Transition Blur */}
       <div className="section-seam-blur-bottom" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative w-full max-w-7xl 2xl:max-w-[1680px] mx-auto px-3.5 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
         <div className="max-w-3xl mx-auto text-center space-y-6">
           {/* Authentic Corporate Identifier */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold tracking-wider uppercase shadow-doff-sm">
@@ -59,14 +59,14 @@ export const HeroBannerView: React.FC<HeroBannerProps> = ({
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
             <button
               onClick={() => onNavigate("contact")}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-doff-navy text-white text-xs font-semibold hover:bg-doff-navydark transition-colors shadow-doff-sm"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-doff-navy text-white text-xs font-semibold hover:bg-doff-navydark transition-colors shadow-doff-sm"
             >
               <span>Ajukan Kemitraan & Reseller</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
             <button
               onClick={() => onNavigate("brands")}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-white text-doff-navy border border-slate-300 text-xs font-semibold hover:bg-slate-50 transition-colors shadow-doff-sm"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-white text-doff-navy border border-slate-300 text-xs font-semibold hover:bg-slate-50 transition-colors shadow-doff-sm"
             >
               <span>Jelajahi 5 Brand Kami</span>
             </button>

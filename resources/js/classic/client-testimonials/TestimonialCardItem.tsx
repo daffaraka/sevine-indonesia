@@ -14,7 +14,7 @@ export const TestimonialCardItem: React.FC<TestimonialCardItemProps> = ({
   onViewProof
 }) => {
   return (
-    <div className="bg-white rounded-xl p-5 border border-slate-200/90 shadow-sm hover:shadow-md flex flex-col justify-between hover:border-slate-300 transition-all group">
+    <div className="bg-white rounded-lg p-5 border border-slate-200/90 shadow-sm hover:shadow-md flex flex-col justify-between hover:border-slate-300 transition-all group">
       <div className="space-y-3">
         {/* Header Meta: Rating & Aspect */}
         <div className="flex items-center justify-between text-[11px] pb-2.5 border-b border-slate-100 font-mono">
@@ -48,7 +48,7 @@ export const TestimonialCardItem: React.FC<TestimonialCardItemProps> = ({
                   `${item.platform || 'Shopee Official Shop'} • ${item.highlightAspect}`
                 )
               }
-              className="relative w-full h-18 sm:h-20 rounded-lg overflow-hidden border border-slate-200 bg-white p-1 group/img focus:outline-hidden focus:ring-2 focus:ring-doff-terracotta/40 transition-all text-left flex items-center justify-center shadow-2xs"
+              className="relative w-full h-18 sm:h-20 rounded-md overflow-hidden border border-slate-200 bg-white p-1 group/img focus:outline-hidden focus:ring-2 focus:ring-doff-terracotta/40 transition-all text-left flex items-center justify-center shadow-2xs"
               title="Klik untuk memperbesar bukti ulasan dari asset"
             >
               <img

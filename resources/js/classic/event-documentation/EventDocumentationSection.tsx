@@ -3,8 +3,11 @@ import { CompanyProfileService } from '../../services/CompanyProfileService';
 import { PortfolioEventsGrid } from '../portfolio-gallery/PortfolioEventsGrid';
 import { PortfolioImageLightbox } from '../portfolio-gallery/PortfolioImageLightbox';
 
+import { OfflineEvent } from '../../types/CompanyProfileTypes';
+
 interface EventDocumentationSectionProps {
   id?: string;
+  events?: OfflineEvent[];
 }
 
 /**
@@ -12,13 +15,14 @@ interface EventDocumentationSectionProps {
  */
 export const EventDocumentationSection: React.FC<EventDocumentationSectionProps> = ({
   id = 'events',
+  events,
 }) => {
   const [lightboxData, setLightboxData] = useState<{ src: string | null; title: string | null }>({
     src: null,
     title: null,
   });
 
-  const offlineEvents = CompanyProfileService.getOfflineEvents();
+  const offlineEvents = events ?? CompanyProfileService.getOfflineEvents();
 
   return (
     <section
@@ -29,7 +33,7 @@ export const EventDocumentationSection: React.FC<EventDocumentationSectionProps>
       <div className="section-seam-blur-top" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-[#132238]/70 to-transparent z-10" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div className="relative w-full max-w-7xl 2xl:max-w-[1680px] mx-auto px-3.5 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 space-y-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-2xl space-y-3">
             <div className="text-xs font-bold text-doff-terracotta uppercase tracking-wider">
@@ -47,7 +51,7 @@ export const EventDocumentationSection: React.FC<EventDocumentationSectionProps>
             </p>
           </div>
 
-          <div className="inline-flex items-center gap-2 self-start md:self-auto px-3.5 py-2 rounded-xl bg-white border border-slate-200/90 shadow-doff-sm text-xs font-semibold text-doff-navy shrink-0">
+          <div className="inline-flex items-center gap-2 self-start md:self-auto px-3.5 py-2 rounded-lg bg-white border border-slate-200/90 shadow-doff-sm text-xs font-semibold text-doff-navy shrink-0">
             <span>{offlineEvents.length} Dokumentasi Pameran</span>
           </div>
         </div>

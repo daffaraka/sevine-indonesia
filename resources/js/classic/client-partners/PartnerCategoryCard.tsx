@@ -10,7 +10,7 @@ export const PartnerCategoryCard: React.FC<PartnerCategoryCardProps> = ({ group 
   const isScrollable = totalItems > 4;
 
   return (
-    <div className="bg-white rounded-xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover:shadow-md flex flex-col hover:border-slate-300 transition-all">
+    <div className="bg-white rounded-lg p-5 sm:p-6 border border-slate-200/90 shadow-sm hover:shadow-md flex flex-col hover:border-slate-300 transition-all">
       <div className="pb-3 border-b border-slate-100 flex items-center justify-between">
         <div>
           <span className="text-[10px] font-bold text-doff-terracotta uppercase tracking-wider block">
@@ -33,7 +33,7 @@ export const PartnerCategoryCard: React.FC<PartnerCategoryCardProps> = ({ group 
           group.partnerItems.map((item) => (
             <div
               key={item.id}
-              className="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-200/70"
+              className="flex items-center gap-2.5 p-2 rounded-md bg-slate-50 border border-slate-200/70"
             >
               <div className="w-7 h-7 rounded-full bg-white p-0.5 border border-slate-200 shrink-0 flex items-center justify-center overflow-hidden">
                 <img

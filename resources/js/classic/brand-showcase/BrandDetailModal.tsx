@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { X, MessageCircle, ShoppingBag } from 'lucide-react';
+import { AnimatePresence, motion } from 'motion/react';
 import { BrandItem } from '../../types/CompanyProfileTypes';
 import { CONTACT_INFO } from '../../data/SevineProfileData';
 
@@ -23,22 +24,35 @@ export const BrandDetailModal: React.FC<BrandDetailModalProps> = ({ brand, onClo
     };
   }, [brand, onClose]);
 
-  if (!brand) return null;
-
-  const whatsappMessage = encodeURIComponent(
-    `Halo Tim Sevine, saya tertarik untuk bermitra / membeli katalog produk dari brand ${brand.name}. Mohon informasi lengkapnya.`
-  );
+  const whatsappMessage = brand
+    ? encodeURIComponent(
+        `Halo Tim Sevine, saya tertarik untuk bermitra / membeli katalog produk dari brand ${brand.name}. Mohon informasi lengkapnya.`
+      )
+    : '';
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
-      {/* Backdrop */}
-      <div
-        className="fixed inset-0 bg-slate-900/50 backdrop-blur-xs transition-opacity"
-        onClick={onClose}
-      />
+    <AnimatePresence>
+      {brand && (
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
+          {/* Backdrop */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.18 }}
+            className="fixed inset-0 bg-slate-900/50 backdrop-blur-xs"
+            onClick={onClose}
+          />
 
-      {/* Modal Dialog / Mobile Bottom Sheet */}
-      <div className="relative w-full max-w-lg bg-white rounded-t-3xl sm:rounded-2xl shadow-2xl p-6 sm:p-8 z-10 max-h-[90vh] overflow-y-auto">
+          {/* Modal Dialog / Mobile Bottom Sheet */}
+          <motion.div
+            data-lenis-prevent
+            initial={{ opacity: 0, y: 20, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 16, scale: 0.98 }}
+            transition={{ duration: 0.22, ease: [0.2, 0.8, 0.2, 1] }}
+            className="relative w-full max-w-lg bg-white rounded-t-2xl sm:rounded-xl shadow-2xl p-6 sm:p-8 z-10 max-h-[90vh] overflow-y-auto"
+          >
         {/* Header Modal */}
         <div className="flex items-center justify-between pb-4 border-b border-slate-100">
           <div>
@@ -51,7 +65,7 @@ export const BrandDetailModal: React.FC<BrandDetailModalProps> = ({ brand, onClo
           </div>
           <button
             onClick={onClose}
-            className="p-2 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100 transition-colors"
+            className="p-2 text-slate-400 hover:text-slate-600 rounded-md hover:bg-slate-100 transition-colors"
             aria-label="Tutup modal"
           >
             <X className="w-5 h-5" />
@@ -60,7 +74,7 @@ export const BrandDetailModal: React.FC<BrandDetailModalProps> = ({ brand, onClo
 
         {/* Gambar dan Deskripsi */}
         <div className="py-4 space-y-4">
-          <div className="h-44 w-full rounded-xl overflow-hidden bg-slate-50 border border-slate-100 p-6 flex items-center justify-center">
+          <div className="h-44 w-full rounded-lg overflow-hidden bg-slate-50 border border-slate-100 p-6 flex items-center justify-center">
             <img
               src={brand.imageUrl}
               alt={brand.imageAlt || brand.name}
@@ -81,7 +95,7 @@ export const BrandDetailModal: React.FC<BrandDetailModalProps> = ({ brand, onClo
           </div>
 
           {/* Keunggulan Kunci */}
-          <div className="bg-slate-50 rounded-xl p-4 border border-slate-100 space-y-2">
+          <div className="bg-slate-50 rounded-lg p-4 border border-slate-100 space-y-2">
             <div className="text-xs font-bold text-doff-navy">Karakteristik & Mutu Produk:</div>
             <div className="space-y-1.5">
               {brand.highlightPoints.map((point, idx) => (
@@ -106,23 +120,25 @@ export const BrandDetailModal: React.FC<BrandDetailModalProps> = ({ brand, onClo
             href={`https://wa.me/62${CONTACT_INFO.resellerHotline.replace(/^0/, '')}?text=${whatsappMessage}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-doff-navy text-white text-xs font-semibold hover:bg-doff-navydark transition-colors"
+            className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg bg-doff-navy text-white text-xs font-semibold hover:bg-doff-navydark sevine-btn-motion"
           >
             <MessageCircle className="w-4 h-4 text-white" />
             <span>Tanya Kemitraan {brand.name}</span>
           </a>
 
           <a
-            href="https://shopee.co.id/sevine.id"
+            href={brand.shopeeUrl || "https://shopee.co.id/sevine.id"}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-slate-100 text-doff-navy text-xs font-semibold hover:bg-slate-200 transition-colors"
+            className="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg bg-slate-100 text-doff-navy text-xs font-semibold hover:bg-slate-200 sevine-btn-motion"
           >
             <ShoppingBag className="w-4 h-4" />
             <span>Lihat di Toko Resmi</span>
           </a>
         </div>
-      </div>
-    </div>
+          </motion.div>
+        </div>
+      )}
+    </AnimatePresence>
   );
 };

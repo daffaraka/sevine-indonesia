@@ -1,20 +1,25 @@
 import React, { useState } from 'react';
-import { ChevronRight, Home, ShieldCheck, Sparkles, Truck } from 'lucide-react';
+import { ChevronRight, Home, ShieldCheck, Sparkles } from 'lucide-react';
 import { BackToTopButton } from '../../Layouts/components/BackToTopButton';
 import { MainFooter } from '../../Layouts/components/MainFooter';
 import { MainNavbar } from '../../Layouts/components/MainNavbar';
 import { MobileNavigationDrawer } from '../../Layouts/components/MobileNavigationDrawer';
 import { QuickWhatsAppFloatingButton } from '../../Layouts/components/QuickWhatsAppFloatingButton';
+import { scrollToSmoothTarget, useSmoothScroll } from '../../hooks/useSmoothScroll';
 import { ProductCatalogSection } from './ProductCatalogSection';
+import { CatalogBrand, CatalogCategory, CatalogProductItem } from './types/ProductCatalogTypes';
 
 interface ProductCatalogPageProps {
   id?: string;
   onNavigateHome?: () => void;
+  products?: CatalogProductItem[];
+  categoryOptions?: Array<{ id: CatalogCategory; label: string }>;
+  brandOptions?: Array<{ id: CatalogBrand; name: string; subtitle: string }>;
 }
 
 const CatalogPageHero: React.FC<{ onNavigateHome: () => void }> = ({ onNavigateHome }) => (
   <header className="bg-gradient-to-b from-white to-slate-100/60 border-b border-slate-200/80 pt-8 pb-10">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+    <div className="w-full max-w-7xl 2xl:max-w-[1680px] mx-auto px-3.5 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 space-y-4">
       <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs text-slate-500">
         <button type="button" onClick={onNavigateHome} className="flex items-center gap-1 hover:text-doff-navy transition-colors">
           <Home className="w-3.5 h-3.5" />
@@ -35,13 +40,9 @@ const CatalogPageHero: React.FC<{ onNavigateHome: () => void }> = ({ onNavigateH
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2 text-xs text-slate-600">
-          <span className="flex items-center gap-1 bg-white px-2.5 py-1 rounded-lg border border-slate-200 shadow-xs">
+          <span className="flex items-center gap-1 bg-white px-2.5 py-1 rounded-md border border-slate-200 shadow-xs">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
             <span>100% Original Sevine</span>
-          </span>
-          <span className="flex items-center gap-1 bg-white px-2.5 py-1 rounded-lg border border-slate-200 shadow-xs">
-            <Truck className="w-3.5 h-3.5 text-blue-600" />
-            <span>Gratis Ongkir Xtra</span>
           </span>
         </div>
       </div>
@@ -49,18 +50,26 @@ const CatalogPageHero: React.FC<{ onNavigateHome: () => void }> = ({ onNavigateH
   </header>
 );
 
-export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({ id = 'catalog-page', onNavigateHome }) => {
+export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
+  id = 'catalog-page',
+  onNavigateHome,
+  products,
+  categoryOptions,
+  brandOptions,
+}) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+
+  useSmoothScroll(true);
 
   const handleNavigate = (sectionId: string) => {
     const targetElement = document.getElementById(sectionId);
     if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
+      scrollToSmoothTarget(sectionId);
       return;
     }
     if (onNavigateHome) {
       onNavigateHome();
-      setTimeout(() => document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' }), 120);
+      setTimeout(() => scrollToSmoothTarget(sectionId), 120);
     } else {
       window.history.pushState({}, '', '/');
       window.location.href = `/#${sectionId}`;
@@ -73,7 +82,12 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({ id = 'ca
       <MobileNavigationDrawer id="catalog-mobile-drawer" isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} activeSection="portfolio" onNavigate={handleNavigate} />
       <CatalogPageHero onNavigateHome={() => handleNavigate('hero')} />
       <main className="flex-1">
-        <ProductCatalogSection id="portfolio" />
+        <ProductCatalogSection
+          id="portfolio"
+          products={products}
+          categoryOptions={categoryOptions}
+          brandOptions={brandOptions}
+        />
       </main>
       <MainFooter id="catalog-footer" onNavigate={handleNavigate} />
       <BackToTopButton />

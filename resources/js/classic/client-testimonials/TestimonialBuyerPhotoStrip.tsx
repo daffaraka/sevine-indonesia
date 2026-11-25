@@ -28,7 +28,7 @@ export const TestimonialBuyerPhotoStrip: React.FC<TestimonialBuyerPhotoStripProp
             key={idx}
             type="button"
             onClick={() => onSelectPhoto(photo, `Foto Produk Pembeli (${author}) - #${idx + 1}`)}
-            className="group relative flex-shrink-0 w-10 h-10 rounded-md overflow-hidden border border-slate-200/90 hover:border-doff-terracotta transition-all shadow-2xs"
+            className="group relative flex-shrink-0 w-10 h-10 rounded overflow-hidden border border-slate-200/90 hover:border-doff-terracotta transition-all shadow-2xs"
             title={`Lihat foto ${idx + 1} dari ${author}`}
           >
             <img

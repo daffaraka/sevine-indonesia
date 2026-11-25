@@ -11,12 +11,12 @@ interface MainFooterProps {
 export const MainFooter: React.FC<MainFooterProps> = ({ id = 'classic-main-footer', onNavigate }) => {
   return (
     <footer id={id} className="bg-doff-navy text-slate-300 pt-16 pb-12 border-t border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-7xl 2xl:max-w-[1680px] mx-auto px-3.5 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800/80">
           {/* Kolom 1: Profil Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center p-2 shadow-xs">
+              <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center p-2 shadow-xs">
                 <img
                   src="/assets/brands/logo-sevine-2.webp"
                   alt="Logo CV. Sevine Indonesia"
@@ -39,14 +39,14 @@ export const MainFooter: React.FC<MainFooterProps> = ({ id = 'classic-main-foote
                 href="https://instagram.com/sevine.id"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors"
+                className="p-2 rounded-md bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
               </a>
               <a
                 href={`mailto:${CONTACT_INFO.email}`}
-                className="p-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors"
+                className="p-2 rounded-md bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors"
                 aria-label="Email"
               >
                 <Mail className="w-4 h-4" />
@@ -55,7 +55,7 @@ export const MainFooter: React.FC<MainFooterProps> = ({ id = 'classic-main-foote
                 href="https://shopee.co.id/sevine.id"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors"
+                className="p-2 rounded-md bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors"
                 aria-label="Shopee"
               >
                 <ShoppingBag className="w-4 h-4" />

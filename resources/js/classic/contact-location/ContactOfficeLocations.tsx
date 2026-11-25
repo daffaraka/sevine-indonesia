@@ -26,10 +26,10 @@ export const ContactOfficeLocations: React.FC<ContactOfficeLocationsProps> = ({
       aria-labelledby={`${id}-heading`}
       className="relative py-16 md:py-24 bg-blue-grid-pattern overflow-hidden"
     >
-      {/* Top Subtle Transition Blur & Bottom Fade into Navy Footer */}
+      {/* Top Subtle Transition Blur & Soft Bottom Seam */}
       <div className="section-seam-blur-top" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-[#1B2E4B]/60 to-transparent z-10" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-[#EEF2F6]/80 to-transparent z-10" />
+      <div className="w-full max-w-7xl 2xl:max-w-[1680px] mx-auto px-3.5 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 space-y-12">
         {/* Header Seksi */}
         <div className="max-w-2xl space-y-3">
           <div className="text-xs font-bold text-doff-terracotta uppercase tracking-wider">
@@ -56,7 +56,7 @@ export const ContactOfficeLocations: React.FC<ContactOfficeLocationsProps> = ({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-4">
           {/* Kolom Kiri: Quick Contacts */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="doff-card rounded-2xl p-6 border border-slate-200/80 space-y-4">
+            <div className="doff-card rounded-xl p-6 border border-slate-200/80 space-y-4">
               <div className="text-xs font-bold text-doff-navy uppercase tracking-wider">
                 Saluran Resmi Sevine
               </div>
@@ -66,9 +66,9 @@ export const ContactOfficeLocations: React.FC<ContactOfficeLocationsProps> = ({
                   href={`https://wa.me/62${contact.resellerHotline.replace(/^0/, "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200/80 transition-colors group"
+                  className="flex items-center gap-3 p-3 rounded-md bg-slate-50 hover:bg-slate-100 border border-slate-200/80 transition-colors group"
                 >
-                  <div className="p-2 rounded-md bg-white text-doff-navy border border-slate-200 shrink-0 group-hover:border-slate-300">
+                  <div className="p-2 rounded bg-white text-doff-navy border border-slate-200 shrink-0 group-hover:border-slate-300">
                     <PhoneCall className="w-4 h-4" />
                   </div>
                   <div>
@@ -85,9 +85,9 @@ export const ContactOfficeLocations: React.FC<ContactOfficeLocationsProps> = ({
                   href={`https://wa.me/62${contact.collaborationHotline.replace(/^0/, "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200/80 transition-colors group"
+                  className="flex items-center gap-3 p-3 rounded-md bg-slate-50 hover:bg-slate-100 border border-slate-200/80 transition-colors group"
                 >
-                  <div className="p-2 rounded-md bg-white text-doff-navy border border-slate-200 shrink-0 group-hover:border-slate-300">
+                  <div className="p-2 rounded bg-white text-doff-navy border border-slate-200 shrink-0 group-hover:border-slate-300">
                     <Handshake className="w-4 h-4" />
                   </div>
                   <div>
@@ -104,9 +104,9 @@ export const ContactOfficeLocations: React.FC<ContactOfficeLocationsProps> = ({
                   href="https://shopee.co.id/sevine.id"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200/80 transition-colors group"
+                  className="flex items-center gap-3 p-3 rounded-md bg-slate-50 hover:bg-slate-100 border border-slate-200/80 transition-colors group"
                 >
-                  <div className="p-2 rounded-md bg-white text-doff-navy border border-slate-200 shrink-0 group-hover:border-slate-300">
+                  <div className="p-2 rounded bg-white text-doff-navy border border-slate-200 shrink-0 group-hover:border-slate-300">
                     <ShoppingBag className="w-4 h-4" />
                   </div>
                   <div>
@@ -121,9 +121,9 @@ export const ContactOfficeLocations: React.FC<ContactOfficeLocationsProps> = ({
                   href="https://instagram.com/sevine.id"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200/80 transition-colors group"
+                  className="flex items-center gap-3 p-3 rounded-md bg-slate-50 hover:bg-slate-100 border border-slate-200/80 transition-colors group"
                 >
-                  <div className="p-2 rounded-md bg-white text-doff-navy border border-slate-200 shrink-0 group-hover:border-slate-300">
+                  <div className="p-2 rounded bg-white text-doff-navy border border-slate-200 shrink-0 group-hover:border-slate-300">
                     <Instagram className="w-4 h-4" />
                   </div>
                   <div>
@@ -136,9 +136,9 @@ export const ContactOfficeLocations: React.FC<ContactOfficeLocationsProps> = ({
 
                 <a
                   href={`mailto:${contact.email}`}
-                  className="flex items-center gap-3 p-3 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200/80 transition-colors group"
+                  className="flex items-center gap-3 p-3 rounded-md bg-slate-50 hover:bg-slate-100 border border-slate-200/80 transition-colors group"
                 >
-                  <div className="p-2 rounded-md bg-white text-doff-navy border border-slate-200 shrink-0 group-hover:border-slate-300">
+                  <div className="p-2 rounded bg-white text-doff-navy border border-slate-200 shrink-0 group-hover:border-slate-300">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>

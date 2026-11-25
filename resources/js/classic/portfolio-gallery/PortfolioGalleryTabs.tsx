@@ -25,7 +25,7 @@ export const PortfolioGalleryTabs: React.FC<PortfolioGalleryTabsProps> = ({ id =
 
       {/* Bottom Gentle Fade into Deep Navy Partners Section */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-[#132238]/70 to-transparent z-10" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div className="w-full max-w-7xl 2xl:max-w-[1680px] mx-auto px-3.5 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 space-y-10">
         {/* Header Seksi */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-2xl space-y-3">
@@ -41,10 +41,10 @@ export const PortfolioGalleryTabs: React.FC<PortfolioGalleryTabsProps> = ({ id =
           </div>
 
           {/* Tab Button Switcher */}
-          <div className="inline-flex p-1 rounded-xl bg-slate-200/80 border border-slate-300/80 self-start md:self-auto">
+          <div className="inline-flex p-1 rounded-lg bg-slate-200/80 border border-slate-300/80 self-start md:self-auto">
             <button
               onClick={() => setActiveTab('products')}
-              className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${
+              className={`px-4 py-2 rounded-md text-xs font-bold transition-all ${
                 activeTab === 'products'
                   ? 'bg-white text-doff-navy shadow-xs'
                   : 'text-slate-600 hover:text-doff-navy'
@@ -54,7 +54,7 @@ export const PortfolioGalleryTabs: React.FC<PortfolioGalleryTabsProps> = ({ id =
             </button>
             <button
               onClick={() => setActiveTab('events')}
-              className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${
+              className={`px-4 py-2 rounded-md text-xs font-bold transition-all ${
                 activeTab === 'events'
                   ? 'bg-white text-doff-navy shadow-xs'
                   : 'text-slate-600 hover:text-doff-navy'

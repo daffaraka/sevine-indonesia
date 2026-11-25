@@ -4,7 +4,6 @@ import { formatRupiah } from '../hooks/ProductCatalogFilterUtils';
 import { CatalogProductItem } from '../types/ProductCatalogTypes';
 import {
   ProductRatingMeta,
-  ProductSwatchDots,
   ProductThumbnailBox,
 } from './ProductCatalogCardParts';
 
@@ -19,7 +18,7 @@ export const ProductCatalogGridItem: React.FC<ProductCatalogGridItemProps> = ({
 }) => (
   <article
     onClick={() => onSelect(product)}
-    className="group bg-white rounded-xl border border-slate-200/90 shadow-doff-sm hover:border-slate-300 hover:shadow-doff-md transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
+    className="group bg-white rounded-lg border border-slate-200/90 shadow-doff-sm doff-card-hover flex flex-col justify-between overflow-hidden cursor-pointer"
   >
     <div>
       <ProductThumbnailBox product={product} className="aspect-square w-full" showHoverOverlay />
@@ -28,7 +27,6 @@ export const ProductCatalogGridItem: React.FC<ProductCatalogGridItemProps> = ({
           <span className="text-[10px] font-bold uppercase tracking-wider text-doff-terracotta">
             {product.brand}
           </span>
-          <ProductSwatchDots swatches={product.swatches} maxVisible={3} />
         </div>
         <h3 className="text-xs sm:text-sm font-semibold text-doff-navy line-clamp-2 leading-snug group-hover:text-doff-terracotta transition-colors">
           {product.title}
@@ -59,10 +57,10 @@ export const ProductCatalogGridItem: React.FC<ProductCatalogGridItemProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         onClick={(e) => e.stopPropagation()}
-        className="w-full py-1.5 px-2 bg-slate-50 hover:bg-doff-navy hover:text-white text-doff-navy text-[11px] font-bold rounded-lg border border-slate-200 flex items-center justify-center gap-1.5 transition-colors"
+        className="w-full py-1.5 px-2 bg-slate-50 hover:bg-doff-navy hover:text-white text-doff-navy text-[11px] font-bold rounded-md border border-slate-200 flex items-center justify-center gap-1.5 sevine-btn-motion"
       >
         <span>Beli di Shopee</span>
-        <ExternalLink className="w-3 h-3" />
+        <ExternalLink className="w-3 h-3 sevine-arrow-shift" />
       </a>
     </div>
   </article>

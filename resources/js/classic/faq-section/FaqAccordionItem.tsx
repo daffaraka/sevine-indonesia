@@ -22,7 +22,7 @@ export const FaqAccordionItem: React.FC<FaqAccordionItemProps> = ({
   const answerId = `${item.id}-answer`;
 
   return (
-    <article className="doff-card rounded-xl border border-slate-200/90 overflow-hidden transition-colors hover:border-slate-300">
+    <article className="doff-card rounded-lg border border-slate-200/90 overflow-hidden transition-colors hover:border-slate-300">
       <h3>
         <button
           type="button"
@@ -40,7 +40,7 @@ export const FaqAccordionItem: React.FC<FaqAccordionItemProps> = ({
             </span>
           </div>
           <span
-            className={`mt-1 p-1.5 rounded-lg bg-slate-50 border border-slate-200 text-doff-navy shrink-0 transition-transform duration-200 ${
+            className={`mt-1 p-1.5 rounded-md bg-slate-50 border border-slate-200 text-doff-navy shrink-0 transition-transform duration-200 ${
               isOpen ? 'rotate-180 bg-slate-100' : ''
             }`}
             aria-hidden="true"

@@ -22,7 +22,7 @@ export const CoreValuesCard: React.FC<CoreValuesCardProps> = ({ values }) => {
         {values.map((item) => (
           <div
             key={item.letter}
-            className="bg-white rounded-xl p-6 border border-slate-200/90 shadow-md hover:shadow-lg flex flex-col justify-between relative overflow-hidden transition-all"
+            className="bg-white rounded-lg p-6 border border-slate-200/90 shadow-md hover:shadow-lg flex flex-col justify-between relative overflow-hidden transition-all"
           >
             <div>
               <div className="flex items-center justify-between mb-4">

@@ -29,7 +29,7 @@ export const WorkflowProcessTimeline: React.FC<WorkflowProcessTimelineProps> = (
       <div className="section-seam-blur-top" />
       <div className="section-seam-blur-bottom" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative w-full max-w-7xl 2xl:max-w-[1680px] mx-auto px-3.5 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
         {/* 12-Column Split-Screen Ledger Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           {/* Kolom Kiri: Header & Kotak Tahap Aktif (4 Kolom) */}
@@ -56,7 +56,7 @@ export const WorkflowProcessTimeline: React.FC<WorkflowProcessTimelineProps> = (
           </div>
 
           {/* Kolom Kanan: Tabel Tipografi Swiss Ledger Interaktif (8 Kolom) */}
-          <div className="lg:col-span-8 divide-y divide-white/10 rounded-2xl overflow-hidden bg-[#1B2E4B]/50 backdrop-blur-sm border border-white/10 shadow-xl">
+          <div className="lg:col-span-8 divide-y divide-white/10 rounded-xl overflow-hidden bg-[#1B2E4B]/50 backdrop-blur-sm border border-white/10 shadow-xl">
             {steps.map((step, idx) => (
               <WorkflowStepCard
                 key={step.step}

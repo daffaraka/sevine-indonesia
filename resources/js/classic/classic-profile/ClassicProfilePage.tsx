@@ -17,29 +17,56 @@ import { ClientPartnershipSection } from '../client-partners/ClientPartnershipSe
 import { CustomerTestimonialSlider } from '../client-testimonials/CustomerTestimonialSlider';
 import { FaqAccordionSection } from '../faq-section/FaqAccordionSection';
 import { ContactOfficeLocations } from '../contact-location/ContactOfficeLocations';
+import { CareerPortalList } from '../contact-location/CareerPortalList';
+import { scrollToSmoothTarget, useSmoothScroll } from '../../hooks/useSmoothScroll';
+import {
+  BrandItem,
+  CareerPublicItem,
+  ClientPartnerGroup,
+  FaqItem,
+  OfflineEvent,
+  PartnerBrandItem,
+  TestimonialItem,
+} from '../../types/CompanyProfileTypes';
+import { CatalogProductItem } from '../product-catalog/types/ProductCatalogTypes';
 
 interface ClassicProfilePageProps {
   id?: string;
   onNavigateToCatalog?: () => void;
+  brands?: BrandItem[];
+  products?: CatalogProductItem[];
+  events?: OfflineEvent[];
+  partnerBrands?: PartnerBrandItem[];
+  partnerGroups?: ClientPartnerGroup[];
+  careers?: CareerPublicItem[];
+  testimonials?: TestimonialItem[];
+  faqs?: FaqItem[];
 }
 
 export const ClassicProfilePage: React.FC<ClassicProfilePageProps> = ({
   id = 'classic-profile-page',
   onNavigateToCatalog,
+  brands,
+  products,
+  events,
+  partnerBrands,
+  partnerGroups,
+  careers,
+  testimonials,
+  faqs,
 }) => {
   const [activeSection, setActiveSection] = useState<string>('hero');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
+  useSmoothScroll(true);
+
   useEffect(() => {
     const hashId = window.location.hash.replace('#', '').trim();
     if (hashId) {
-      const target = document.getElementById(hashId);
-      if (target) {
-        window.setTimeout(() => {
-          target.scrollIntoView({ behavior: 'smooth' });
-          setActiveSection(hashId);
-        }, 80);
-      }
+      window.setTimeout(() => {
+        scrollToSmoothTarget(hashId);
+        setActiveSection(hashId);
+      }, 100);
     }
 
     const handleScroll = () => {
@@ -55,7 +82,8 @@ export const ClassicProfilePage: React.FC<ClassicProfilePageProps> = ({
         'partners',
         'testimonials',
         'faq',
-        'contact'
+        'contact',
+        'careers'
       ];
       const scrollPos = window.scrollY + 200;
 
@@ -78,10 +106,7 @@ export const ClassicProfilePage: React.FC<ClassicProfilePageProps> = ({
 
   const handleNavigate = (sectionId: string) => {
     setActiveSection(sectionId);
-    const targetElement = document.getElementById(sectionId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToSmoothTarget(sectionId);
   };
 
   return (
@@ -104,7 +129,7 @@ export const ClassicProfilePage: React.FC<ClassicProfilePageProps> = ({
       <main id={`${id}-main`} className="flex-1">
         <HeroBannerView id="hero" onNavigate={handleNavigate} />
         <CompanyAboutStory id="about" />
-        <BrandShowcaseGrid id="brands" />
+        <BrandShowcaseGrid id="brands" brands={brands} />
         <CompanyAdvantageGrid id="advantages" />
         <WorkflowProcessTimeline id="workflow" />
         <DepartmentTeamGrid id="team" />
@@ -112,13 +137,19 @@ export const ClassicProfilePage: React.FC<ClassicProfilePageProps> = ({
           id="portfolio"
           showFilters={false}
           maxPreviewCount={8}
+          products={products}
           onViewMoreProducts={onNavigateToCatalog}
         />
-        <EventDocumentationSection id="events" />
-        <ClientPartnershipSection id="partners" />
-        <CustomerTestimonialSlider id="testimonials" />
-        <FaqAccordionSection id="faq" />
+        <EventDocumentationSection id="events" events={events} />
+        <ClientPartnershipSection
+          id="partners"
+          allBrands={partnerBrands}
+          groups={partnerGroups}
+        />
+        <CustomerTestimonialSlider id="testimonials" testimonials={testimonials} />
+        <FaqAccordionSection id="faq" faqs={faqs} />
         <ContactOfficeLocations id="contact" />
+        <CareerPortalList id="careers" careers={careers} />
       </main>
 
       <MainFooter id="classic-footer" onNavigate={handleNavigate} />

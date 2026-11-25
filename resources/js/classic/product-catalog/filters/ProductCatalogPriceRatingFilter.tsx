@@ -31,7 +31,7 @@ export const PriceRangeFilter: React.FC<PriceRangeFilterProps> = ({ minPrice, ma
           placeholder="MIN"
           value={minInput}
           onChange={(e) => setMinInput(e.target.value)}
-          className="w-full px-2.5 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-md focus:outline-none focus:border-doff-navy"
+          className="w-full px-2.5 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded focus:outline-none focus:border-doff-navy"
         />
         <span className="text-slate-400 text-xs">-</span>
         <input
@@ -39,12 +39,12 @@ export const PriceRangeFilter: React.FC<PriceRangeFilterProps> = ({ minPrice, ma
           placeholder="MAKS"
           value={maxInput}
           onChange={(e) => setMaxInput(e.target.value)}
-          className="w-full px-2.5 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-md focus:outline-none focus:border-doff-navy"
+          className="w-full px-2.5 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded focus:outline-none focus:border-doff-navy"
         />
       </div>
       <button
         type="submit"
-        className="w-full py-1.5 text-xs font-bold bg-doff-navy text-white rounded-md hover:bg-doff-navydark transition-colors"
+        className="w-full py-1.5 text-xs font-bold bg-doff-navy text-white rounded hover:bg-doff-navydark transition-colors"
       >
         Terapkan Harga
       </button>
@@ -66,7 +66,7 @@ export const RatingFilter: React.FC<RatingFilterProps> = ({ minRating, onSelect 
           key={star}
           type="button"
           onClick={() => onSelect(isChecked ? null : star)}
-          className={`w-full flex items-center gap-2 text-xs py-1 px-2 rounded-md transition-colors ${
+          className={`w-full flex items-center gap-2 text-xs py-1 px-2 rounded transition-colors ${
             isChecked ? 'bg-amber-50 text-amber-900 font-bold' : 'text-slate-600 hover:bg-slate-50'
           }`}
         >

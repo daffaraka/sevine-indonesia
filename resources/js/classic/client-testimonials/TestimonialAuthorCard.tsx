@@ -13,10 +13,10 @@ export const TestimonialAuthorCard: React.FC<TestimonialAuthorCardProps> = ({
   platform
 }) => {
   return (
-    <div className="flex items-center justify-between px-3 py-1.5 sm:py-2 rounded-xl bg-slate-50/90 border-2 border-slate-300 transition-colors group-hover:border-slate-400">
+    <div className="flex items-center justify-between px-3 py-1.5 sm:py-2 rounded-lg bg-slate-50/90 border-2 border-slate-300 transition-colors group-hover:border-slate-400">
       {/* Sisi Kiri: Icon Person & Nama */}
       <div className="flex items-center gap-2 min-w-0">
-        <div className="w-7 h-7 rounded-lg bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-2xs text-slate-700">
+        <div className="w-7 h-7 rounded-md bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-2xs text-slate-700">
           <User className="w-3.5 h-3.5 text-doff-navy" />
         </div>
         <div className="min-w-0">

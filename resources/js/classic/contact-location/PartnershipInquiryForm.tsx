@@ -28,7 +28,7 @@ export const PartnershipInquiryForm: React.FC = () => {
   };
 
   return (
-    <div className="bg-white rounded-xl p-6 sm:p-8 border border-slate-200 shadow-doff-sm">
+    <div className="bg-white rounded-lg p-6 sm:p-8 border border-slate-200 shadow-doff-sm">
       <div className="mb-6 space-y-1 pb-4 border-b border-slate-100">
         <h3 className="font-bold text-doff-navy text-lg sm:text-xl">
           Formulir Permohonan Kemitraan
@@ -48,7 +48,7 @@ export const PartnershipInquiryForm: React.FC = () => {
               placeholder="Contoh: Budi Santoso"
               value={formData.fullName}
               onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-              className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-doff-navy bg-white"
+              className="w-full px-3.5 py-2.5 rounded-md border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-doff-navy bg-white"
             />
           </div>
 
@@ -60,7 +60,7 @@ export const PartnershipInquiryForm: React.FC = () => {
               placeholder="Contoh: 08123456789"
               value={formData.whatsappNumber}
               onChange={(e) => setFormData({ ...formData, whatsappNumber: e.target.value })}
-              className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-doff-navy bg-white"
+              className="w-full px-3.5 py-2.5 rounded-md border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-doff-navy bg-white"
             />
           </div>
         </div>
@@ -73,7 +73,7 @@ export const PartnershipInquiryForm: React.FC = () => {
               placeholder="Contoh: Toko Berkah / PT Maju"
               value={formData.companyOrStoreName}
               onChange={(e) => setFormData({ ...formData, companyOrStoreName: e.target.value })}
-              className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-doff-navy bg-white"
+              className="w-full px-3.5 py-2.5 rounded-md border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-doff-navy bg-white"
             />
           </div>
 
@@ -82,7 +82,7 @@ export const PartnershipInquiryForm: React.FC = () => {
             <select
               value={formData.partnershipType}
               onChange={(e) => setFormData({ ...formData, partnershipType: e.target.value as InquiryFormData['partnershipType'] })}
-              className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-doff-navy bg-white"
+              className="w-full px-3.5 py-2.5 rounded-md border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-doff-navy bg-white"
             >
               <option value="reseller">Mitra Reseller Resmi</option>
               <option value="corporate_b2b">Pesanan Korporasi / B2B</option>
@@ -99,13 +99,13 @@ export const PartnershipInquiryForm: React.FC = () => {
             placeholder="Tuliskan produk yang diminati, estimasi kuantitas, atau pertanyaan khusus..."
             value={formData.messageNotes}
             onChange={(e) => setFormData({ ...formData, messageNotes: e.target.value })}
-            className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-doff-navy bg-white resize-none"
+            className="w-full px-3.5 py-2.5 rounded-md border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-doff-navy bg-white resize-none"
           />
         </div>
 
         <button
           type="submit"
-          className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-doff-navy text-white text-xs font-semibold hover:bg-doff-navydark transition-colors shadow-doff-sm"
+          className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-md bg-doff-navy text-white text-xs font-semibold hover:bg-doff-navydark transition-colors shadow-doff-sm"
         >
           {submitted ? (
             <>

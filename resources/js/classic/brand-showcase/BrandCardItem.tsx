@@ -18,7 +18,7 @@ export const BrandCardItem: React.FC<BrandCardItemProps> = ({
   return (
     <div
       id={cardId}
-      className="bg-white rounded-lg border-2 border-slate-300/90 shadow-md hover:shadow-lg overflow-hidden flex flex-col justify-between group hover:border-slate-300 transition-all"
+      className="bg-white rounded-md border-2 border-slate-300/90 shadow-md hover:shadow-lg overflow-hidden flex flex-col justify-between group hover:border-slate-300 transition-all"
     >
       {/* Brand Image Preview */}
       <div className="relative h-48 w-full overflow-hidden bg-slate-50 p-6 flex items-center justify-center">
@@ -62,7 +62,7 @@ export const BrandCardItem: React.FC<BrandCardItemProps> = ({
 
           <button
             onClick={() => onSelect(brand)}
-            className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-slate-300/50 border-2 border-dark hover:bg-blue-700/50 text-doff-navy text-xs font-semibold transition-colors"
+            className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-md bg-slate-300/50 border-2 border-dark hover:bg-blue-700/50 text-doff-navy text-xs font-semibold transition-colors"
           >
             <span>Lihat Detail Brand</span>
             <ArrowUpRight className="w-3.5 h-3.5" />

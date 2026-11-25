@@ -9,7 +9,7 @@ export const VisionMissionSection: React.FC<VisionMissionProps> = ({ vision, mis
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch pt-6">
       {/* Kolom Visi */}
-      <div className="lg:col-span-5 bg-doff-navy rounded-xl p-6 sm:p-8 text-white flex flex-col justify-between shadow-doff-sm">
+      <div className="lg:col-span-5 bg-doff-navy rounded-lg p-6 sm:p-8 text-white flex flex-col justify-between shadow-doff-sm">
         <div className="space-y-4">
           <div className="text-[11px] font-bold text-doff-gold uppercase tracking-widest">
             {vision.title}
@@ -28,7 +28,7 @@ export const VisionMissionSection: React.FC<VisionMissionProps> = ({ vision, mis
       </div>
 
       {/* Kolom Misi */}
-      <div className="lg:col-span-7 bg-white rounded-xl p-6 sm:p-8 border border-slate-200 shadow-doff-sm flex flex-col justify-between">
+      <div className="lg:col-span-7 bg-white rounded-lg p-6 sm:p-8 border border-slate-200 shadow-doff-sm flex flex-col justify-between">
         <div>
           <div className="text-xs font-bold text-doff-navy uppercase tracking-wider mb-5 pb-3 border-b border-slate-100 flex items-center justify-between">
             <span>6 Pilar Misi Strategis</span>

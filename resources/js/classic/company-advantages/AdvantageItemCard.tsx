@@ -7,7 +7,7 @@ interface AdvantageItemCardProps {
 
 export const AdvantageItemCard: React.FC<AdvantageItemCardProps> = ({ item }) => {
   return (
-    <div className="bg-white rounded-xl p-6 border border-slate-200/90 shadow-md hover:shadow-lg flex flex-col justify-between hover:border-slate-300 transition-all">
+    <div className="bg-white rounded-lg p-6 border border-slate-200/90 shadow-md hover:shadow-lg flex flex-col justify-between hover:border-slate-300 transition-all">
       <div className="space-y-3">
         <div className="flex items-center justify-between pb-3 border-b border-slate-100">
           <span className="text-xs font-mono font-bold text-doff-terracotta tracking-wider">

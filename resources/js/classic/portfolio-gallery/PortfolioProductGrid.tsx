@@ -16,7 +16,7 @@ export const PortfolioProductGrid: React.FC<PortfolioProductGridProps> = ({
       {products.map((item) => (
         <div
           key={item.id}
-          className="bg-white rounded-xl border border-slate-200/90 shadow-doff-sm overflow-hidden group cursor-pointer hover:border-slate-300 transition-colors"
+          className="bg-white rounded-lg border border-slate-200/90 shadow-doff-sm overflow-hidden group cursor-pointer hover:border-slate-300 transition-colors"
           onClick={() => onZoom(item.image, item.title)}
         >
           <div className="relative h-60 w-full overflow-hidden bg-slate-100">
