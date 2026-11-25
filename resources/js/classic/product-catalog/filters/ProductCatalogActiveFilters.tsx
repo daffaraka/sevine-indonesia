@@ -18,6 +18,7 @@ import {
 interface ProductCatalogActiveFiltersProps {
   filterState: CatalogFilterState;
   activeFilterCount: number;
+  categoryOptions?: Array<{ id: CatalogCategory; label: string }>;
   onRemoveCategory: (cat: CatalogCategory) => void;
   onRemoveBrand: (brand: CatalogBrand) => void;
   onRemoveShippingOrigin: (origin: ShippingOrigin) => void;
@@ -29,7 +30,7 @@ interface ProductCatalogActiveFiltersProps {
 }
 
 const buildFilterChips = (props: ProductCatalogActiveFiltersProps): ActiveFilterChip[] => {
-  const { filterState } = props;
+  const { filterState, categoryOptions = CATALOG_CATEGORY_OPTIONS } = props;
   const chips: ActiveFilterChip[] = [];
 
   if (filterState.searchQuery.trim()) {
@@ -42,7 +43,7 @@ const buildFilterChips = (props: ProductCatalogActiveFiltersProps): ActiveFilter
   }
 
   filterState.selectedCategories.forEach((catId) => {
-    const label = CATALOG_CATEGORY_OPTIONS.find((c) => c.id === catId)?.label || catId;
+    const label = categoryOptions.find((c) => c.id === catId)?.label || catId;
     chips.push({ key: `cat-${catId}`, label, toneClass: 'bg-slate-200/80 text-doff-navy font-medium', onRemove: () => props.onRemoveCategory(catId) });
   });
 

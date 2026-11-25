@@ -13,6 +13,8 @@ import { PriceRangeFilter, RatingFilter } from './ProductCatalogPriceRatingFilte
 
 export interface ProductCatalogFilterPanelProps {
   filterState: CatalogFilterState;
+  categoryOptions?: Array<{ id: CatalogCategory; label: string }>;
+  brandOptions?: Array<{ id: CatalogBrand; name: string; subtitle: string }>;
   onToggleCategory: (cat: CatalogCategory) => void;
   onToggleBrand: (brand: CatalogBrand) => void;
   onToggleShippingOrigin: (origin: ShippingOrigin) => void;
@@ -23,6 +25,8 @@ export interface ProductCatalogFilterPanelProps {
 
 export const ProductCatalogFilterPanel: React.FC<ProductCatalogFilterPanelProps> = ({
   filterState,
+  categoryOptions = CATALOG_CATEGORY_OPTIONS,
+  brandOptions = CATALOG_BRAND_OPTIONS,
   onToggleCategory,
   onToggleBrand,
   onToggleShippingOrigin,
@@ -39,7 +43,7 @@ export const ProductCatalogFilterPanel: React.FC<ProductCatalogFilterPanelProps>
     <div className="space-y-5">
       <FilterSection title="Kategori Produk" isOpen={open.category} onToggle={() => toggle('category')}>
         <CheckboxOptionList
-          items={CATALOG_CATEGORY_OPTIONS.map((cat) => ({
+          items={categoryOptions.map((cat) => ({
             id: cat.id,
             label: cat.label,
             checked: cat.id === 'all' ? filterState.selectedCategories.length === 0 : filterState.selectedCategories.includes(cat.id),
@@ -51,7 +55,7 @@ export const ProductCatalogFilterPanel: React.FC<ProductCatalogFilterPanelProps>
       <FilterSection title="5 Brand Sevine" isOpen={open.brand} onToggle={() => toggle('brand')}>
         <CheckboxOptionList
           spacing="space-y-2"
-          items={CATALOG_BRAND_OPTIONS.map((brand) => ({
+          items={brandOptions.map((brand) => ({
             id: brand.id,
             label: brand.name,
             subtitle: brand.subtitle,

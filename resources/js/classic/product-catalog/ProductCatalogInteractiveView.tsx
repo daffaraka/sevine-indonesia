@@ -9,13 +9,26 @@ import {
 import { ProductCatalogTopToolbar } from './filters/ProductCatalogTopToolbar';
 import { useProductCatalogFilter } from './hooks/useProductCatalogFilter';
 import { ProductCatalogDetailModal } from './modal/ProductCatalogDetailModal';
+import { CatalogBrand, CatalogCategory, CatalogProductItem } from './types/ProductCatalogTypes';
 
-export const ProductCatalogInteractiveView: React.FC = () => {
-  const catalog = useProductCatalogFilter(SEVINE_CATALOG_PRODUCTS);
+interface ProductCatalogInteractiveViewProps {
+  products?: CatalogProductItem[];
+  categoryOptions?: Array<{ id: CatalogCategory; label: string }>;
+  brandOptions?: Array<{ id: CatalogBrand; name: string; subtitle: string }>;
+}
+
+export const ProductCatalogInteractiveView: React.FC<ProductCatalogInteractiveViewProps> = ({
+  products = SEVINE_CATALOG_PRODUCTS,
+  categoryOptions,
+  brandOptions,
+}) => {
+  const catalog = useProductCatalogFilter(products);
 
   const sharedFilterProps = {
     filterState: catalog.filterState,
     activeFilterCount: catalog.activeFilterCount,
+    categoryOptions,
+    brandOptions,
     onToggleCategory: catalog.toggleCategory,
     onToggleBrand: catalog.toggleBrand,
     onToggleShippingOrigin: catalog.toggleShippingOrigin,
@@ -42,6 +55,7 @@ export const ProductCatalogInteractiveView: React.FC = () => {
       <ProductCatalogActiveFilters
         filterState={catalog.filterState}
         activeFilterCount={catalog.activeFilterCount}
+        categoryOptions={categoryOptions}
         onRemoveCategory={catalog.toggleCategory}
         onRemoveBrand={catalog.toggleBrand}
         onRemoveShippingOrigin={catalog.toggleShippingOrigin}

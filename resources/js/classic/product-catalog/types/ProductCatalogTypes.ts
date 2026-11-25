@@ -1,4 +1,4 @@
-export type CatalogBrand = 'SEVINE' | 'klou' | 'LALUNA' | 'ASSAIF' | 'NABIRA';
+export type CatalogBrand = 'SEVINE' | 'klou' | 'LALUNA' | 'ASSAIF' | 'NABIRA' | (string & {});
 
 export type CatalogCategory =
   | 'all'
@@ -7,7 +7,8 @@ export type CatalogCategory =
   | 'tas-wanita'
   | 'apparel'
   | 'muslim-pria'
-  | 'muslim-wanita';
+  | 'muslim-wanita'
+  | (string & {});
 
 export type ShippingOrigin = 'ngawi' | 'jakarta' | 'solo';
 
