@@ -4,14 +4,44 @@
 
 @layer base {
   html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  html,
+  body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     color: #1B2E4B;
     background-color: #F8FAFC;
+    overflow-x: clip;
   }
 
   /* Smooth scroll and mobile touch settings */
   * {
     -webkit-tap-highlight-color: transparent;
+  }
+
+  .font-mono {
+    font-variant-numeric: tabular-nums;
   }
 }
 
@@ -24,13 +54,56 @@
   }
 
   .doff-card-hover {
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    transition: border-color 180ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      box-shadow 180ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1);
   }
 
   .doff-card-hover:hover {
     border-color: #CBD5E1;
-    box-shadow: 0 4px 14px -2px rgba(27, 46, 75, 0.06);
-    transform: translateY(-1px);
+    box-shadow: 0 8px 24px -6px rgba(27, 46, 75, 0.09);
+    transform: translateY(-2px);
+  }
+
+  /* Quiet micro-interaction utilities (taste-ui-ux motion tokens) */
+  .sevine-btn-motion {
+    transition: background-color 140ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      border-color 140ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      color 140ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      box-shadow 140ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      transform 140ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .sevine-btn-motion:hover {
+      transform: translateY(-1px);
+    }
+  }
+
+  .sevine-btn-motion:active {
+    transform: translateY(1px) scale(0.985);
+    transition-duration: 90ms;
+  }
+
+  .sevine-photo-zoom {
+    transition: transform 600ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .group:hover .sevine-photo-zoom {
+      transform: scale(1.03);
+    }
+  }
+
+  .sevine-arrow-shift {
+    transition: transform 160ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .group:hover .sevine-arrow-shift,
+    .sevine-btn-motion:hover .sevine-arrow-shift {
+      transform: translateX(3px);
+    }
   }
 
   /* Muted linen background tone */
