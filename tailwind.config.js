@@ -1,3 +1,5 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -6,6 +8,10 @@ export default {
     "./resources/js/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      xs: '320px',
+      ...defaultTheme.screens,
+    },
     extend: {
       colors: {
         doff: {
@@ -36,8 +42,8 @@ export default {
       },
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        mono: ['"Space Grotesk"', 'ui-monospace', 'monospace'],
+        serif: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
         'doff-sm': '0 1px 3px rgba(27, 46, 75, 0.05)',

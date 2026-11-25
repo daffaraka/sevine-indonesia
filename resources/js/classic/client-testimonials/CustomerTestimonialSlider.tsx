@@ -3,8 +3,11 @@ import { TestimonialCardItem } from "./TestimonialCardItem";
 import { TestimonialImageLightbox } from "./TestimonialImageLightbox";
 import { CompanyProfileService } from '../../services/CompanyProfileService';
 
+import { TestimonialItem } from '../../types/CompanyProfileTypes';
+
 interface CustomerTestimonialSliderProps {
   id?: string;
+  testimonials?: TestimonialItem[];
 }
 
 interface ActiveLightboxData {
@@ -15,8 +18,8 @@ interface ActiveLightboxData {
 
 export const CustomerTestimonialSlider: React.FC<
   CustomerTestimonialSliderProps
-> = ({ id = "testimonials" }) => {
-  const testimonials = CompanyProfileService.getTestimonials();
+> = ({ id = "testimonials", testimonials: propTestimonials }) => {
+  const testimonials = propTestimonials ?? CompanyProfileService.getTestimonials();
   const [lightboxData, setLightboxData] = useState<ActiveLightboxData | null>(
     null,
   );
@@ -42,7 +45,7 @@ export const CustomerTestimonialSlider: React.FC<
       {/* Top and Bottom Subtle Seamless Fades */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-[#0E1A2C] to-transparent z-10" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-white/70 to-transparent z-10" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
+      <div className="w-full max-w-7xl 2xl:max-w-[1680px] mx-auto px-3.5 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 space-y-8 sm:space-y-10">
         {/* Header Seksi */}
         <div className="max-w-8xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="max-w-2xl space-y-2.5">
@@ -66,7 +69,7 @@ export const CustomerTestimonialSlider: React.FC<
         </div>
 
         {/* Layout Testimoni: 2 Kolom Ringkas (Ukuran Semula) */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
           {testimonials.map((testi) => (
             <TestimonialCardItem
               key={testi.id}

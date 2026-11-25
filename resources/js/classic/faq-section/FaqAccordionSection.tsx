@@ -2,12 +2,18 @@ import React, { useState } from 'react';
 import { CompanyProfileService } from '../../services/CompanyProfileService';
 import { FaqAccordionItem } from './FaqAccordionItem';
 
+import { FaqItem } from '../../types/CompanyProfileTypes';
+
 interface FaqAccordionSectionProps {
   id?: string;
+  faqs?: FaqItem[];
 }
 
-export const FaqAccordionSection: React.FC<FaqAccordionSectionProps> = ({ id = 'faq' }) => {
-  const faqItems = CompanyProfileService.getFaqItems();
+export const FaqAccordionSection: React.FC<FaqAccordionSectionProps> = ({
+  id = 'faq',
+  faqs,
+}) => {
+  const faqItems = faqs ?? CompanyProfileService.getFaqItems();
   const [openFaqId, setOpenFaqId] = useState<string | null>(faqItems[0]?.id ?? null);
 
   const handleToggleFaq = (faqId: string) => {
@@ -20,7 +26,7 @@ export const FaqAccordionSection: React.FC<FaqAccordionSectionProps> = ({ id = '
       aria-labelledby={`${id}-heading`}
       className="relative py-16 md:py-24 bg-warm-linen border-t border-slate-200/80 overflow-hidden"
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div className="w-full max-w-4xl 2xl:max-w-5xl mx-auto px-3.5 sm:px-6 lg:px-8 space-y-10">
         <div className="space-y-3 text-center max-w-2xl mx-auto">
           <div className="text-xs font-bold text-doff-terracotta uppercase tracking-wider">
             Informasi Kemitraan &amp; Produksi

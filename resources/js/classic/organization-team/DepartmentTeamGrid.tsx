@@ -40,7 +40,7 @@ export const DepartmentTeamGrid: React.FC<DepartmentTeamGridProps> = ({ id = 'te
         />
       </svg>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div className="relative w-full max-w-7xl 2xl:max-w-[1680px] mx-auto px-3.5 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 space-y-12">
         {/* Header Seksi */}
         <div className="max-w-2xl space-y-3">
           <div className="text-xs font-bold text-doff-terracotta uppercase tracking-wider">
