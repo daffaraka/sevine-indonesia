@@ -10,6 +10,7 @@ use App\Models\Faq;
 use App\Models\Partner;
 use App\Models\PartnershipInquiry;
 use App\Models\Product;
+use App\Models\ProductCategory;
 use App\Models\Testimonial;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -24,8 +25,13 @@ class PublicProfileController extends Controller
     {
         return Inertia::render('Public/ClassicProfile', [
             'brands'       => Brand::where('is_active', true)->orderBy('sort_order')->get(),
-            'events'       => Event::with('images')->where('is_published', true)->orderBy('sort_order')->get(),
-            'partners'     => Partner::where('status', 'Mitra Aktif')->orderBy('sort_order')->get(),
+            'categories'   => ProductCategory::where('is_active', true)->orderBy('sort_order')->orderBy('name')->get(),
+            'products'     => Product::with(['brand', 'category', 'swatches', 'images'])
+                ->where('status', 'Produksi Aktif')
+                ->latest('id')
+                ->get(),
+            'events'       => Event::with('images')->where('is_published', true)->orderBy('sort_order')->latest('id')->get(),
+            'partners'     => Partner::where('status', 'Mitra Aktif')->orderBy('sort_order')->latest('id')->get(),
             'careers'      => Career::where('is_active', true)->latest('updated_at')->get(),
             'testimonials' => Testimonial::where('is_active', true)->get(),
             'faqs'         => Faq::where('is_active', true)->orderBy('sort_order')->get(),
@@ -39,7 +45,24 @@ class PublicProfileController extends Controller
                 ->where('status', 'Produksi Aktif')
                 ->latest('id')
                 ->get(),
-            'brands' => Brand::where('is_active', true)->orderBy('sort_order')->get(),
+            'brands'     => Brand::where('is_active', true)->orderBy('sort_order')->get(),
+            'categories' => ProductCategory::where('is_active', true)->orderBy('sort_order')->orderBy('name')->get(),
+        ]);
+    }
+
+    public function careerDetail(Career $career): Response
+    {
+        abort_unless($career->is_active, 404);
+
+        $otherCareers = Career::where('is_active', true)
+            ->whereKeyNot($career->getKey())
+            ->latest('updated_at')
+            ->limit(4)
+            ->get();
+
+        return Inertia::render('Public/CareerDetail', [
+            'career'       => $career,
+            'otherCareers' => $otherCareers,
         ]);
     }
 

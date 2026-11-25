@@ -60,7 +60,7 @@ export const PUBLIC_URL_BY_MENU: Record<AdminMenuKey, { href: string; label: str
   products: { href: '/catalog', label: 'Lihat Katalog Publik' },
   categories: { href: '/catalog', label: 'Lihat Filter Katalog' },
   brands: { href: '/#brands', label: 'Lihat 5 Brand Publik' },
-  careers: { href: '/#contact', label: 'Lihat Portal Publik' },
+  careers: { href: '/#careers', label: 'Lihat Portal Publik' },
   events: { href: '/#events', label: 'Lihat Galeri Event' },
   collaborations: { href: '/#partners', label: 'Lihat Bagian Mitra' },
   access: { href: '/', label: 'Lihat Website' },

@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware([TrackPublicVisitorMiddleware::class])->group(function () {
     Route::get('/', [PublicProfileController::class, 'home'])->name('public.home');
     Route::get('/catalog', [PublicProfileController::class, 'catalog'])->name('public.catalog');
+    Route::get('/careers/{career:slug}', [PublicProfileController::class, 'careerDetail'])->name('public.careers.show');
 });
 
 Route::post('/inquiries', [PublicProfileController::class, 'storeInquiry'])
