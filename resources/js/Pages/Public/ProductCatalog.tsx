@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { router } from '@inertiajs/react';
+import { Head, router } from '@inertiajs/react';
 import { ProductCatalogPage } from '../../classic/product-catalog/ProductCatalogPage';
 import {
   BackendBrand,
@@ -26,12 +26,15 @@ export default function ProductCatalog({
   const categoryOptions = useMemo(() => mapCatalogCategoryOptionsFromDb(dbCategories), [dbCategories]);
 
   return (
-    <ProductCatalogPage
-      id="catalog-view"
-      onNavigateHome={() => router.visit('/')}
-      products={products}
-      brandOptions={brandOptions}
-      categoryOptions={categoryOptions}
-    />
+    <>
+      <Head title="Katalog Produk" />
+      <ProductCatalogPage
+        id="catalog-view"
+        onNavigateHome={() => router.visit('/')}
+        products={products}
+        brandOptions={brandOptions}
+        categoryOptions={categoryOptions}
+      />
+    </>
   );
 }

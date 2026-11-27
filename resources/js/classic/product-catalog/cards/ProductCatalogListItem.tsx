@@ -1,5 +1,10 @@
 import React from 'react';
-import { ExternalLink, Eye, ShieldCheck } from 'lucide-react';
+import { Link } from '@inertiajs/react';
+import { ArrowUpRight, ExternalLink, Eye, ShieldCheck } from 'lucide-react';
+import {
+  getProductDetailPath,
+  recordPublicClick,
+} from '../../../services/PublicTelemetryService';
 import { formatRupiah } from '../hooks/ProductCatalogFilterUtils';
 import { CatalogProductItem } from '../types/ProductCatalogTypes';
 import {
@@ -25,12 +30,18 @@ export const ProductCatalogListItem: React.FC<ProductCatalogListItemProps> = ({
     <div className="flex-1 space-y-2">
       <div className="flex flex-wrap items-center gap-2">
         <span className="text-[10px] font-bold px-2 py-0.5 bg-slate-100 text-doff-navy rounded uppercase tracking-wider">{product.brand}</span>
-        <span className="text-[10px] font-semibold text-slate-500">SKU: {product.sku}</span>
+        <span className="text-[10px] font-mono font-semibold text-slate-500">SKU: {product.sku}</span>
         <span className="text-[10px] text-slate-400">•</span>
         <span className="text-[10px] text-slate-500 font-medium">{product.categoryLabel}</span>
       </div>
-      <h3 className="text-sm sm:text-base font-bold text-doff-navy group-hover:text-doff-terracotta transition-colors">
-        {product.title}
+      <h3 className="text-sm sm:text-base font-bold text-doff-navy">
+        <Link
+          href={getProductDetailPath(product.sku)}
+          onClick={(e) => e.stopPropagation()}
+          className="hover:text-doff-terracotta transition-colors"
+        >
+          {product.title}
+        </Link>
       </h3>
       <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">{product.description}</p>
       <div className="flex flex-wrap gap-1.5 pt-1">
@@ -66,11 +77,37 @@ export const ProductCatalogListItem: React.FC<ProductCatalogListItemProps> = ({
         )}
       </div>
       <div className="space-y-2 pt-2">
-        <button type="button" onClick={() => onSelect(product)} className="w-full py-1.5 px-3 bg-doff-navy hover:bg-doff-navydark text-white text-xs font-bold rounded-md shadow-xs flex items-center justify-center gap-1.5 transition-colors">
-          <Eye className="w-3.5 h-3.5" />
-          <span>Spesifikasi Produk</span>
-        </button>
-        <a href={product.shopeeUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="w-full py-1.5 px-3 bg-slate-50 hover:bg-doff-terracotta hover:text-white text-doff-navy text-xs font-bold rounded-md border border-slate-200 flex items-center justify-center gap-1.5 transition-colors">
+        <div className="grid grid-cols-2 gap-1.5">
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              onSelect(product);
+            }}
+            className="py-1.5 px-2 bg-slate-100 hover:bg-slate-200 text-doff-navy text-[11px] font-bold rounded-md flex items-center justify-center gap-1 transition-colors"
+          >
+            <Eye className="w-3.5 h-3.5" />
+            <span>Quick View</span>
+          </button>
+          <Link
+            href={getProductDetailPath(product.sku)}
+            onClick={(e) => e.stopPropagation()}
+            className="py-1.5 px-2 bg-doff-navy hover:bg-doff-navydark text-white text-[11px] font-bold rounded-md shadow-xs flex items-center justify-center gap-1 transition-colors"
+          >
+            <span>Detail</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+        <a
+          href={product.shopeeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => {
+            e.stopPropagation();
+            recordPublicClick('shopee', { productId: product.numericId });
+          }}
+          className="w-full py-1.5 px-3 bg-slate-50 hover:bg-doff-terracotta hover:text-white text-doff-navy text-xs font-bold rounded-md border border-slate-200 flex items-center justify-center gap-1.5 transition-colors"
+        >
           <span>Beli di Shopee</span>
           <ExternalLink className="w-3.5 h-3.5" />
         </a>

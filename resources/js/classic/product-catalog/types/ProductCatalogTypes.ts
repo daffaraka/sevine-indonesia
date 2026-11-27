@@ -19,6 +19,7 @@ export interface ProductColorSwatch {
 
 export interface CatalogProductItem {
   id: string;
+  numericId?: number;
   sku: string;
   title: string;
   brand: CatalogBrand;
@@ -47,6 +48,7 @@ export interface CatalogProductItem {
   wholesalePrice: number;
   minWholesaleQty: number;
   shopeeUrl: string;
+  viewsCount?: number;
 }
 
 export interface ServiceFilterState {

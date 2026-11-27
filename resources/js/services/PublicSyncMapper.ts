@@ -54,12 +54,14 @@ export interface BackendProduct {
   sku: string;
   name: string;
   capacity?: string | null;
+  price?: number | null;
   status: string;
   description?: string | null;
   features?: string[] | null;
   shipping_origin?: ShippingOrigin | null;
   is_b2b_ready?: boolean;
   shopee_url?: string | null;
+  views_count?: number | null;
   brand?: {
     id: number | string;
     key: string;
@@ -189,61 +191,98 @@ export function mapCatalogCategoryOptionsFromDb(
   ];
 }
 
+function parseSoldCountFromText(text?: string | null): number | null {
+  if (!text) return null;
+  const normalized = text.toLowerCase().replace(/\s+/g, '');
+  const rbMatch = normalized.match(/(\d+(?:[.,]\d+)?)rb/);
+  if (rbMatch) {
+    return Math.round(parseFloat(rbMatch[1].replace(',', '.')) * 1000);
+  }
+  const numMatch = normalized.match(/(\d+(?:[.,]\d+)?)/);
+  if (!numMatch) return null;
+  return parseInt(numMatch[1].replace(/[.,]/g, ''), 10) || null;
+}
+
+function formatSoldLabel(capacity?: string | null): string {
+  if (!capacity || capacity === '-') return 'Ready Produksi';
+  return /terjual/i.test(capacity) ? capacity : `Kapasitas ${capacity}`;
+}
+
+export function mapSingleProductFromDb(row: BackendProduct): CatalogProductItem {
+  const staticMatch = STATIC_PRODUCT_BY_SKU.get((row.sku || '').toUpperCase());
+  const origin: ShippingOrigin = row.shipping_origin || staticMatch?.shippingOrigin || 'ngawi';
+  const originMeta = SHIPPING_ORIGIN_LABEL_MAP[origin] || SHIPPING_ORIGIN_LABEL_MAP.ngawi;
+  const gallery =
+    row.images && row.images.length > 0
+      ? row.images.map((img) => img.image_path)
+      : staticMatch?.gallery ?? ['/assets/brands/logo-sevine-1.webp'];
+  const primaryImage =
+    row.images?.find((img) => img.is_primary)?.image_path || gallery[0];
+
+  const swatches =
+    row.swatches && row.swatches.length > 0
+      ? row.swatches.map((s) => ({ name: s.name, hex: s.hex_code }))
+      : staticMatch?.swatches ?? [];
+
+  const features =
+    row.features && row.features.length > 0
+      ? row.features
+      : staticMatch?.features ?? (row.capacity ? [`Kapasitas ${row.capacity}`] : []);
+
+  const hasDbPrice = typeof row.price === 'number' && row.price > 0;
+  const resolvedPrice = hasDbPrice ? row.price! : (staticMatch?.price ?? 149000);
+  const resolvedOriginalPrice = hasDbPrice
+    ? resolvedPrice
+    : (staticMatch?.originalPrice ?? 189000);
+  const resolvedDiscount = hasDbPrice ? 0 : (staticMatch?.discountPercentage ?? 21);
+  const parsedSoldCount = parseSoldCountFromText(row.capacity);
+  const parsedNumericId = Number(row.id);
+
+  return {
+    id: `db-prod-${row.id}`,
+    numericId: Number.isFinite(parsedNumericId) && parsedNumericId > 0 ? parsedNumericId : undefined,
+    sku: row.sku,
+    title: row.name,
+    brand: (row.brand?.key || staticMatch?.brand || 'SEVINE') as CatalogBrand,
+    category: (row.category?.slug || staticMatch?.category || 'all') as CatalogCategory,
+    categoryLabel: row.category?.name || staticMatch?.categoryLabel || 'Produk Sevine',
+    price: resolvedPrice,
+    originalPrice: resolvedOriginalPrice,
+    discountPercentage: resolvedDiscount,
+    rating: staticMatch?.rating ?? 4.9,
+    ratingCount: staticMatch?.ratingCount ?? 120,
+    soldCount: parsedSoldCount ?? staticMatch?.soldCount ?? 500,
+    soldLabel: staticMatch?.soldLabel ?? formatSoldLabel(row.capacity),
+    location: originMeta.location,
+    shippingOrigin: origin,
+    shippingOriginLabel: originMeta.label,
+    image: primaryImage,
+    gallery,
+    description: row.description || staticMatch?.description || '',
+    features,
+    swatches,
+    isOfficial: true,
+    isFreeShipping: true,
+    isCod: true,
+    isReadyStock: row.status === 'Produksi Aktif',
+    isB2BReady: row.is_b2b_ready ?? true,
+    wholesalePrice: hasDbPrice
+      ? Math.round((resolvedPrice * 0.8) / 100) * 100
+      : (staticMatch?.wholesalePrice ?? 115000),
+    minWholesaleQty: staticMatch?.minWholesaleQty ?? 12,
+    shopeeUrl: row.shopee_url || row.brand?.shopee_url || staticMatch?.shopeeUrl || 'https://shopee.co.id/sevine.id',
+    viewsCount: typeof row.views_count === 'number' ? row.views_count : undefined,
+  };
+}
+
 export function mapProductsFromDb(rows?: BackendProduct[]): CatalogProductItem[] {
   if (!rows || rows.length === 0) return SEVINE_CATALOG_PRODUCTS;
-  return rows.map((row) => {
-    const staticMatch = STATIC_PRODUCT_BY_SKU.get((row.sku || '').toUpperCase());
-    const origin: ShippingOrigin = row.shipping_origin || staticMatch?.shippingOrigin || 'ngawi';
-    const originMeta = SHIPPING_ORIGIN_LABEL_MAP[origin] || SHIPPING_ORIGIN_LABEL_MAP.ngawi;
-    const gallery =
-      row.images && row.images.length > 0
-        ? row.images.map((img) => img.image_path)
-        : staticMatch?.gallery ?? ['/assets/brands/logo-sevine-1.webp'];
-    const primaryImage =
-      row.images?.find((img) => img.is_primary)?.image_path || gallery[0];
+  return rows.map(mapSingleProductFromDb);
+}
 
-    const swatches =
-      row.swatches && row.swatches.length > 0
-        ? row.swatches.map((s) => ({ name: s.name, hex: s.hex_code }))
-        : staticMatch?.swatches ?? [];
-
-    const features =
-      row.features && row.features.length > 0
-        ? row.features
-        : staticMatch?.features ?? (row.capacity ? [`Kapasitas ${row.capacity}`] : []);
-
-    return {
-      id: `db-prod-${row.id}`,
-      sku: row.sku,
-      title: row.name,
-      brand: (row.brand?.key || staticMatch?.brand || 'SEVINE') as CatalogBrand,
-      category: (row.category?.slug || staticMatch?.category || 'all') as CatalogCategory,
-      categoryLabel: row.category?.name || staticMatch?.categoryLabel || 'Produk Sevine',
-      price: staticMatch?.price ?? 149000,
-      originalPrice: staticMatch?.originalPrice ?? 189000,
-      discountPercentage: staticMatch?.discountPercentage ?? 21,
-      rating: staticMatch?.rating ?? 4.9,
-      ratingCount: staticMatch?.ratingCount ?? 120,
-      soldCount: staticMatch?.soldCount ?? 500,
-      soldLabel: staticMatch?.soldLabel ?? (row.capacity ? `Kapasitas ${row.capacity}` : 'Ready Produksi'),
-      location: originMeta.location,
-      shippingOrigin: origin,
-      shippingOriginLabel: originMeta.label,
-      image: primaryImage,
-      gallery,
-      description: row.description || staticMatch?.description || '',
-      features,
-      swatches,
-      isOfficial: true,
-      isFreeShipping: true,
-      isCod: true,
-      isReadyStock: row.status === 'Produksi Aktif',
-      isB2BReady: row.is_b2b_ready ?? true,
-      wholesalePrice: staticMatch?.wholesalePrice ?? 115000,
-      minWholesaleQty: staticMatch?.minWholesaleQty ?? 12,
-      shopeeUrl: row.shopee_url || row.brand?.shopee_url || staticMatch?.shopeeUrl || 'https://shopee.co.id/sevine.id',
-    };
-  });
+export function mapRelatedProductsFromDb(rows?: BackendProduct[]): CatalogProductItem[] {
+  if (!rows || rows.length === 0) return [];
+  return rows.map(mapSingleProductFromDb);
 }
 
 const FALLBACK_EVENT_GALLERY = [

@@ -50,6 +50,33 @@ class PublicProfileController extends Controller
         ]);
     }
 
+    public function productDetail(string $sku): Response
+    {
+        $product = Product::with(['brand', 'category', 'swatches', 'images'])
+            ->where('status', 'Produksi Aktif')
+            ->whereRaw('LOWER(sku) = ?', [strtolower($sku)])
+            ->firstOrFail();
+
+        $product->increment('views_count');
+
+        $relatedProducts = Product::with(['brand', 'category', 'swatches', 'images'])
+            ->where('status', 'Produksi Aktif')
+            ->whereKeyNot($product->getKey())
+            ->where(function ($query) use ($product) {
+                $query->where('category_id', $product->category_id)
+                    ->orWhere('brand_id', $product->brand_id);
+            })
+            ->orderByRaw('CASE WHEN category_id = ? THEN 0 ELSE 1 END', [$product->category_id])
+            ->latest('id')
+            ->limit(4)
+            ->get();
+
+        return Inertia::render('Public/ProductDetail', [
+            'product'         => $product,
+            'relatedProducts' => $relatedProducts,
+        ]);
+    }
+
     public function careerDetail(Career $career): Response
     {
         abort_unless($career->is_active, 404);

@@ -1,4 +1,6 @@
 import React from 'react';
+import { scrollToSmoothTarget } from '../../hooks/useSmoothScroll';
+import { ProductCatalogPagination } from './cards/ProductCatalogPagination';
 import { ProductCatalogResultsGrid } from './cards/ProductCatalogResultsGrid';
 import { SEVINE_CATALOG_PRODUCTS } from './data/ProductCatalogData';
 import { ProductCatalogActiveFilters } from './filters/ProductCatalogActiveFilters';
@@ -15,14 +17,21 @@ interface ProductCatalogInteractiveViewProps {
   products?: CatalogProductItem[];
   categoryOptions?: Array<{ id: CatalogCategory; label: string }>;
   brandOptions?: Array<{ id: CatalogBrand; name: string; subtitle: string }>;
+  syncWithUrl?: boolean;
 }
 
 export const ProductCatalogInteractiveView: React.FC<ProductCatalogInteractiveViewProps> = ({
   products = SEVINE_CATALOG_PRODUCTS,
   categoryOptions,
   brandOptions,
+  syncWithUrl = true,
 }) => {
-  const catalog = useProductCatalogFilter(products);
+  const catalog = useProductCatalogFilter(products, syncWithUrl);
+
+  const handlePageChange = (page: number) => {
+    catalog.goToPage(page);
+    scrollToSmoothTarget('catalog-toolbar-anchor');
+  };
 
   const sharedFilterProps = {
     filterState: catalog.filterState,
@@ -39,7 +48,7 @@ export const ProductCatalogInteractiveView: React.FC<ProductCatalogInteractiveVi
   };
 
   return (
-    <div className="space-y-4">
+    <div id="catalog-toolbar-anchor" className="space-y-4">
       <ProductCatalogTopToolbar
         searchQuery={catalog.filterState.searchQuery}
         onSearchChange={catalog.setSearchQuery}
@@ -70,14 +79,28 @@ export const ProductCatalogInteractiveView: React.FC<ProductCatalogInteractiveVi
         <div className="hidden lg:block">
           <ProductCatalogFilterSidebar {...sharedFilterProps} />
         </div>
-        <div className="flex-1 w-full min-w-0">
+        <div className="flex-1 w-full min-w-0 space-y-5">
           <ProductCatalogResultsGrid
             isFiltering={catalog.isFiltering}
             viewMode={catalog.viewMode}
-            products={catalog.sortedProducts}
+            products={catalog.paginatedProducts}
             onResetFilters={catalog.resetAllFilters}
             onSelectProduct={catalog.setSelectedProductModal}
           />
+          {!catalog.isFiltering && (
+            <ProductCatalogPagination
+              totalItems={catalog.filteredCount}
+              rangeStart={catalog.rangeStart}
+              rangeEnd={catalog.rangeEnd}
+              currentPage={catalog.currentPage}
+              totalPages={catalog.totalPages}
+              pageSize={catalog.pageSize}
+              remainingCount={catalog.remainingCount}
+              onPageChange={handlePageChange}
+              onPageSizeChange={catalog.setPageSize}
+              onLoadMore={catalog.loadMoreProducts}
+            />
+          )}
         </div>
       </div>
 

@@ -14,8 +14,9 @@ class TelemetryController extends Controller
     public function trackClick(Request $request): JsonResponse
     {
         $validated = $request->validate([
-            'type'     => ['required', Rule::in(['whatsapp', 'shopee', 'career'])],
-            'careerId' => ['nullable', 'integer', 'exists:careers,id'],
+            'type'      => ['required', Rule::in(['whatsapp', 'shopee', 'career'])],
+            'careerId'  => ['nullable', 'integer', 'exists:careers,id'],
+            'productId' => ['nullable', 'integer', 'exists:products,id'],
         ]);
 
         $column = match ($validated['type']) {
@@ -24,19 +25,26 @@ class TelemetryController extends Controller
             'career'   => 'career_form_clicks',
         };
 
-        DailyVisitorMetric::upsert(
-            [
-                'metric_date' => now()->toDateString(),
-                $column       => 1,
-                'created_at'  => now(),
-                'updated_at'  => now(),
-            ],
-            ['metric_date'],
-            [
-                $column      => DB::raw("{$column} + 1"),
-                'updated_at' => now(),
-            ],
-        );
+        $today = now()->toDateString();
+        $existingMetric = DailyVisitorMetric::whereDate('metric_date', $today)->first();
+
+        if ($existingMetric) {
+            $existingMetric->increment($column);
+        } else {
+            DailyVisitorMetric::upsert(
+                [
+                    'metric_date' => $today,
+                    $column       => 1,
+                    'created_at'  => now(),
+                    'updated_at'  => now(),
+                ],
+                ['metric_date'],
+                [
+                    $column      => DB::raw("{$column} + 1"),
+                    'updated_at' => now(),
+                ],
+            );
+        }
 
         if ($validated['type'] === 'career' && ! empty($validated['careerId'])) {
             Career::whereKey($validated['careerId'])->increment('apply_clicks_count');

@@ -1,5 +1,5 @@
-import React from 'react';
-import { RotateCcw, X } from 'lucide-react';
+import React, { useState } from 'react';
+import { Check, Link2, RotateCcw, X } from 'lucide-react';
 import {
   CATALOG_CATEGORY_OPTIONS,
   SERVICE_FILTER_OPTIONS,
@@ -81,8 +81,21 @@ const buildFilterChips = (props: ProductCatalogActiveFiltersProps): ActiveFilter
 };
 
 export const ProductCatalogActiveFilters: React.FC<ProductCatalogActiveFiltersProps> = (props) => {
+  const [copiedLink, setCopiedLink] = useState<boolean>(false);
+
   if (props.activeFilterCount === 0) return null;
   const chips = buildFilterChips(props);
+
+  const handleCopyFilteredUrl = async () => {
+    if (typeof window === 'undefined' || !navigator.clipboard) return;
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setCopiedLink(true);
+      window.setTimeout(() => setCopiedLink(false), 2000);
+    } catch {
+      // Abaikan bila izin clipboard diblokir browser
+    }
+  };
 
   return (
     <div className="flex flex-wrap items-center gap-2 pt-1 pb-2">
@@ -98,6 +111,14 @@ export const ProductCatalogActiveFilters: React.FC<ProductCatalogActiveFiltersPr
       <button type="button" onClick={props.onResetAllFilters} className="text-xs font-semibold text-doff-terracotta hover:underline inline-flex items-center gap-1 ml-1">
         <RotateCcw className="w-3 h-3" />
         <span>Reset Semua</span>
+      </button>
+      <button
+        type="button"
+        onClick={handleCopyFilteredUrl}
+        className="text-xs font-semibold text-doff-navy hover:text-doff-terracotta inline-flex items-center gap-1 ml-auto px-2.5 py-1 rounded-md bg-white border border-slate-200 transition-colors"
+      >
+        {copiedLink ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Link2 className="w-3.5 h-3.5" />}
+        <span>{copiedLink ? 'Tautan Disalin' : 'Salin Tautan'}</span>
       </button>
     </div>
   );

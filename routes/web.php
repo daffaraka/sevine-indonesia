@@ -23,6 +23,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware([TrackPublicVisitorMiddleware::class])->group(function () {
     Route::get('/', [PublicProfileController::class, 'home'])->name('public.home');
     Route::get('/catalog', [PublicProfileController::class, 'catalog'])->name('public.catalog');
+    Route::get('/catalog/{sku}', [PublicProfileController::class, 'productDetail'])
+        ->where('sku', '[A-Za-z0-9._-]+')
+        ->name('public.catalog.show');
     Route::get('/careers/{career:slug}', [PublicProfileController::class, 'careerDetail'])->name('public.careers.show');
 });
 
