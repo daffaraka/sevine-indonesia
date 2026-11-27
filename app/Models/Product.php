@@ -17,6 +17,7 @@ class Product extends Model
         'category_id',
         'name',
         'capacity',
+        'price',
         'status',
         'description',
         'features',
@@ -29,6 +30,7 @@ class Product extends Model
     protected function casts(): array
     {
         return [
+            'price'        => 'integer',
             'features'     => 'array',
             'is_b2b_ready' => 'boolean',
             'views_count'  => 'integer',

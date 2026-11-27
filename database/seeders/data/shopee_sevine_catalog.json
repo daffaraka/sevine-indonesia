@@ -1,0 +1,1123 @@
+{
+  "source": "https://shopee.co.id/sevine.id#product_list",
+  "brand_key": "SEVINE",
+  "shipping_origin": "ngawi",
+  "categories": [
+    {
+      "slug": "polka-series",
+      "name": "Polka Series",
+      "description": "Koleksi tas motif polkadot Sevine berbahan nylon water repellent dengan sentuhan manis dan fungsional.",
+      "sort_order": 1,
+      "shopee_collection_url": "https://shopee.co.id/sevine.id?page=0&shopCollection=277626597"
+    },
+    {
+      "slug": "new-arrivals-sling-bags",
+      "name": "New Arrivals Sling Bags",
+      "description": "Rilisan terbaru sling bag water repellent Sevine dengan aksen pita serut dan gaya Korean style.",
+      "sort_order": 2,
+      "shopee_collection_url": "https://shopee.co.id/sevine.id?page=0&shopCollection=264842580"
+    },
+    {
+      "slug": "back-to-school-collection",
+      "name": "Back to School Collection",
+      "description": "Totebag dan ransel water repellent berkapasitas lega untuk sekolah dan kuliah, muat tablet hingga laptop 14 inch.",
+      "sort_order": 3,
+      "shopee_collection_url": "https://shopee.co.id/sevine.id?page=0&shopCollection=274406998"
+    },
+    {
+      "slug": "most-popular-sling-bag",
+      "name": "Most Popular Sling Bag",
+      "description": "Sling bag terlaris Sevine (Kiora, Sora, Kyla) berbahan nylon crinkle tahan percikan air dengan resleting YKK.",
+      "sort_order": 4,
+      "shopee_collection_url": "https://shopee.co.id/sevine.id?page=0&shopCollection=264842615"
+    },
+    {
+      "slug": "bundling-buy-more-save-more",
+      "name": "Bundling Buy More Save More",
+      "description": "Paket hemat tas Sevine pilihan lengkap dengan gantungan bag charm rajut, macrame, maupun nylon.",
+      "sort_order": 5,
+      "shopee_collection_url": "https://shopee.co.id/sevine.id?page=0&shopCollection=260813615"
+    },
+    {
+      "slug": "luma-ramadhan-series",
+      "name": "Luma Ramadhan Series",
+      "description": "Koleksi bucket sling bag Luma dengan penutup magnetik, pilihan bundling bag charm mutiara, hingga hampers hijab pashmina.",
+      "sort_order": 6,
+      "shopee_collection_url": "https://shopee.co.id/sevine.id?page=0&shopCollection=266738344"
+    },
+    {
+      "slug": "totebag-shoulder-series",
+      "name": "Totebag & Shoulder Bag Series",
+      "description": "Seri signature totebag laptop dan shoulder bag Sevine (Aurora, Anya, Audrey) untuk aktivitas harian dan kampus.",
+      "sort_order": 7,
+      "shopee_collection_url": "https://shopee.co.id/sevine.id?page=0&shopCollection=254775288"
+    },
+    {
+      "slug": "bag-charms",
+      "name": "Bag Charms",
+      "description": "Koleksi gantungan tas handmade aesthetic Sevine berbahan macrame, rajut, nylon crinkle, resin, dan orchid latex.",
+      "sort_order": 8,
+      "shopee_collection_url": "https://shopee.co.id/sevine.id?page=0&shopCollection=261171650"
+    }
+  ],
+  "products": [
+    {
+      "sku": "SVN-PLK-001",
+      "shopee_item_id": "53615946276",
+      "category_slug": "polka-series",
+      "name": "Sevine Kiora Polka Sling Bag Polkadot Tahan Air Tas Selempang Wanita Resleting",
+      "price": 48900,
+      "capacity": "4RB+ terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Kiora-Polka-Sling-Bag-Polkadot-Tahan-Air-Tas-Selempang-Cewek-Wanita-Slingbag-Resleting-i.147117083.53615946276",
+      "description": "Kiora Polkadot Sling Bag adalah versi terbaru dari Kiora Sling Bag dengan motif polkadot manis dan stylish untuk berbagai kegiatan. Terbuat dari kain nylon water repellent yang aman terhadap percikan air, dilapisi busa dan furing, serta dilengkapi resleting YKK dan tali adjustable 33–57 cm.",
+      "features": [
+        "Kain Nylon Water Repellent",
+        "Resleting YKK Presisi",
+        "Lapisan Busa & Furing",
+        "Ukuran 24 x 15 x 6 cm · Tali 33–57 cm"
+      ],
+      "swatches": [
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Baby Pink", "hex_code": "#F2C6CE" },
+        { "name": "Burgundy", "hex_code": "#6D2B38" },
+        { "name": "Butter Yellow", "hex_code": "#F2DF9B" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztj-mvyiox0fyf41f8",
+        "https://down-id.img.susercontent.com/file/id-11134207-81zte-mvy90dp67kzkca",
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztg-msozq0qo6psa67"
+      ],
+      "images": [
+        "/assets/products/polka-series/svn-plk-001-1.webp",
+        "/assets/products/polka-series/svn-plk-001-2.webp",
+        "/assets/products/polka-series/svn-plk-001-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-PLK-002",
+      "shopee_item_id": "47067890733",
+      "category_slug": "polka-series",
+      "name": "Sevine Shila Polka Totebag Polkadot Sekolah Kuliah Sekat Kantong",
+      "price": 55254,
+      "capacity": "1RB+ terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Shila-Polka-Totebag-Polkadot-Sekolah-Kuliah-Tas-Cewek-Wanita-Sekat-Kantong-Tote-Bag-i.147117083.47067890733",
+      "description": "Shila Polka Totebag berbahan nylon crinkle water repellent dengan lapisan busa dan furing yang nyaman digunakan harian. Dilengkapi penutup magnetik serta ruang lega yang muat tablet hingga ukuran 11 inch untuk sekolah maupun kuliah.",
+      "features": [
+        "Nylon Crinkle Water Resistant",
+        "Muat Tablet hingga 11 inch",
+        "Penutup Magnetik + Lapisan Busa & Furing",
+        "Ukuran 29 x 36 cm · Tali 27 cm"
+      ],
+      "swatches": [
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Baby Pink", "hex_code": "#F2C6CE" },
+        { "name": "Matcha Strawberry", "hex_code": "#9CAF88" },
+        { "name": "Choco Mint", "hex_code": "#88B2A6" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81zth-mvfom2ttkg7bfa",
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztd-mt55tn26o8p129",
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztc-mv8u41x8ukn55f"
+      ],
+      "images": [
+        "/assets/products/polka-series/svn-plk-002-1.webp",
+        "/assets/products/polka-series/svn-plk-002-2.webp",
+        "/assets/products/polka-series/svn-plk-002-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-PLK-003",
+      "shopee_item_id": "55168803570",
+      "category_slug": "polka-series",
+      "name": "Sevine Affiliator's Choice Kiora Polka Sling Bag Polkadot Bundling Bagcharm",
+      "price": 53442,
+      "capacity": "1RB+ terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Affiliator's-Choice-Kiora-Polka-Sling-Bag-Polkadot-Bagcharm-Tahan-Air-Selempang-Tas-Korean-Style-i.147117083.55168803570",
+      "description": "Paket Kiora Polka Sling Bag berbahan kain nylon water repellent dengan resleting YKK, lapisan busa dan furing, dipadukan pilihan gantungan tas Orchid Latex atau Cherry Resin yang mempermanis gaya Korean style harian.",
+      "features": [
+        "Kiora Polka Nylon Water Repellent",
+        "Resleting YKK + Busa & Furing",
+        "Bundling Bagcharm Orchid / Cherry Resin",
+        "Ukuran 24 x 15 x 6 cm · Tali 33–57 cm"
+      ],
+      "swatches": [
+        { "name": "Polka Black", "hex_code": "#1E1E22" },
+        { "name": "Polka Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Polka Brown", "hex_code": "#7C5A43" },
+        { "name": "Polka Cream", "hex_code": "#E9DEC9" },
+        { "name": "Polka Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Polka Baby Pink", "hex_code": "#F2C6CE" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztq-mu06q5p7drlt44",
+        "https://down-id.img.susercontent.com/file/id-11134207-81zth-mu06q5p7f66954",
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztn-mtz8re23leko61"
+      ],
+      "images": [
+        "/assets/products/polka-series/svn-plk-003-1.webp",
+        "/assets/products/polka-series/svn-plk-003-2.webp",
+        "/assets/products/polka-series/svn-plk-003-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-PLK-004",
+      "shopee_item_id": "45368127985",
+      "category_slug": "polka-series",
+      "name": "Sevine Elfy Polka Sling Bag Polkadot Tas Bahu Tahan Air Resleting",
+      "price": 56900,
+      "capacity": "594 terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Elfy-Polka-Sling-Bag-Polkadot-Tas-Bahu-Tahan-Air-Tas-Selempang-Cewek-Wanita-Resleting-i.147117083.45368127985",
+      "description": "Sevine Elfy Polka Sling Bag hadir dengan tali adjustable 29–57 cm yang nyaman dipakai sebagai tas bahu maupun selempang. Dibuat dari nylon crinkle water repellent dengan lapisan busa, furing, dan resleting YKK untuk menjaga barang bawaan tetap aman.",
+      "features": [
+        "Nylon Crinkle Water Repellent",
+        "Resleting YKK + Busa & Furing",
+        "Tali Adjustable 29–57 cm (Bahu & Selempang)",
+        "Ukuran 22 x 5 x 18 cm"
+      ],
+      "swatches": [
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Baby Pink", "hex_code": "#F2C6CE" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztg-mtixv6naw5508a",
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztd-mtdbto1s70u92c",
+        "https://down-id.img.susercontent.com/file/id-11134207-81zti-mtdml8oejt3d1e"
+      ],
+      "images": [
+        "/assets/products/polka-series/svn-plk-004-1.webp",
+        "/assets/products/polka-series/svn-plk-004-2.webp",
+        "/assets/products/polka-series/svn-plk-004-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-NEW-001",
+      "shopee_item_id": "56706207548",
+      "category_slug": "new-arrivals-sling-bags",
+      "name": "Sevine Elora Slingbag Selempang Sekolah Kuliah Resleting Korean Style",
+      "price": 50900,
+      "capacity": "10RB+ terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Elora-Slingbag-Selempang-Sekolah-Kuliah-Tas-Cewek-Wanita-Resleting-Sling-Bag-Lucu-Korean-Style-i.147117083.56706207548",
+      "description": "Elora Sling Bag terbuat dari nylon crinkle water resistant berkarakter daun talas yang tahan percikan air. Dilengkapi lapisan busa dan furing serta penutup resleting, serasi dipadukan dengan berbagai gaya outfit harian.",
+      "features": [
+        "Nylon Crinkle Water Resistant",
+        "Penutup Resleting Aman",
+        "Lapisan Busa & Furing Lembut",
+        "Ukuran 26 x 6 x 21 cm · Tali maks. 51 cm"
+      ],
+      "swatches": [
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztq-mrvconvdua6aef",
+        "https://down-id.img.susercontent.com/file/id-11134207-822wt-mn9memurnthe12",
+        "https://down-id.img.susercontent.com/file/id-11134207-822wp-mn9memurs16q86"
+      ],
+      "images": [
+        "/assets/products/new-arrivals-sling-bags/svn-new-001-1.webp",
+        "/assets/products/new-arrivals-sling-bags/svn-new-001-2.webp",
+        "/assets/products/new-arrivals-sling-bags/svn-new-001-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-NEW-002",
+      "shopee_item_id": "52109063893",
+      "category_slug": "new-arrivals-sling-bags",
+      "name": "Sevine Mola Slingbag Selempang Tas Pita Serut Wanita Korean Style",
+      "price": 56905,
+      "capacity": "1RB+ terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Mola-Slingbag-Selempang-Sekolah-Kuliah-Tas-Pita-Cewek-Wanita-Sling-Bag-Lucu-i.147117083.52109063893",
+      "description": "Mola Sling Bag dihiasi aksen pita manis dan tali serut pada bagian penutup magnetik sehingga memberi siluet feminin yang unik. Berbahan nylon crinkle water resistant dengan lapisan busa dan furing.",
+      "features": [
+        "Nylon Crinkle Water Resistant",
+        "Aksen Pita & Tali Serut + Penutup Magnet",
+        "Lapisan Busa & Furing",
+        "Ukuran 25 x 7 x 14 cm · Tali 28–52 cm"
+      ],
+      "swatches": [
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztm-mrvez2shzuvb39",
+        "https://down-id.img.susercontent.com/file/id-11134207-822wq-mn9kn88n8ni8e1",
+        "https://down-id.img.susercontent.com/file/id-11110105-6vg6s-mn9mf0ilg7pdac_cover"
+      ],
+      "images": [
+        "/assets/products/new-arrivals-sling-bags/svn-new-002-1.webp",
+        "/assets/products/new-arrivals-sling-bags/svn-new-002-2.webp",
+        "/assets/products/new-arrivals-sling-bags/svn-new-002-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-NEW-003",
+      "shopee_item_id": "51159706472",
+      "category_slug": "new-arrivals-sling-bags",
+      "name": "Sevine Livy Slingbag Selempang Tas Pita Serut Resleting Korean Style",
+      "price": 54900,
+      "capacity": "1RB+ terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Livy-Slingbag-Selempang-Sekolah-Kuliah-Tas-Pita-Serut-Cewek-Wanita-Sling-Bag-Lucu-Korean-Style-i.147117083.51159706472",
+      "description": "Livy Sling Bag hadir dengan desain simpel dilengkapi tali serut yang dapat dibentuk menjadi pita manis serta penutup resleting. Muat iPad hingga 8 inch dan terbuat dari nylon crinkle water resistant berlapis busa dan furing.",
+      "features": [
+        "Nylon Crinkle Water Resistant",
+        "Muat iPad hingga 8 inch",
+        "Tali Serut Pita + Penutup Resleting",
+        "Ukuran 24 x 6 x 17 cm · Tali maks. 54 cm"
+      ],
+      "swatches": [
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81zto-mrvea02s0utj8b",
+        "https://down-id.img.susercontent.com/file/id-11134207-822wu-mnwd6bbtygao6b",
+        "https://down-id.img.susercontent.com/file/id-11110105-6vff6-mnwbyk5czthe21_cover"
+      ],
+      "images": [
+        "/assets/products/new-arrivals-sling-bags/svn-new-003-1.webp",
+        "/assets/products/new-arrivals-sling-bags/svn-new-003-2.webp",
+        "/assets/products/new-arrivals-sling-bags/svn-new-003-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-NEW-004",
+      "shopee_item_id": "47159507489",
+      "category_slug": "new-arrivals-sling-bags",
+      "name": "Sevine Aruna Slingbag Selempang Tas Pita Serut Magnet Korean Style",
+      "price": 49900,
+      "capacity": "338 terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Aruna-Slingbag-Selempang-Sekolah-Kuliah-Tas-Pita-Serut-Cewek-Wanita-Sling-Bag-Lucu-Korean-Style-i.147117083.47159507489",
+      "description": "Aruna Sling Bag tampil ringkas dengan detail tali serut pita di bagian penutup magnetik. Terbuat dari bahan nylon crinkle water resistant yang tahan percikan air ringan, lengkap dengan lapisan busa dan furing.",
+      "features": [
+        "Nylon Crinkle Water Resistant",
+        "Penutup Magnet + Tali Serut Pita",
+        "Lapisan Busa & Furing",
+        "Ukuran 21 x 7 x 16,5 cm · Tali maks. 52 cm"
+      ],
+      "swatches": [
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztf-mrvh11dyclxgb7",
+        "https://down-id.img.susercontent.com/file/id-11134207-822wi-mnhb89z0s45h12",
+        "https://down-id.img.susercontent.com/file/id-11110105-6vg6j-mnwbx402fshsa7_cover"
+      ],
+      "images": [
+        "/assets/products/new-arrivals-sling-bags/svn-new-004-1.webp",
+        "/assets/products/new-arrivals-sling-bags/svn-new-004-2.webp",
+        "/assets/products/new-arrivals-sling-bags/svn-new-004-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-BTS-001",
+      "shopee_item_id": "43459276880",
+      "category_slug": "back-to-school-collection",
+      "name": "Sevine Ivana Polos Totebag Tas Selempang Sekolah Kuliah Laptop 14 Inch",
+      "price": 84900,
+      "capacity": "681 terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Ivana-Polos-Totebag-Tas-Selempang-Sekolah-Kuliah-Tas-Cewek-Resleting-Tote-Bag-Slingbag-Laptop-i.147117083.43459276880",
+      "description": "Ivana 2-in-1 berfungsi sebagai totebag sekaligus sling bag dengan bahan nylon crinkle water repellent berlapis busa angin dan furing. Ideal untuk sekolah dan kuliah karena muat laptop hingga 14 inch serta menggunakan resleting YKK.",
+      "features": [
+        "2-in-1 Totebag & Sling Bag",
+        "Muat Laptop hingga 14 inch",
+        "Nylon Water Repellent + Resleting YKK",
+        "Ukuran 42 x 30 x 7 cm · Tali 30–50 cm"
+      ],
+      "swatches": [
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" },
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-7ra0u-mchghns4noyf9b",
+        "https://down-id.img.susercontent.com/file/id-11134207-7ra0j-mcfz3nyop8zp8d",
+        "https://down-id.img.susercontent.com/file/id-11134207-7ra0n-mcfz3nyojmpxc0"
+      ],
+      "images": [
+        "/assets/products/back-to-school-collection/svn-bts-001-1.webp",
+        "/assets/products/back-to-school-collection/svn-bts-001-2.webp",
+        "/assets/products/back-to-school-collection/svn-bts-001-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-BTS-002",
+      "shopee_item_id": "56006581928",
+      "category_slug": "back-to-school-collection",
+      "name": "Sevine Selena Totebag Sekolah Kuliah Resleting Laptop 12 Inch",
+      "price": 59900,
+      "capacity": "444 terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Selena-Totebag-Sekolah-Kuliah-Tas-Cewek-Wanita-Resleting-Tote-Bag-Laptop-i.147117083.56006581928",
+      "description": "Selena Totebag berbahan nylon crinkle water repellent dengan lapisan busa dan furing yang ringan namun kokoh. Cocok untuk aktivitas kampus dan sekolah dengan kapasitas laptop hingga 12 inch.",
+      "features": [
+        "Nylon Crinkle Water Resistant",
+        "Muat Laptop hingga 12 inch",
+        "Penutup Resleting + Busa & Furing",
+        "Ukuran 35 x 6 x 28 cm · Tali 33 cm"
+      ],
+      "swatches": [
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81zti-mrvez2si5h5382",
+        "https://down-id.img.susercontent.com/file/id-11134207-822wh-mnkz84k9k1zaa5",
+        "https://down-id.img.susercontent.com/file/id-11110105-6vg6p-mmifrvminqisf0_cover"
+      ],
+      "images": [
+        "/assets/products/back-to-school-collection/svn-bts-002-1.webp",
+        "/assets/products/back-to-school-collection/svn-bts-002-2.webp",
+        "/assets/products/back-to-school-collection/svn-bts-002-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-BTS-003",
+      "shopee_item_id": "26487117919",
+      "category_slug": "back-to-school-collection",
+      "name": "Sevine Ivy Polos Totebag Sekolah Kuliah Resleting Laptop 14 Inch Korean Style",
+      "price": 62898,
+      "capacity": "2RB+ terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Ivy-Polos-Totebag-Sekolah-Kuliah-Tas-Cewek-Wanita-Resleting-Tote-Bag-Laptop-Korean-Style-i.147117083.26487117919",
+      "description": "Ivy Polos Totebag dibuat dari bahan nylon crinkle water repellent yang dilapisi busa angin dan furing lembut. Berkapasitas lega untuk laptop hingga 14 inch dengan penutup resleting YKK untuk mobilitas sekolah dan kuliah.",
+      "features": [
+        "Nylon Crinkle Water Repellent",
+        "Muat Laptop hingga 14 inch",
+        "Resleting YKK + Busa Angin & Furing",
+        "Ukuran 42 x 30 x 7 cm · Tali 30 cm"
+      ],
+      "swatches": [
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Peach", "hex_code": "#E8B7A4" },
+        { "name": "Cream", "hex_code": "#E9DEC9" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztm-mqmzsheuxwch7c",
+        "https://down-id.img.susercontent.com/file/id-11134207-7rbkd-magd84q6wrlka6",
+        "https://down-id.img.susercontent.com/file/id-11134207-7rbk8-magd84q6y66035"
+      ],
+      "images": [
+        "/assets/products/back-to-school-collection/svn-bts-003-1.webp",
+        "/assets/products/back-to-school-collection/svn-bts-003-2.webp",
+        "/assets/products/back-to-school-collection/svn-bts-003-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-BTS-004",
+      "shopee_item_id": "54759313858",
+      "category_slug": "back-to-school-collection",
+      "name": "Sevine Clara Totebag Sekolah Kuliah Sekat Kantong Resleting Laptop 13 Inch",
+      "price": 67900,
+      "capacity": "518 terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Clara-Totebag-Sekolah-Kuliah-Tas-Cewek-Wanita-Sekat-Kantong-Resleting-Tote-Bag-Laptop-i.147117083.54759313858",
+      "description": "Clara Totebag dilengkapi sekat kantong khusus laptop 12–13 inch di bagian dalam dengan bahan nylon crinkle water repellent, lapisan busa, dan furing. Rapi dan fungsional untuk kebutuhan belajar maupun kerja harian.",
+      "features": [
+        "Sekat Kantong Laptop 12–13 inch",
+        "Nylon Crinkle Water Resistant",
+        "Penutup Resleting + Busa & Furing",
+        "Ukuran 35 x 7,5 x 27 cm · Tali 31 cm"
+      ],
+      "swatches": [
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztn-mrvfh620ctfq4c",
+        "https://down-id.img.susercontent.com/file/id-11134207-822wu-mnkz84k9po920d",
+        "https://down-id.img.susercontent.com/file/id-11110105-6vfey-mrvgy20hui2s69_cover"
+      ],
+      "images": [
+        "/assets/products/back-to-school-collection/svn-bts-004-1.webp",
+        "/assets/products/back-to-school-collection/svn-bts-004-2.webp",
+        "/assets/products/back-to-school-collection/svn-bts-004-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-BTS-005",
+      "shopee_item_id": "56212944501",
+      "category_slug": "back-to-school-collection",
+      "name": "Sevine Yori Backpack Totebag Polos Ransel Sekolah Kuliah Korean Style",
+      "price": 99900,
+      "capacity": "22 terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Yori-Backpack-Totebag-Polos-Ransel-Sekolah-Kuliah-Tas-Punggung-Cewek-Lucu-Wanita-Resleting-Korean-Style-i.147117083.56212944501",
+      "description": "Yori Backpack multifungsi dapat dipakai sebagai ransel maupun slingbag dengan bahan nylon crinkle water resistant. Ruang utama berpenutup magnetis berlapis busa dan furing, dirancang ergonomis untuk sekolah dan kuliah.",
+      "features": [
+        "Multifungsi Backpack & Slingbag",
+        "Nylon Crinkle Water Resistant",
+        "Penutup Magnetis + Busa & Furing",
+        "Ukuran 29 x 8 x 24 cm · Tali Sling 32–65 cm"
+      ],
+      "swatches": [
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-822wj-mpz42xfdasjk63",
+        "https://down-id.img.susercontent.com/file/id-11134207-822wj-mpz42xfd9dz422",
+        "https://down-id.img.susercontent.com/file/id-11110105-6vfeo-mrvhcwb2hvk76a_cover"
+      ],
+      "images": [
+        "/assets/products/back-to-school-collection/svn-bts-005-1.webp",
+        "/assets/products/back-to-school-collection/svn-bts-005-2.webp",
+        "/assets/products/back-to-school-collection/svn-bts-005-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-BTS-006",
+      "shopee_item_id": "45811549027",
+      "category_slug": "back-to-school-collection",
+      "name": "Sevine Aerin Backpack Polos Ransel Sekolah Kuliah Magnetis Korean Style",
+      "price": 89900,
+      "capacity": "34 terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Aerin-Backpack-Polos-Ransel-Sekolah-Kuliah-Tas-Punggung-Cewek-Lucu-Wanita-Magnetis-Korean-Style-i.147117083.45811549027",
+      "description": "Aerin Backpack berbahan nylon crinkle water resistant tampil compact dan eye-catching untuk sekolah maupun kampus. Muat buku B5 dan tablet hingga 11 inch dengan penutup magnetis, busa, dan furing pelindung.",
+      "features": [
+        "Muat Buku B5 & Tablet hingga 11 inch",
+        "Nylon Crinkle Water Resistant",
+        "Penutup Magnetis + Busa & Furing",
+        "Ukuran 23 x 10 x 24 cm · Tali 38–63 cm"
+      ],
+      "swatches": [
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-822wj-mplsfvrbh1cc42",
+        "https://down-id.img.susercontent.com/file/id-11134207-822wj-mplsfvr9n0nhfc",
+        "https://down-id.img.susercontent.com/file/id-11110105-6vff3-mqmzf3rkpjpc6b_cover"
+      ],
+      "images": [
+        "/assets/products/back-to-school-collection/svn-bts-006-1.webp",
+        "/assets/products/back-to-school-collection/svn-bts-006-2.webp",
+        "/assets/products/back-to-school-collection/svn-bts-006-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-POP-001",
+      "shopee_item_id": "41069036449",
+      "category_slug": "most-popular-sling-bag",
+      "name": "Sevine Kiora Polos Sling Bag Tahan Air Tas Selempang Korean Style Resleting",
+      "price": 50800,
+      "capacity": "10RB+ terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Kiora-Polos-Sling-Bag-Tahan-Air-Tas-Selempang-Cewek-Wanita-Korean-Style-Slingbag-Resleting-Polos-i.147117083.41069036449",
+      "description": "Kiora Polos Sling Bag adalah tas selempang best-seller Sevine dengan desain compact minimalis berbahan nylon crinkle water repellent. Dilengkapi resleting YKK, lapisan busa dan furing, serta tali adjustable 33–57 cm.",
+      "features": [
+        "Best Seller Nylon Crinkle Water Repellent",
+        "Resleting YKK Original",
+        "Lapisan Busa & Furing + Printing DTF",
+        "Ukuran 24 x 15 x 6 cm · Tali 33–57 cm"
+      ],
+      "swatches": [
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Peach", "hex_code": "#E8B7A4" },
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztl-mtixv6nefytda4",
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztk-mtixv6nehddt2c",
+        "https://down-id.img.susercontent.com/file/id-11110105-6vdvh-mepa14q7py4l27_cover"
+      ],
+      "images": [
+        "/assets/products/most-popular-sling-bag/svn-pop-001-1.webp",
+        "/assets/products/most-popular-sling-bag/svn-pop-001-2.webp",
+        "/assets/products/most-popular-sling-bag/svn-pop-001-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-POP-002",
+      "shopee_item_id": "48650160734",
+      "category_slug": "most-popular-sling-bag",
+      "name": "Sevine Sora Polos Sling Bag Tas Bahu Tahan Air Selempang Korean Style",
+      "price": 44900,
+      "capacity": "10RB+ terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Sora-Polos-Sling-Bag-Tas-Bahu-Tahan-Air-Tas-Selempang-Korean-Style-Cewek-Wanita-Resleting-i.147117083.48650160734",
+      "description": "Sora Polos Sling Bag hadir dengan sentuhan pita manis dan tali serbaguna yang dapat diatur 16–53 cm sebagai shoulder bag maupun sling bag. Berbahan nylon crinkle water repellent berlapis busa dan furing dengan resleting YKK.",
+      "features": [
+        "Nylon Crinkle Water Repellent",
+        "Resleting YKK + Sentuhan Pita Manis",
+        "Tali Adjustable 16–53 cm (Shoulder & Sling)",
+        "Ukuran 27 x 16 cm"
+      ],
+      "swatches": [
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81zte-mrvdobb6yeiv1c",
+        "https://down-id.img.susercontent.com/file/id-11134207-82250-mimhs2q5cqv7d9",
+        "https://down-id.img.susercontent.com/file/id-11110105-6vdv6-mie1sp0701s674_cover"
+      ],
+      "images": [
+        "/assets/products/most-popular-sling-bag/svn-pop-002-1.webp",
+        "/assets/products/most-popular-sling-bag/svn-pop-002-2.webp",
+        "/assets/products/most-popular-sling-bag/svn-pop-002-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-POP-003",
+      "shopee_item_id": "29584014717",
+      "category_slug": "most-popular-sling-bag",
+      "name": "Sevine Kyla Polos Sling Bag Tahan Air Tas Selempang Resleting Korean Style",
+      "price": 57900,
+      "capacity": "10RB+ terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Kyla-Polos-Sling-Bag-Tahan-Air-Tas-Selempang-Cewek-Wanita-Slingbag-Resleting-Korean-Style-Polos-i.147117083.29584014717",
+      "description": "Kyla Polos Sling Bag berkapasitas lebih lega dibanding Kiora, menggunakan kain nylon crinkle water repellent dengan lapisan busa dan furing serta resleting YKK untuk menunjang mobilitas harian.",
+      "features": [
+        "Nylon Crinkle Water Repellent",
+        "Resleting YKK + Busa & Furing",
+        "Kapasitas Lebih Lega untuk Harian",
+        "Ukuran 27 x 16 x 8 cm · Tali 29–52 cm"
+      ],
+      "swatches": [
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" },
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-7rbkd-ma0xrc5krpkgf2",
+        "https://down-id.img.susercontent.com/file/id-11134207-7rbk5-ma0xrc5kuipc86",
+        "https://down-id.img.susercontent.com/file/id-11134207-7rbk3-ma0xrc5kt44w96"
+      ],
+      "images": [
+        "/assets/products/most-popular-sling-bag/svn-pop-003-1.webp",
+        "/assets/products/most-popular-sling-bag/svn-pop-003-2.webp",
+        "/assets/products/most-popular-sling-bag/svn-pop-003-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-BND-001",
+      "shopee_item_id": "45650864916",
+      "category_slug": "bundling-buy-more-save-more",
+      "name": "Sevine Affiliator's Choice Kiora Sling Bag Bundling Bagcharm Macrame",
+      "price": 52580,
+      "capacity": "10RB+ terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Affiliator's-Choice-Kiora-Sling-Bag-Bagcharm-Tahan-Air-Selempang-Tas-Korean-Style-Cewek-Wanita-Gantungan-Nylon-i.147117083.45650864916",
+      "description": "Paket bundling favorit Kiora Sling Bag berbahan kain nylon water repellent dengan resleting YKK, dipadukan gantungan tas macrame pita 15 x 8 cm untuk tampilan Korean style yang langsung siap pakai.",
+      "features": [
+        "Bundling Kiora Sling Bag + Bagcharm Macrame",
+        "Kain Nylon Water Repellent & Resleting YKK",
+        "Lapisan Busa & Furing",
+        "Tas 24 x 15 x 6 cm · Charm 15 x 8 cm"
+      ],
+      "swatches": [
+        { "name": "Kiora Black", "hex_code": "#1E1E22" },
+        { "name": "Kiora Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Kiora Brown", "hex_code": "#7C5A43" },
+        { "name": "Kiora Cream", "hex_code": "#E9DEC9" },
+        { "name": "Kiora Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Kiora Peach", "hex_code": "#E8B7A4" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-8224y-mkc0fxqf8lxk95",
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztm-msp7opmhc742ed",
+        "https://down-id.img.susercontent.com/file/id-11134207-8224q-mkc0fxs1aqyt4d"
+      ],
+      "images": [
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-001-1.webp",
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-001-2.webp",
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-001-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-BND-002",
+      "shopee_item_id": "27642702891",
+      "category_slug": "bundling-buy-more-save-more",
+      "name": "Sevine Kiora Sling Bag Bundling Bag Charm Rajut Cherry & Lily",
+      "price": 48900,
+      "capacity": "10RB+ terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Kiora-Sling-Bag-Bundling-Bag-Charm-Rajut-Gantungan-Sekolah-Tas-Cewek-Korean-Style-Wanita-Resleting-Ganci-i.147117083.27642702891",
+      "description": "Bundling Kiora Sling Bag water repellent dengan bag charm rajut handmade (Cherry Red / Lily Cream) berukuran 10 x 6 cm. Praktis, tahan percikan air, dan dilengkapi resleting YKK serta lapisan busa dan furing.",
+      "features": [
+        "Bundling Kiora Sling Bag + Bag Charm Rajut",
+        "Nylon Crinkle Water Repellent",
+        "Resleting YKK + Busa & Furing",
+        "Tas 24 x 15 x 6 cm · Charm Rajut 10 x 6 cm"
+      ],
+      "swatches": [
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" },
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztc-mrvea02s3nyf6f",
+        "https://down-id.img.susercontent.com/file/id-11134207-82251-ml5tf36693ia23",
+        "https://down-id.img.susercontent.com/file/id-11134207-81zte-mfm629ptj7yhee"
+      ],
+      "images": [
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-002-1.webp",
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-002-2.webp",
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-002-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-BND-003",
+      "shopee_item_id": "51252393343",
+      "category_slug": "bundling-buy-more-save-more",
+      "name": "Sevine Kiora Sling Bag Bundling Bag Charm Nylon Lonceng",
+      "price": 58900,
+      "capacity": "762 terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Kiora-Sling-Bag-Bundling-Bag-Charm-Nylon-Lonceng-Gantungan-Sekolah-Tas-Wanita-Resleting-Ganci-i.147117083.51252393343",
+      "description": "Bundling Kiora Sling Bag nylon crinkle water repellent bersama bag charm nylon lonceng berpengait besi. Cocok untuk sekolah, kuliah, dan hangout dengan penutup resleting YKK serta tali adjustable 33–57 cm.",
+      "features": [
+        "Bundling Kiora + Bag Charm Nylon Pengait Besi",
+        "Nylon Crinkle Water Repellent",
+        "Resleting YKK + Busa & Furing",
+        "Tas 24 x 15 x 6 cm · Charm 10 x 5 cm"
+      ],
+      "swatches": [
+        { "name": "Kiora Black", "hex_code": "#1E1E22" },
+        { "name": "Kiora Brown", "hex_code": "#7C5A43" },
+        { "name": "Kiora Cream", "hex_code": "#E9DEC9" },
+        { "name": "Kiora Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Kiora Peach", "hex_code": "#E8B7A4" },
+        { "name": "Kiora Baby Blue", "hex_code": "#A8C6DF" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztp-mrvea02ry1on6f",
+        "https://down-id.img.susercontent.com/file/id-11134207-8224z-ml5tf366ai2qf3",
+        "https://down-id.img.susercontent.com/file/id-11134207-8224u-mhpz7a9mqrk189"
+      ],
+      "images": [
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-003-1.webp",
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-003-2.webp",
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-003-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-BND-004",
+      "shopee_item_id": "52006047647",
+      "category_slug": "bundling-buy-more-save-more",
+      "name": "Sevine Affiliator's Choice Sora Sling Bag Bundling Bagcharm Pita & Cherry",
+      "price": 49900,
+      "capacity": "3RB+ terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Affiliator's-Choice-Sora-Sling-Bag-Bagcharm-Tas-Bahu-Tahan-Air-Tas-Selempang-Korean-Style-i.147117083.52006047647",
+      "description": "Sora Sling Bag include gantungan tas macrame pita atau cherry rajut/resin. Terbuat dari nylon crinkle water repellent dengan lapisan busa dan furing, resleting YKK, serta tali serbaguna 16–53 cm.",
+      "features": [
+        "Bundling Sora Sling Bag + Bagcharm Pilihan",
+        "Nylon Crinkle Water Repellent & Resleting YKK",
+        "Tali Adjustable 16–53 cm",
+        "Ukuran Tas 27 x 16 cm"
+      ],
+      "swatches": [
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-8224x-mkp7y27y3kec02",
+        "https://down-id.img.susercontent.com/file/id-11134207-8224y-ml5tf366bwn613",
+        "https://down-id.img.susercontent.com/file/id-11134207-8224y-mkjfx06b71tv37"
+      ],
+      "images": [
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-004-1.webp",
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-004-2.webp",
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-004-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-BND-005",
+      "shopee_item_id": "52102924645",
+      "category_slug": "bundling-buy-more-save-more",
+      "name": "Sevine Affiliator's Choice Kiora Sling Bag Bundling Gantungan Macrame Vol. 2",
+      "price": 58900,
+      "capacity": "777 terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Affiliator's-Choice-Kiora-Sling-Bag-Bagcharm-Tahan-Air-Tas-Selempang-Cewek-Wanita-Gantungan-Macrame-Tas-i.147117083.52102924645",
+      "description": "Bundling Kiora Sling Bag nylon water repellent dengan gantungan macrame 15 x 4 cm varian warna Pink Fushia, Grey Pink, Dark Brown, dan Cream Ivory. Lengkap dengan resleting YKK serta lapisan busa dan furing.",
+      "features": [
+        "Bundling Kiora + Macrame Charm 15 x 4 cm",
+        "Kain Nylon Water Repellent",
+        "Resleting YKK + Busa & Furing",
+        "Ukuran Tas 24 x 15 x 6 cm · Tali 33–57 cm"
+      ],
+      "swatches": [
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-8224p-mkaw1rzks83m38",
+        "https://down-id.img.susercontent.com/file/id-11134207-8224r-ml5tf3667oxued",
+        "https://down-id.img.susercontent.com/file/id-11134207-82250-mkaw5qwoddz98e"
+      ],
+      "images": [
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-005-1.webp",
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-005-2.webp",
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-005-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-BND-006",
+      "shopee_item_id": "57114458778",
+      "category_slug": "bundling-buy-more-save-more",
+      "name": "Sevine Spesial Live Affiliator Kiora Sling Bag Bundling Bagcharm Pita",
+      "price": 56900,
+      "capacity": "1RB+ terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Spesial-Live-Affiliator-Kiora-Sling-Bag-Bagcharm-Tas-Bahu-Tahan-Air-Tas-Selempang-Korean-Style-i.147117083.57114458778",
+      "description": "Edisi spesial bundling Kiora Sling Bag nylon water repellent dan gantungan pita macrame 15 x 8 cm. Dilengkapi resleting YKK, lapisan busa dan furing, serta tali selempang adjustable 33–57 cm.",
+      "features": [
+        "Edisi Bundling Kiora + Macrame Pita",
+        "Kain Nylon Water Repellent",
+        "Resleting YKK + Busa & Furing",
+        "Ukuran Tas 24 x 15 x 6 cm · Tali 33–57 cm"
+      ],
+      "swatches": [
+        { "name": "Kiora Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Kiora Black", "hex_code": "#1E1E22" },
+        { "name": "Kiora Brown", "hex_code": "#7C5A43" },
+        { "name": "Kiora Cream", "hex_code": "#E9DEC9" },
+        { "name": "Kiora Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Kiora Peach", "hex_code": "#E8B7A4" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztp-mqx7p9b0jv2a24",
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztf-mqx4tmrtyxoie6",
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztj-mqx64di5j0ud88"
+      ],
+      "images": [
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-006-1.webp",
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-006-2.webp",
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-006-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-BND-007",
+      "shopee_item_id": "42115694677",
+      "category_slug": "bundling-buy-more-save-more",
+      "name": "Sevine Ivy Tote Bag Bundling Bag Charm Macrame Sekolah Kuliah Laptop 14 Inch",
+      "price": 84900,
+      "capacity": "136 terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Ivy-Tote-Bag-Bundling-Bag-Charm-Gantungan-Sekolah-Kuliah-Tas-Cewek-Korean-Style-Wanita-Resleting-Ganci-i.147117083.42115694677",
+      "description": "Bundling Ivy Tote Bag water repellent muat laptop 14 inch bersama gantungan tali macrame 19 x 8 cm berpengait besi. Menggunakan resleting YKK, busa angin, dan furing untuk kenyamanan aktivitas kampus.",
+      "features": [
+        "Bundling Ivy Totebag 14\" + Macrame Charm",
+        "Nylon Crinkle Water Repellent",
+        "Resleting YKK + Busa Angin & Furing",
+        "Tas 42 x 30 x 7 cm · Charm 19 x 8 cm"
+      ],
+      "swatches": [
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" },
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-8224o-mh7bhj7wnuvh3a",
+        "https://down-id.img.susercontent.com/file/id-11134207-8224w-mh7bhj7wp9fxe3",
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztn-mqmzshex5yq5f2"
+      ],
+      "images": [
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-007-1.webp",
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-007-2.webp",
+        "/assets/products/bundling-buy-more-save-more/svn-bnd-007-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-LUM-001",
+      "shopee_item_id": "27244140157",
+      "category_slug": "luma-ramadhan-series",
+      "name": "Sevine Luma Sling Bag Bucket Tahan Air Handbag Magnet Ramadhan Series",
+      "price": 57900,
+      "capacity": "685 terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Luma-Sling-Bag-Tas-Cewek-Lebaran-Tahan-Air-Tas-Selempang-Wanita-Handbag-Magnet-i.147117083.27244140157",
+      "description": "Luma Sling Bag adalah tas model bucket berpalet pastel dan earth tone yang mudah di-mix & match untuk segala kesempatan. Terbuat dari kain nylon water repellent dengan penutup magnet, lapisan busa dan furing, serta tali adjustable hingga 67 cm.",
+      "features": [
+        "Siluet Bucket Pastel & Earth Tone",
+        "Kain Nylon Water Repellent",
+        "Penutup Magnet + Busa & Furing",
+        "Ukuran 22 x 14 x 10 cm · Tali maks. 67 cm"
+      ],
+      "swatches": [
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztd-mrvconvdx3b619",
+        "https://down-id.img.susercontent.com/file/id-11134207-8224u-mjtrexq6fi8225",
+        "https://down-id.img.susercontent.com/file/id-11134207-8224r-mjtrexq6e3nm78"
+      ],
+      "images": [
+        "/assets/products/luma-ramadhan-series/svn-lum-001-1.webp",
+        "/assets/products/luma-ramadhan-series/svn-lum-001-2.webp",
+        "/assets/products/luma-ramadhan-series/svn-lum-001-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-LUM-002",
+      "shopee_item_id": "56805627423",
+      "category_slug": "luma-ramadhan-series",
+      "name": "Sevine Luma Sling Bag Bundling Bagcharm Mutiara Tahan Air Handbag Magnet",
+      "price": 48930,
+      "capacity": "34 terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Luma-Sling-Bag-Bundling-Bagcharm-Mutiara-Tas-Cewek-Tahan-Air-Tas-Selempang-Wanita-Handbag-Magnet-i.147117083.56805627423",
+      "description": "Paket Luma Sling Bag bucket water repellent lengkap dengan 1 pcs bagcharm mutiara putih berukuran 9 x 6 cm. Praktis dengan bukaan magnetik, lapisan busa dan furing, serta tali selempang adjustable hingga 67 cm.",
+      "features": [
+        "1 pcs Luma Sling Bag + Bagcharm Mutiara",
+        "Kain Nylon Water Repellent",
+        "Penutup Magnet + Busa & Furing",
+        "Ukuran 22 x 14 x 10 cm · Tali maks. 67 cm"
+      ],
+      "swatches": [
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztg-mrvdobb717nr49",
+        "https://down-id.img.susercontent.com/file/id-11134207-8224w-mk3dx7828dfpa4",
+        "https://down-id.img.susercontent.com/file/id-11134207-8224s-mk3dx7825katdb"
+      ],
+      "images": [
+        "/assets/products/luma-ramadhan-series/svn-lum-002-1.webp",
+        "/assets/products/luma-ramadhan-series/svn-lum-002-2.webp",
+        "/assets/products/luma-ramadhan-series/svn-lum-002-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-LUM-003",
+      "shopee_item_id": "56505183768",
+      "category_slug": "luma-ramadhan-series",
+      "name": "Sevine Luma Sling Bag x Hijab Pashmina Hampers Dustbag Bundling",
+      "price": 74900,
+      "capacity": "8 terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Luma-Sling-Bag-x-Hijab-Pashmina-Hampers-Dustbag-Bundling-Tas-Cewek-Tahan-Air-Tas-Selempang-i.147117083.56505183768",
+      "description": "Bundling hampers eksklusif berisi 1 pcs Luma Sling Bag nylon water repellent, 1 pcs Hijab Pashmina Ceruty Flowy (75 x 175 cm), dan 1 pcs Dustbag. Elegan untuk pemakaian sendiri maupun hadiah spesial.",
+      "features": [
+        "Set Hampers: Luma Bag + Pashmina + Dustbag",
+        "Tas Nylon Water Repellent + Penutup Magnet",
+        "Hijab Pashmina Ceruty Flowy 75 x 175 cm",
+        "Ukuran Tas 22 x 14 x 10 cm"
+      ],
+      "swatches": [
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Brown", "hex_code": "#7C5A43" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Peach", "hex_code": "#E8B7A4" },
+        { "name": "Cacao", "hex_code": "#6F4E37" },
+        { "name": "Latte", "hex_code": "#C8AD93" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-8224r-mjtt2qdt61vk22",
+        "https://down-id.img.susercontent.com/file/id-11134207-82251-mjtsgvv8lcsje7",
+        "https://down-id.img.susercontent.com/file/id-11134207-8224r-mjtsgvv8mrcz63"
+      ],
+      "images": [
+        "/assets/products/luma-ramadhan-series/svn-lum-003-1.webp",
+        "/assets/products/luma-ramadhan-series/svn-lum-003-2.webp",
+        "/assets/products/luma-ramadhan-series/svn-lum-003-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-TOT-001",
+      "shopee_item_id": "29165347024",
+      "category_slug": "totebag-shoulder-series",
+      "name": "Sevine Aurora Totebag Sekolah Kuliah Tahan Air Resleting Laptop 14 Inch",
+      "price": 109000,
+      "capacity": "3RB+ terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Aurora-Totebag-Sekolah-Kuliah-Tahan-Air-Tas-Cewek-Wanita-Resleting-Laptop-AURORA-POLOS-i.147117083.29165347024",
+      "description": "Aurora Totebag berbahan nylon crinkle water repellent dilengkapi lapisan furing, saku interior, serta saku kanan dan kiri untuk botol minum atau aksesori. Muat laptop hingga 14 inch dengan penutup ganda resleting dan magnet.",
+      "features": [
+        "Nylon Crinkle Water Repellent",
+        "Muat Laptop 14 inch + Saku Samping Kanan-Kiri",
+        "Penutup Ganda Resleting & Magnet",
+        "Ukuran 36 x 26 x 10 cm · Tali 30 cm"
+      ],
+      "swatches": [
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" },
+        { "name": "Caramel", "hex_code": "#B87A4B" },
+        { "name": "Peach", "hex_code": "#E8B7A4" },
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Khaki", "hex_code": "#B5A88F" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-7rbk1-m96xa8by6fip85",
+        "https://down-id.img.susercontent.com/file/id-11134207-7rasm-m1qqekv3q01d1a",
+        "https://down-id.img.susercontent.com/file/id-11110105-7rasm-m1qqrartod349b"
+      ],
+      "images": [
+        "/assets/products/totebag-shoulder-series/svn-tot-001-1.webp",
+        "/assets/products/totebag-shoulder-series/svn-tot-001-2.webp",
+        "/assets/products/totebag-shoulder-series/svn-tot-001-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-TOT-002",
+      "shopee_item_id": "26735890900",
+      "category_slug": "totebag-shoulder-series",
+      "name": "Sevine Anya Shoulder Bag Tas Bahu Kanvas Organik Simpel Elegan",
+      "price": 110000,
+      "capacity": "35 terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Anya-Shoulder-Bag-Tas-Bahu-Tote-Bag-Cewek-Wanita-Totebag-Simpel-Elegan-Hitam-POLOS-i.147117083.26735890900",
+      "description": "Anya Shoulder Bag berukuran sedang dengan desain simpel dan elegan dari kain kanvas organik premium water splash resistant. Kuat, ringan, berpenutup magnet, cocok untuk aktivitas harian kasual.",
+      "features": [
+        "Kanvas Organik Premium Water Splash Resistant",
+        "Penutup Magnet Praktis",
+        "Desain Kasual Simpel & Ringan",
+        "Ukuran 24 x 23 x 8 cm · Tali 25 cm"
+      ],
+      "swatches": [
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Broken White", "hex_code": "#F5F2EA" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-7rbkb-m9bgkex6a6lp0e",
+        "https://down-id.img.susercontent.com/file/id-11134207-7rbk5-m9bgkex6bl6533",
+        "https://down-id.img.susercontent.com/file/id-11134207-7rbkb-matnhfsbi9h448"
+      ],
+      "images": [
+        "/assets/products/totebag-shoulder-series/svn-tot-002-1.webp",
+        "/assets/products/totebag-shoulder-series/svn-tot-002-2.webp",
+        "/assets/products/totebag-shoulder-series/svn-tot-002-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-TOT-003",
+      "shopee_item_id": "26326032134",
+      "category_slug": "totebag-shoulder-series",
+      "name": "Sevine Audrey Polos Totebag Sekolah Kuliah Resleting Laptop 14 Inch",
+      "price": 74900,
+      "capacity": "470 terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Audrey-Polos-Totebag-Sekolah-Kuliah-Tas-Cewek-Wanita-Resleting-Tote-Bag-Laptop-POLOS-i.147117083.26326032134",
+      "description": "Audrey Polos Totebag berbahan nylon crinkle water repellent dengan lapisan busa dan furing yang nyaman dipakai sehari-hari. Muat laptop hingga 14 inch dan dilengkapi resleting penutup utama.",
+      "features": [
+        "Nylon Crinkle Water Repellent",
+        "Muat Laptop hingga 14 inch",
+        "Penutup Resleting + Busa & Furing",
+        "Ukuran 42 x 29 cm · Tali 29 cm"
+      ],
+      "swatches": [
+        { "name": "Black", "hex_code": "#1E1E22" },
+        { "name": "Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Caramel", "hex_code": "#B87A4B" },
+        { "name": "Cream", "hex_code": "#E9DEC9" },
+        { "name": "Peach", "hex_code": "#E8B7A4" },
+        { "name": "Ivory", "hex_code": "#F6F3EB" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-7rbk5-m96xa8by7u352d",
+        "https://down-id.img.susercontent.com/file/id-11134207-7rbk9-m66c2mw7v9ozaa",
+        "https://down-id.img.susercontent.com/file/id-11134207-7rbkc-m66f9y9ig9ky4d"
+      ],
+      "images": [
+        "/assets/products/totebag-shoulder-series/svn-tot-003-1.webp",
+        "/assets/products/totebag-shoulder-series/svn-tot-003-2.webp",
+        "/assets/products/totebag-shoulder-series/svn-tot-003-3.webp"
+      ]
+    },
+    {
+      "sku": "SVN-CHM-001",
+      "shopee_item_id": "41807154834",
+      "category_slug": "bag-charms",
+      "name": "Sevine Gantungan All Varian Bag Charm Macrame Rajut & Orchid Handmade",
+      "price": 13900,
+      "capacity": "3RB+ terjual",
+      "shopee_url": "https://shopee.co.id/Sevine-Gantungan-All-Varian-Tas-Wanita-Gantungan-Kunci-Bag-Charm-Macrame-Boneka-Rajut-Handmade-Aesthetic-Lucu-Renda-i.147117083.41807154834",
+      "description": "Koleksi gantungan tas dan gantungan kunci aesthetic Sevine dengan beragam pilihan material: tali macrame, rajut handmade (Lily & Cherry), pita nylon crinkle, mutiara, cherry resin, dan bunga orchid latex dengan pengait besi/rajut.",
+      "features": [
+        "Beragam Material: Macrame, Rajut, Nylon Crinkle, Latex & Resin",
+        "Pilihan Varian Orchid, Pita Crinkle, Mutiara & Cherry",
+        "Pengait Besi & Tali Rajut Kuat",
+        "Aksesori Resmi Pemercantik Tas Sevine"
+      ],
+      "swatches": [
+        { "name": "Orchid Butter Yellow", "hex_code": "#F2DF9B" },
+        { "name": "Orchid Maroon", "hex_code": "#732634" },
+        { "name": "Orchid Ocean", "hex_code": "#4E88A8" },
+        { "name": "Orchid White", "hex_code": "#F8F7F4" },
+        { "name": "Pita Baby Blue", "hex_code": "#A8C6DF" },
+        { "name": "Pita Brown", "hex_code": "#7C5A43" },
+        { "name": "Pita Black", "hex_code": "#1E1E22" }
+      ],
+      "source_images": [
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztk-msjp7ow4rpxl98",
+        "https://down-id.img.susercontent.com/file/id-11134207-81ztp-msjp7ow4qbd54b",
+        "https://down-id.img.susercontent.com/file/id-11134207-822wt-mmkyk9k8kjk426"
+      ],
+      "images": [
+        "/assets/products/bag-charms/svn-chm-001-1.webp",
+        "/assets/products/bag-charms/svn-chm-001-2.webp",
+        "/assets/products/bag-charms/svn-chm-001-3.webp"
+      ]
+    }
+  ]
+}
